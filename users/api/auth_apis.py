@@ -4,14 +4,17 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.middleware.csrf import get_token
 from users.models import User, CustomSession
+from django.views.decorators.csrf import csrf_exempt
 
 
+@csrf_exempt
 @api_view(["GET"])
 @permission_classes([AllowAny])
 def get_csrf_token(request):
     return Response({"csrfToken": get_token(request)})
 
 
+@csrf_exempt
 @api_view(["POST"])
 @permission_classes([AllowAny])
 def login_view(request):
@@ -40,6 +43,7 @@ def login_view(request):
     return Response({"error": "Invalid credentials"}, status=400)
 
 
+@csrf_exempt
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
 def logout_view(request):

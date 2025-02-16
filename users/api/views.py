@@ -1,3 +1,4 @@
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
@@ -6,6 +7,7 @@ from .serializers import UserSerializer, SessionSerializer
 from users.models import User
 
 
+@csrf_exempt
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
 def get_me(request):
@@ -13,6 +15,7 @@ def get_me(request):
     return Response(serializer.data, status=200)
 
 
+@csrf_exempt
 @api_view(["GET"])
 @permission_classes([AllowAny])
 def get_users(request):
@@ -21,6 +24,7 @@ def get_users(request):
     return Response(serializer.data, status=200)
 
 
+@csrf_exempt
 @api_view(["POST"])
 @permission_classes([AllowAny])
 def create_user(request):
@@ -40,10 +44,10 @@ def create_user(request):
     return Response(serializer.errors, status=400)
 
 
+@csrf_exempt
 @api_view(["POST"])
 @permission_classes([AllowAny])
 def update_user(request, id):
-    print(request.data)
     user = User.objects.filter(id=id).first()
     if not user:
         return Response({"error": "User not found"}, status=404)
@@ -55,6 +59,7 @@ def update_user(request, id):
     return Response(serializer.errors, status=400)
 
 
+@csrf_exempt
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
 def get_my_sessions(request):
