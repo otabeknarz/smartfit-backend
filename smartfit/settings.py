@@ -55,10 +55,6 @@ CSRF_TRUSTED_ORIGINS = [
     "https://smartfitapi.otabek.me",
     "https://smartfit.otabek.me",
 ]
-SESSION_COOKIE_HTTPONLY = True
-SESSION_COOKIE_SAMESITE = "Lax"
-CSRF_COOKIE_HTTPONLY = False
-CSRF_COOKIE_SAMESITE = "Lax"
 
 INSTALLED_APPS = [
     "django.contrib.admin",
