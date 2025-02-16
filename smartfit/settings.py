@@ -56,6 +56,10 @@ CSRF_TRUSTED_ORIGINS = [
     "https://smartfit.otabek.me",
 ]
 
+CSRF_COOKIE_NAME = None
+CSRF_USE_SESSIONS = False
+CSRF_COOKIE_HTTPONLY = False
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
