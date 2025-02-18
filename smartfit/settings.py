@@ -31,11 +31,11 @@ ALLOWED_HOSTS = ["*"]
 # JWT Authentication settings
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
     ],
 }
 
@@ -56,10 +56,6 @@ CSRF_TRUSTED_ORIGINS = [
     "https://smartfit.otabek.me",
 ]
 
-CSRF_COOKIE_NAME = None
-CSRF_USE_SESSIONS = False
-CSRF_COOKIE_HTTPONLY = False
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -69,8 +65,13 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # REST API
     "rest_framework",
+    "rest_framework.authtoken",
     # Local apps
     "users.apps.UsersConfig",
+]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +79,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    # "django.middleware.csrf.CsrfViewMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",

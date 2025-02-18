@@ -8,7 +8,6 @@ urlpatterns = [
     # Auth APIs
     path('login/', auth_apis.login_view, name="login"),
     path('logout/', auth_apis.logout_view, name="logout"),
-    path('get-csrf-token/', auth_apis.get_csrf_token, name="get_csrf_token"),
     # User APIs
     path('get-me/', views.get_me, name="get_me"),
     path('get/', views.get_users, name="get_users"),

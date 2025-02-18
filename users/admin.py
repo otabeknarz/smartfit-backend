@@ -42,18 +42,18 @@ class CustomSessionAdmin(admin.ModelAdmin):
     search_fields = ("user__username", "user__id", "ip_address", "device_info")
     list_filter = ("last_online", "created_at")
     ordering = ("last_online",)
-    readonly_fields = ("sessionid", "last_online", "created_at")
+    readonly_fields = ("token", "last_online", "created_at")
     fieldsets = (
         (
             None,
-            {"fields": ("user", "sessionid", "ip_address", "device_info", "last_online", "created_at")},
+            {"fields": ("user", "token", "ip_address", "device_info", "last_online", "created_at")},
         ),
     )
     add_fieldsets = (
         (
             None,
             {
-                "fields": ("user", "sessionid", "ip_address", "device_info"),
+                "fields": ("user", "token", "ip_address", "device_info"),
             },
         ),
     )

@@ -28,7 +28,7 @@ class User(AbstractUser):
 
 class CustomSession(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False, related_name="custom_sessions")
-    sessionid = models.CharField(max_length=64, unique=True, null=False, blank=False)
+    token = models.CharField(max_length=64, unique=True, null=False, blank=False)
     ip_address = models.CharField(max_length=64, null=True, blank=True)
     device_info = models.CharField(max_length=512, null=True, blank=True)
     last_online = models.DateTimeField(auto_now=True)
