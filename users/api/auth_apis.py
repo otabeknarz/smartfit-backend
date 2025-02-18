@@ -23,7 +23,13 @@ def login_view(request):
         ip_address=request.META.get("REMOTE_ADDR"),
         device_info=request.META.get("HTTP_USER_AGENT")
     )
-    return Response({"token": token.key}, status=200)
+    return Response(
+        {
+            "token": token.key,
+            "has_registered_successfully": bool(user.gender) and bool(user.age) and bool(user.height)
+        },
+        status=200
+    )
 
 
 @api_view(["GET"])
