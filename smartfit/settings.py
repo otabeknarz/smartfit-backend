@@ -46,6 +46,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://207.154.246.175:3000",
     "https://smartfitapi.otabek.me",
     "https://smartfit.otabek.me",
+    "https://smart-fit.uz",
+    "https://api.smart-fit.uz",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -54,6 +56,8 @@ CSRF_TRUSTED_ORIGINS = [
     "http://207.154.246.175:3000",
     "https://smartfitapi.otabek.me",
     "https://smartfit.otabek.me",
+    "https://smart-fit.uz",
+    "https://api.smart-fit.uz",
 ]
 
 INSTALLED_APPS = [
@@ -68,6 +72,7 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     # Local apps
     "users.apps.UsersConfig",
+    "courses.apps.CoursesConfig",
 ]
 
 AUTHENTICATION_BACKENDS = [
