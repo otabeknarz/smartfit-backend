@@ -19,8 +19,35 @@ def get_categories(request):
 @permission_classes([AllowAny])
 def get_courses(request):
     courses = Course.objects.all()
-    serializer = serializers.CourseSerializer(courses, many=True)
+    serializer = serializers.CoursesSerializer(courses, many=True)
     return Response(serializer.data, status=200)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_my_courses(request):
+    courses = [enrollment.course for enrollment in request.user.enrollments.all()]
+    serializer = serializers.CoursesSerializer(courses, many=True)
+    return Response(serializer.data, status=200)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_course(request, slug):
+    courses = [enrollment.course for enrollment in request.user.enrollments.all() if enrollment.course.slug == slug]
+    if len(courses) == 0:
+        course = Course.objects.filter(slug=slug).first()
+        if course:
+            serializer = serializers.CourseSerializer(course)
+            response = serializer.data
+            response["is_enrolled"] = False
+            return Response(response, status=200)
+
+        return Response({"status": "false", "error": "We couldn't find any course with this slug"}, status=404)
+    serializer = serializers.CourseSerializer(courses[0])
+    response = serializer.data
+    response["is_enrolled"] = True
+    return Response(response, status=200)
 
 
 @api_view(['GET'])

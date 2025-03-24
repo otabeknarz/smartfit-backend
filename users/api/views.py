@@ -7,7 +7,6 @@ from .serializers import UserSerializer, SessionSerializer
 from users.models import User
 
 
-@csrf_exempt
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
 def get_me(request):
@@ -15,7 +14,6 @@ def get_me(request):
     return Response(serializer.data, status=200)
 
 
-@csrf_exempt
 @api_view(["GET"])
 @permission_classes([AllowAny])
 def get_users(request):
@@ -59,7 +57,6 @@ def update_user(request, id):
     return Response(serializer.errors, status=400)
 
 
-@csrf_exempt
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
 def get_my_sessions(request):
