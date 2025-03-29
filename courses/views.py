@@ -6,7 +6,8 @@ from courses.models import OneTimeVideoToken, Lesson
 
 def video(request, uuid):
     token = OneTimeVideoToken.objects.filter(id=uuid).first()
-    if not token or not token.is_used:
+
+    if not token or token.is_used:
         raise Http404()
 
     lesson = token.lesson
