@@ -104,3 +104,14 @@ class Progress(models.Model):
 
     def get_course_progress(self, course):
         return self.lessons.objects.filter(course=course)
+
+
+class OneTimeVideoToken(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name="tokens")
+    is_used = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Token for <{self.lesson.title}>"
