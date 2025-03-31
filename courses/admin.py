@@ -9,6 +9,14 @@ from .models import (
     OneTimeVideoToken
 )
 
+@admin.register(Lesson)
+class LessonAdmin(admin.ModelAdmin):
+    list_display = ('title', 'part', 'order', 'duration', 'created_at')
+    search_fields = ('title',)
+    ordering = ('-created_at',)
+    list_filter = ('part', 'order', 'created_at')
+
+
 admin.site.register(Category)
 admin.site.register(Course)
 admin.site.register(CoursePart)
