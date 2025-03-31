@@ -76,7 +76,7 @@ class Lesson(models.Model):
         return f"{self.part.course.title} - {self.part.title} - {self.title}"
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
+        self.slug = slugify(self.part.title + "--" + self.title)
         super(Lesson, self).save(*args, **kwargs)
 
 
