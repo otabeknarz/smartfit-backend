@@ -20,7 +20,6 @@ class LessonAdmin(admin.ModelAdmin):
 admin.site.register(Category)
 admin.site.register(Course)
 admin.site.register(CoursePart)
-admin.site.register(Lesson)
 admin.site.register(Enrollment)
 admin.site.register(Progress)
 admin.site.register(OneTimeVideoToken)
