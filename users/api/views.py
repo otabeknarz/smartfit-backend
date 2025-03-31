@@ -31,9 +31,9 @@ def create_user(request):
         return Response(
             {
                 "error": "User already exists",
-                "has_registered_successfully": bool(user.phone_number)
+                "has_registered_successfully": bool(user.phone_number),
             },
-            status=400
+            status=400,
         )
     serializer = UserSerializer(data=request.data)
     if serializer.is_valid():

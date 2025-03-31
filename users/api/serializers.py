@@ -5,7 +5,11 @@ from users.models import User, CustomSession, Payment
 class TrainerSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'name', 'gender',)
+        fields = (
+            "id",
+            "name",
+            "gender",
+        )
 
 
 class PaymentSerializer(serializers.ModelSerializer):
@@ -22,6 +26,7 @@ class PaymentSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.ModelSerializer):
     payments = PaymentSerializer(many=True, read_only=True)
+
     class Meta:
         model = User
         fields = (
@@ -33,7 +38,7 @@ class UserSerializer(serializers.ModelSerializer):
             "age",
             "height",
             "date_joined",
-            "payments"
+            "payments",
         )
         extra_kwargs = {
             "id": {"required": True},

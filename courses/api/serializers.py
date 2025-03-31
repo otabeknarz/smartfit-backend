@@ -1,18 +1,26 @@
 from rest_framework import serializers
-from courses.models import Category, Course, CoursePart, Lesson, Enrollment, Progress
+from courses.models import (
+    Category,
+    Course,
+    CoursePart,
+    Lesson,
+    Enrollment,
+    Progress,
+    OneTimeVideoToken,
+)
 from users.api.serializers import UserSerializer, TrainerSerializer
 
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = '__all__'
+        fields = "__all__"
 
 
 class LessonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Lesson
-        fields = '__all__'
+        fields = "__all__"
 
 
 class CoursePartSerializer(serializers.ModelSerializer):
@@ -20,7 +28,7 @@ class CoursePartSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CoursePart
-        fields = '__all__'
+        fields = "__all__"
 
 
 class CoursesSerializer(serializers.ModelSerializer):
@@ -29,7 +37,7 @@ class CoursesSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Course
-        fields = '__all__'
+        fields = "__all__"
 
 
 class CourseSerializer(serializers.ModelSerializer):
@@ -40,10 +48,16 @@ class CourseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Course
-        fields = '__all__'
+        fields = "__all__"
 
 
 class ProgressSerializer(serializers.ModelSerializer):
     class Meta:
         model = Progress
-        fields = '__all__'
+        fields = "__all__"
+
+
+class OneTimeVideoTokenSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OneTimeVideoToken
+        fields = "id", "lesson", "is_used", "created_at"
