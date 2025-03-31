@@ -118,17 +118,18 @@ def get_one_time_video_token(request, lesson_id):
                 return Response(
                     {"status": "success", "data": serializer.data}, status=200
                 )
-            return Response(
-                {
-                    "status": "error",
-                    "error": {
-                        "code": "LESSON_NOT_FOUND",
-                        "message": {
-                            "en": "Lesson is not found",
-                            "ru": "Видео урок не найден",
-                            "uz": "Video dars topilmadi",
-                        },
-                    },
+
+    return Response(
+        {
+            "status": "error",
+            "error": {
+                "code": "LESSON_NOT_FOUND",
+                "message": {
+                    "en": "Lesson is not found",
+                    "ru": "Видео урок не найден",
+                    "uz": "Video dars topilmadi",
                 },
-                status=404,
-            )
+            },
+        },
+        status=404,
+    )
