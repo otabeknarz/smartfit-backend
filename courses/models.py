@@ -1,6 +1,6 @@
 from django.db import models
-from django.template.defaultfilters import slugify
 import uuid
+from slugify import slugify
 
 from users.models import User
 
@@ -14,8 +14,7 @@ class Category(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.name)
+        self.slug = slugify(self.name)
         super(Category, self).save(*args, **kwargs)
 
 
@@ -36,8 +35,7 @@ class Course(models.Model):
         return self.title
 
     def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title)
+        self.slug = slugify(self.title)
         super(Course, self).save(*args, **kwargs)
 
 
@@ -56,8 +54,7 @@ class CoursePart(models.Model):
         return f"{self.course.title} - {self.title}"
 
     def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title)
+        self.slug = slugify(self.title)
         super(CoursePart, self).save(*args, **kwargs)
 
 
@@ -79,8 +76,7 @@ class Lesson(models.Model):
         return f"{self.part.course.title} - {self.part.title} - {self.title}"
 
     def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title)
+        self.slug = slugify(self.title)
         super(Lesson, self).save(*args, **kwargs)
 
 
