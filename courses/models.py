@@ -76,7 +76,6 @@ class Lesson(models.Model):
     slug = models.SlugField(max_length=255, unique=True, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     video_service_id = models.CharField(max_length=255, null=True, blank=True)
-    video_url = models.URLField()
     order = models.PositiveIntegerField(default=0)
     duration = models.DurationField(null=True, blank=True)
     is_free_preview = models.BooleanField(default=False)
