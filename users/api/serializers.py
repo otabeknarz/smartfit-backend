@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from users.models import User, CustomSession, Payment, OnboardingAnswers
+from users.models import User, CustomSession, Payment
 
 
 class TrainerSerializer(serializers.ModelSerializer):
@@ -53,8 +53,8 @@ class SessionSerializer(serializers.ModelSerializer):
         fields = ("user", "ip_address", "device_info", "last_online", "created_at")
 
 
-class OnboardingAnswersSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = OnboardingAnswers
-        fields = "__all__"
-        read_only_fields = ("id", "created_at", "updated_at")
+# class OnboardingAnswersSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = OnboardingAnswers
+#         fields = "__all__"
+#         read_only_fields = ("id", "created_at", "updated_at")

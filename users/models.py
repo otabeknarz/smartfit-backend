@@ -98,43 +98,43 @@ class Payment(models.Model):
         return f"{self.user} - {self.amount} {self.currency} - {self.status}"
 
 
-class OnboardingAnswers(models.Model):
-    class GoalsChoices(models.TextChoices):
-        WEIGHT_LOSS = "weight_loss", "Weight Loss"
-        MUSCLE_GAIN = "muscle_gain", "Muscle Gain"
-        ENDURANCE = "endurance", "Improve Endurance"
-        STRENGTH = "strength", "Increase Strength"
-        MAINTENANCE = "maintenance", "Maintain Fitness"
-
-    class TimelineChoices(models.TextChoices):
-        ONE_MONTH = "one_month", "One Month"
-        TWO_THREE_MONTHS = "two_three_months", "Two Three Months"
-        LONG_TERM = "long_term", "Long Term"
-
-    class ExperienceLevelChoices(models.TextChoices):
-        BEGINNER = "beginner", "Beginner"
-        INTERMEDIATE = "intermediate", "Intermediate"
-        ADVANCED = "advanced", "Advanced"
-
-    class TrainingFrequencyChoices(models.TextChoices):
-        TWICE = "twice", "Twice"
-        THREE_TO_FOUR = "three_to_four", "Three to four"
-        FIVE_PLUS = "five_plus", "Five Plus"
-
-    class ConsultationChoices(models.TextChoices):
-        YES = "yes", "Yes"
-        NO = "no", "No"
-
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="onboarding_answers")
-    goal = models.CharField(max_length=20, choices=GoalsChoices.choices, null=True, blank=True)
-    timeline = models.CharField(max_length=20, choices=TimelineChoices.choices, null=True, blank=True)
-    experience_level = models.CharField(max_length=20, choices=ExperienceLevelChoices.choices, null=True, blank=True)
-    training_frequency = models.CharField(max_length=20, choices=TrainingFrequencyChoices.choices, null=True, blank=True)
-    consultation = models.CharField(max_length=20, choices=ConsultationChoices.choices, null=True, blank=True)
-
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return f"{self.user.username} - {self.goal} - {self.timeline} - {self.experience_level}"
+# class OnboardingAnswers(models.Model):
+#     class GoalsChoices(models.TextChoices):
+#         WEIGHT_LOSS = "weight_loss", "Weight Loss"
+#         MUSCLE_GAIN = "muscle_gain", "Muscle Gain"
+#         ENDURANCE = "endurance", "Improve Endurance"
+#         STRENGTH = "strength", "Increase Strength"
+#         MAINTENANCE = "maintenance", "Maintain Fitness"
+#
+#     class TimelineChoices(models.TextChoices):
+#         ONE_MONTH = "one_month", "One Month"
+#         TWO_THREE_MONTHS = "two_three_months", "Two Three Months"
+#         LONG_TERM = "long_term", "Long Term"
+#
+#     class ExperienceLevelChoices(models.TextChoices):
+#         BEGINNER = "beginner", "Beginner"
+#         INTERMEDIATE = "intermediate", "Intermediate"
+#         ADVANCED = "advanced", "Advanced"
+#
+#     class TrainingFrequencyChoices(models.TextChoices):
+#         TWICE = "twice", "Twice"
+#         THREE_TO_FOUR = "three_to_four", "Three to four"
+#         FIVE_PLUS = "five_plus", "Five Plus"
+#
+#     class ConsultationChoices(models.TextChoices):
+#         YES = "yes", "Yes"
+#         NO = "no", "No"
+#
+#     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+#     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="onboarding_answers")
+#     goal = models.CharField(max_length=20, choices=GoalsChoices.choices, null=True, blank=True)
+#     timeline = models.CharField(max_length=20, choices=TimelineChoices.choices, null=True, blank=True)
+#     experience_level = models.CharField(max_length=20, choices=ExperienceLevelChoices.choices, null=True, blank=True)
+#     training_frequency = models.CharField(max_length=20, choices=TrainingFrequencyChoices.choices, null=True, blank=True)
+#     consultation = models.CharField(max_length=20, choices=ConsultationChoices.choices, null=True, blank=True)
+#
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
+#
+#     def __str__(self):
+#         return f"{self.user.username} - {self.goal} - {self.timeline} - {self.experience_level}"
