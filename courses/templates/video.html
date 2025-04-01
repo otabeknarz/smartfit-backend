@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ title }}</title>
+    <title>SmartFit - {{ title }}</title>
 </head>
 <body>
     <h3 style="font-family: 'Segoe UI', system-ui, sans-serif;">You are:</h3>
@@ -16,11 +16,12 @@
         <li>Phone: {{ user.phone_number }}</li>
         {% endif %}
     </ul>
+    <p style="font-family: 'Segoe UI', system-ui, sans-serif; font-weight: bold; font-size: large">{{ title }}</p>
     <div style="padding-top:56%;position:relative;">
         <iframe
             src="{{ video_url }}"
             style="border:0;max-width:100%;position:absolute;top:0;left:0;height:100%;width:100%;"
-            allowFullScreen="true"
+            allowFullScreen
             allow="encrypted-media"
         >
         </iframe>
