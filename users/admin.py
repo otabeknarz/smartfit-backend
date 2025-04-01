@@ -11,11 +11,12 @@ class UserAdmin(admin.ModelAdmin):
     readonly_fields = ("id", "date_joined")
     fieldsets = (
         (
-            None,
+            "Main information",
             {
                 "fields": (
                     "id",
                     "name",
+                    "picture",
                     "username",
                     "phone_number",
                     "gender",
@@ -30,7 +31,7 @@ class UserAdmin(admin.ModelAdmin):
         (
             None,
             {
-                "fields": ("id", "name", "username", "phone_number"),
+                "fields": ("id", "name", "picture", "username", "phone_number"),
             },
         ),
     )
