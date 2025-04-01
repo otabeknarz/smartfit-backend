@@ -8,6 +8,7 @@ class TrainerSerializer(serializers.ModelSerializer):
         fields = (
             "id",
             "name",
+            "picture",
             "gender",
         )
 
