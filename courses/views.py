@@ -20,7 +20,7 @@ def video(request, uuid):
 
     payload_str = json.dumps({
         "ttl": 300,
-        "whitelisthref": "smart-fit.uz"
+        "whitelisthref": "api.smart-fit.uz"
     })
 
     headers = {
