@@ -17,6 +17,14 @@
         >
         </iframe>
     </div>
-    <h1 style="font-family: 'Segoe UI', system-ui, sans-serif; color: red;">All videos on SmartFit are for personal use only. Do not record, share, or upload them anywhere. Violations may lead to account suspension or legal action.</h1>
+    <h3 style="font-family: 'Segoe UI', system-ui, sans-serif;">You are:</h3>
+    <ul style="font-size: 20px; font-family: monospace;">
+        <li>Username: {{ user.username }}</li>
+        <li>Name: {{ user.name }}</li>
+        {% if user.phone_number %}
+        <li>Phone: {{ user.phone_number }}</li>
+        {% endif %}
+    </ul>
+    <h2 style="font-family: 'Segoe UI', system-ui, sans-serif; color: red;">All videos on SmartFit are for personal use only. Do not record, share, or upload them anywhere. Violations may lead to account suspension or legal action.</h2>
 </body>
 </html>
