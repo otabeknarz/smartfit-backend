@@ -166,3 +166,8 @@ MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "users.User"
+
+VIDEO_SERVICE_SECRET_KEY = os.getenv("VIDEO_SERVICE_SECRET_KEY")
+
+if not VIDEO_SERVICE_SECRET_KEY:
+    raise ValueError("VIDEO_SERVICE_SECRET_KEY not set")
