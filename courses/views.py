@@ -26,7 +26,7 @@ def video(request, uuid):
     }
 
     response = requests.post(
-        url=f"https://dev.vdocipher.com/api/videos/{lesson.id}/otp",
+        url=f"https://dev.vdocipher.com/api/videos/{lesson.video_service_id}/otp",
         headers=headers,
         data=payload_str
     )
