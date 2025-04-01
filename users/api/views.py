@@ -68,7 +68,9 @@ def get_my_sessions(request):
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def create_onboarding_answers(request):
-    serializer = OnboardingAnswersSerializer(data=request.data+{"user_id": request.user.id})
+    data = request.data
+    data.update(user=request.user.id)
+    serializer = OnboardingAnswersSerializer(data=data)
     if serializer.is_valid():
         serializer.save()
         return Response(serializer.data, status=201)
