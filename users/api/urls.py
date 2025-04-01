@@ -14,4 +14,5 @@ urlpatterns = [
     path("create/", views.create_user, name="create_user"),
     path("update/<str:id>/", views.update_user, name="update_user"),
     path("get-my-sessions/", views.get_my_sessions, name="get_my_sessions"),
+    path("create-onboarding-answers/", views.create_onboarding_answers, name="create_onboarding_answers"),
 ]
