@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User, CustomSession, Payment
+from .models import User, CustomSession, Payment, OnboardingAnswers
 
 
 @admin.register(User)
@@ -79,3 +79,11 @@ class PaymentAdmin(admin.ModelAdmin):
     )
     list_filter = ("status",)
     ordering = ("status",)
+
+
+@admin.register(OnboardingAnswers)
+class OnboardingAnswersAdmin(admin.ModelAdmin):
+    list_display = ("user", "goal", "timeline", "experience_level", "training_frequency", "consultation")
+    search_fields = ("user__username", "user__id", "user__name")
+    list_filter = ("consultation",)
+    ordering = ("consultation",)
