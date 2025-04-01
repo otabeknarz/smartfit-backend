@@ -17,6 +17,7 @@ class User(AbstractUser):
         max_length=40, primary_key=True, unique=True, default=get_random_id
     )
     name = models.CharField(max_length=255, unique=False, null=True, blank=True)
+    picture = models.ImageField(upload_to="images/users/", null=True, blank=True)
     email = models.EmailField(unique=False, null=True, blank=True)
     phone_number = models.CharField(max_length=20, unique=True, null=True, blank=True)
     gender = models.CharField(
