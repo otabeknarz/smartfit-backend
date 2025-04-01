@@ -21,6 +21,7 @@ def video(request, uuid):
         {
             "title": lesson.title,
             "token": token,
+            "user": token.user,
             "video_url": lesson.video_url,
         },
     )
