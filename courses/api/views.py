@@ -123,6 +123,20 @@ def get_one_time_video_token(request, lesson_id):
             status=200,
         )
 
+    if lesson.is_free_preview:
+        video_token = OneTimeVideoToken.objects.create(
+            lesson=lesson, user=request.user
+        )
+        return Response(
+            {
+                "status": "success",
+                "data": {
+                    "video_url": f"https://api.smart-fit.uz/courses/watch-video/{video_token.id}/"
+                },
+            },
+            status=200,
+        )
+
     for enrollment in request.user.enrollments.all():
         for part in enrollment.course.parts.all():
             if part.lessons.filter(id=lesson.id).exists():
