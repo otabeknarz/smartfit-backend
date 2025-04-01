@@ -112,7 +112,7 @@ def get_one_time_video_token(request, lesson_id):
 
     for video_token in request.user.one_time_video_tokens.filter(
         lesson=lesson, is_used=False
-    ).exists():
+    ):
         return Response(
             {
                 "status": "success",
