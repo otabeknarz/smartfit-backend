@@ -18,7 +18,11 @@ def video(request, uuid):
     token.is_used = True
     token.save()
 
-    payload_str = json.dumps({'ttl': 300})
+    payload_str = json.dumps({
+        "ttl": 300,
+        "whitelisthref": "smart-fit.uz"
+    })
+
     headers = {
         'Authorization': f"Apisecret {VIDEO_SERVICE_SECRET_KEY}",
         'Content-Type': "application/json",
