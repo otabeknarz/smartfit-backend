@@ -4,6 +4,7 @@ from .models import (
     Course,
     CoursePart,
     Lesson,
+    Comment,
     Enrollment,
     Progress,
     OneTimeVideoToken,
@@ -16,6 +17,14 @@ class LessonAdmin(admin.ModelAdmin):
     search_fields = ("title",)
     ordering = ("-created_at",)
     list_filter = ("part", "order", "created_at")
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ("user", "lesson", "created_at")
+    search_fields = ("user__name", "text")
+    ordering = ("-created_at",)
+    list_filter = ("lesson", "created_at")
 
 
 admin.site.register(Category)

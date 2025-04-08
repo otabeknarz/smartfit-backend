@@ -91,6 +91,19 @@ class Lesson(models.Model):
         super(Lesson, self).save(*args, **kwargs)
 
 
+class Comment(models.Model):
+    id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True, primary_key=True)
+    text = models.TextField(null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name="comments")
+    lesson = models.ForeignKey(Lesson, on_delete=models.SET_NULL, null=True, related_name="comments")
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.user} - {self.lesson}"
+
+
 class Enrollment(models.Model):
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True
