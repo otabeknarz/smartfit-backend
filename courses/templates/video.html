@@ -8,15 +8,6 @@
     <title>SmartFit - {{ title }}</title>
 </head>
 <body>
-    <h3 style="font-family: 'Segoe UI', system-ui, sans-serif;">You are:</h3>
-    <ul style="font-size: 20px; font-family: monospace;">
-        <li>ID or Username: {{ user.username }}</li>
-        <li>Name: {{ user.name }}</li>
-        {% if user.phone_number %}
-        <li>Phone: {{ user.phone_number }}</li>
-        {% endif %}
-    </ul>
-    <p style="font-family: 'Segoe UI', system-ui, sans-serif; font-weight: bold; font-size: large">{{ title }}</p>
     <div style="padding-top:56%;position:relative;">
         <iframe
             src="{{ video_url }}"
@@ -26,6 +17,6 @@
         >
         </iframe>
     </div>
-    <h2 style="font-family: 'Segoe UI', system-ui, sans-serif; color: red;">All videos on SmartFit are for personal use only. Do not record, share, or upload them anywhere. Violations may lead to account suspension or legal action.</h2>
+    <p style="font-family: 'Segoe UI', system-ui, sans-serif; font-weight: bold; font-size: xx-large">{{ title }}</p>
 </body>
 </html>
