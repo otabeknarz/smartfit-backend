@@ -4,8 +4,9 @@ from rest_framework.response import Response
 
 from users.models import User
 from . import serializers
-from courses.models import Category, Course, Progress, Lesson, OneTimeVideoToken
+from courses.models import Category, Course, Progress, Lesson, OneTimeVideoToken, Comment
 from .serializers import OneTimeVideoTokenSerializer
+from .paginations import CommentPagination
 
 
 @api_view(["GET"])
@@ -167,3 +168,34 @@ def get_one_time_video_token(request, lesson_id):
         },
         status=404,
     )
+
+
+@api_view(["GET"])
+@permission_classes([IsAuthenticated])
+def get_comments(request, lesson_slug):
+    lesson = Lesson.objects.filter(slug=lesson_slug).first()
+    if not lesson:
+        return Response(
+            {
+                "status": "error",
+                "error": {
+                    "code": "LESSON_NOT_FOUND",
+                    "message": {
+                        "en": "Lesson is not found",
+                        "ru": "Видео урок не найден",
+                        "uz": "Video dars topilmadi",
+                    },
+                },
+            },
+            status=404,
+        )
+
+    comments = Comment.objects.filter(lesson=lesson).order_by('-created_at')
+    paginator = CommentPagination()
+    paginated_comments = paginator.paginate_queryset(comments, request)
+
+    serializer = serializers.CommentSerializer(paginated_comments, many=True)
+    return paginator.get_paginated_response({
+        "status": "success",
+        "data": serializer.data
+    })

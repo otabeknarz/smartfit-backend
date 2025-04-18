@@ -4,11 +4,12 @@ from courses.models import (
     Course,
     CoursePart,
     Lesson,
+    Comment,
     Enrollment,
     Progress,
     OneTimeVideoToken,
 )
-from users.api.serializers import UserSerializer, TrainerSerializer
+from users.api.serializers import UserSerializer, UserCommentSerializer, TrainerSerializer
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -20,6 +21,13 @@ class CategorySerializer(serializers.ModelSerializer):
 class LessonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Lesson
+        fields = "__all__"
+
+
+class CommentSerializer(serializers.ModelSerializer):
+    user = UserCommentSerializer(read_only=True)
+    class Meta:
+        model = Comment
         fields = "__all__"
 
 

@@ -14,4 +14,6 @@ urlpatterns = [
         views.get_one_time_video_token,
         name="get_one_time_video",
     ),
+    # Endpoints for comments
+    path("get-comments/<slug:lesson_slug>/", views.get_comments, name="get_comments"),
 ]

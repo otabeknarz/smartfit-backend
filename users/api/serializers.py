@@ -47,6 +47,12 @@ class UserSerializer(serializers.ModelSerializer):
         }
 
 
+class UserCommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ("id", "name", "username")
+
+
 class SessionSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomSession

@@ -61,7 +61,7 @@ class CoursePart(models.Model):
         return f"{self.course.title} - {self.title}"
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.course.title + self.title)
+        self.slug = slugify(self.course.title + "--" + self.title)
         super(CoursePart, self).save(*args, **kwargs)
 
 
@@ -87,7 +87,7 @@ class Lesson(models.Model):
         return f"{self.part.course.title} - {self.part.title} - {self.title}"
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.part.title + "--" + self.title)
+        self.slug = slugify(self.id.__str__()[10] + "--" + self.title)
         super(Lesson, self).save(*args, **kwargs)
 
 
