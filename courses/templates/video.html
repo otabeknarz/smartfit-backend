@@ -7,15 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SmartFit - {{ title }}</title>
 </head>
-<body style="background-color: black; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-    <div style="padding-top:56%;position:relative;">
-        <iframe
-            src="{{ video_url }}"
-            style="border:0;max-width:100%;position:absolute;top:0;left:0;height:100%;width:100%;"
-            allowFullScreen
-            allow="encrypted-media"
-        >
-        </iframe>
-    </div>
+<body style="background-color: black; height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <iframe
+        src="{{ video_url }}"
+        style="border:0;max-width:100%;position:absolute;top:0;left:0;height:100%;width:100%;"
+        allowFullScreen
+        allow="encrypted-media"
+    >
+    </iframe>
 </body>
 </html>
