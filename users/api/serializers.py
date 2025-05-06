@@ -1,5 +1,7 @@
 from rest_framework import serializers
-from users.models import User, CustomSession, Payment, OnboardingAnswers
+from users.models import User, CustomSession, OnboardingAnswers
+
+from payments.api.serializers import PaymentSerializer
 
 
 class TrainerSerializer(serializers.ModelSerializer):
@@ -10,18 +12,6 @@ class TrainerSerializer(serializers.ModelSerializer):
             "name",
             "picture",
             "gender",
-        )
-
-
-class PaymentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Payment
-        fields = (
-            "id",
-            "amount",
-            "currency",
-            "status",
-            "created_at",
         )
 
 

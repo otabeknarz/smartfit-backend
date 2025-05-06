@@ -75,6 +75,7 @@ INSTALLED_APPS = [
     # Local apps
     "users.apps.UsersConfig",
     "courses.apps.CoursesConfig",
+    "payments.apps.PaymentsConfig",
 ]
 
 AUTHENTICATION_BACKENDS = [
@@ -171,3 +172,8 @@ VIDEO_SERVICE_SECRET_KEY = os.getenv("VIDEO_SERVICE_SECRET_KEY")
 
 if not VIDEO_SERVICE_SECRET_KEY:
     raise ValueError("VIDEO_SERVICE_SECRET_KEY not set")
+
+
+# PAYME_CONFIGURATIONS
+PAYME_API_KEY = os.getenv("PAYME_API_KEY")
+HEADERS = {"content-type": "application/json", "Authorization": f"Basic {PAYME_API_KEY}"}
