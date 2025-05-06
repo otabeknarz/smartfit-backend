@@ -12,3 +12,11 @@ class PaymentAdmin(admin.ModelAdmin):
     )
     list_filter = ("status",)
     ordering = ("status",)
+
+
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ("user", "all_amount")
+    search_fields = ("user__username",)
+    list_filter = ()
+    ordering = ("created_at",)
