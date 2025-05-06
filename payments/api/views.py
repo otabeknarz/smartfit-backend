@@ -9,7 +9,7 @@ from smartfit import settings
 
 
 @api_view(["POST"])
-@permission_classes(AllowAny)
+@permission_classes([AllowAny])
 def payme_payment_view(request):
     method = request.data.get("method")
     if method == "CheckPerformTransaction":
