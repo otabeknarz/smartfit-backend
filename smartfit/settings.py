@@ -181,3 +181,28 @@ if not VIDEO_SERVICE_SECRET_KEY:
 # PAYME_CONFIGURATIONS
 PAYME_API_KEY = os.getenv("PAYME_API_KEY")
 HEADERS = {"content-type": "application/json", "Authorization": f"Basic {PAYME_API_KEY}"}
+
+
+# LOGGING_SETTINGS
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'django.request': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+}
