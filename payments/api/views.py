@@ -38,18 +38,25 @@ class PaymeAPIView(APIView):
 
     def check_perform_transaction(self, params, request_id):
         try:
+            print("CheckPerformTransaction called with params:", params)
             payment_id = params["account"]["payment_id"]
-            amount = Decimal(params["amount"]) / 100  # Payme sends amount in tiyin
+            amount = Decimal(params["amount"]) / 100
+            print("Parsed payment_id:", payment_id, "amount:", amount)
+
             payment = get_object_or_404(Payment, id=payment_id)
+            print("Found payment:", payment)
 
             if payment.status != Payment.StatusChoices.PENDING:
                 return self.error_response(-31050, "Transaction already processed", request_id)
 
             if amount != payment.amount:
-                return self.error_response(-31001, "Incorrect amount", request_id)
+                return self.error_response(-31001, f"Incorrect amount: expected {payment.amount}, got {amount}",
+                                           request_id)
 
             return self.success_response({"allow": True}, request_id)
-        except Exception:
+
+        except Exception as e:
+            print("Error in check_perform_transaction:", str(e))
             return self.error_response(-31099, "Error in checking transaction", request_id)
 
     def create_transaction(self, params, request_id):
