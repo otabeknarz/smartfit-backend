@@ -50,6 +50,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://smartfit.otabek.me",
     "https://smart-fit.uz",
     "https://api.smart-fit.uz",
+    "http://test.paycom.uz",
+    "https://test.paycom.uz",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -60,6 +62,8 @@ CSRF_TRUSTED_ORIGINS = [
     "https://smartfit.otabek.me",
     "https://smart-fit.uz",
     "https://api.smart-fit.uz",
+    "http://test.paycom.uz",
+    "https://test.paycom.uz",
 ]
 
 INSTALLED_APPS = [
