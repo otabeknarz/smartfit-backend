@@ -16,7 +16,7 @@ class PaymentAdmin(admin.ModelAdmin):
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ("user", "all_amount")
+    list_display = ("id", "user", "all_amount")
     search_fields = ("user__username",)
     list_filter = ()
     ordering = ("created_at",)
