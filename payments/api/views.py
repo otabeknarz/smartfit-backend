@@ -125,7 +125,7 @@ class PaymeAPIView(APIView):
                 return self.error_response(
                     Payme.CheckPerformTransaction.INVALID_ACCOUNT_INPUT[0],
                     Payme.CheckPerformTransaction.INVALID_ACCOUNT_INPUT[1],
-                    request_id
+                    request_id,
                 )
 
             if amount != float(order.all_amount):
@@ -150,7 +150,10 @@ class PaymeAPIView(APIView):
             payme_transaction_id = params.get("id")
             order = Order.objects.filter(id=order_id).first()
 
-            if Payment.objects.filter(transaction_id=payme_transaction_id).exists() or not order:
+            if (
+                Payment.objects.filter(transaction_id=payme_transaction_id).exists()
+                or not order
+            ):
                 return self.error_response(
                     Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[0],
                     Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[1],
@@ -171,7 +174,7 @@ class PaymeAPIView(APIView):
                     order=order,
                     user=order.user,
                     currency=Payment.CurrencyChoices.UZS,
-                    method=Payment.PaymentMethodChoices.PAYME
+                    method=Payment.PaymentMethodChoices.PAYME,
                 )
 
             except Exception as e:
@@ -274,7 +277,9 @@ class PaymeAPIView(APIView):
 
     @staticmethod
     def success_response(result, request_id):
-        return Response({"jsonrpc": "2.0", "result": result, "id": request_id})
+        return Response(
+            {"jsonrpc": "2.0", "result": result, "id": request_id}, status=200
+        )
 
     @staticmethod
     def error_response(code, message, request_id):
@@ -287,5 +292,6 @@ class PaymeAPIView(APIView):
                     "data": message,
                 },
                 "id": request_id,
-            }
+            },
+            status=400,
         )
