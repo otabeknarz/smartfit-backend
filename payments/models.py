@@ -75,3 +75,8 @@ class Payment(BaseModel):
 
     def __str__(self):
         return f"{self.user} - {self.amount} {self.currency} - ({self.status})"
+
+
+class PaymentManager:
+    def __init__(self, payment: Payment):
+        pass
