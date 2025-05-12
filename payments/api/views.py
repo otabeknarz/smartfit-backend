@@ -97,19 +97,8 @@ class PaymeAPIView(APIView):
         params = data.get("params", {})
         request_id = data.get("id")
 
-        # Safely get Authorization header
-        authorization_header = request.META.get("HTTP_AUTHORIZATION", "")
-        parts = authorization_header.split(" ")
-
-        # Validate token
-        if len(parts) != 2 or parts[0].lower() != "basic":
-            return self.error_response(
-                Payme.General.NOT_AUTHORIZED[0],
-                Payme.General.NOT_AUTHORIZED[1],
-                request_id
-            )
-
-        authorization_token = parts[1]
+        authorization_header = request.META.get("HTTP_AUTHORIZATION")
+        authorization_token = authorization_header.split(" ")[1] if len(authorization_header.split(" ")) == 2 else None
 
         if authorization_token not in (settings.PAYME_CASSA_KEY, settings.PAYME_CASSA_TEST_KEY):
             return self.error_response(
