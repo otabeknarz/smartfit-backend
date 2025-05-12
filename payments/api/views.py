@@ -145,7 +145,7 @@ class PaymeAPIView(APIView):
 
     def create_transaction(self, params, request_id):
         try:
-            order_id = params.get("account", {})("order_id")
+            order_id = params.get("account", {}).get("order_id")
             amount = float(params.get("amount", 0)) / 100
             payme_transaction_id = params.get("id")
             order = Order.objects.filter(id=order_id).first()
