@@ -164,14 +164,22 @@ class PaymeAPIView(APIView):
                     request_id,
                 )
 
-            Payment.objects.create(
-                transaction_id=payme_transaction_id,
-                amount=amount,
-                order=order,
-                user=order.user,
-                currency=Payment.CurrencyChoices.UZS,
-                method=Payment.PaymentMethodChoices.PAYME
-            )
+            try:
+                Payment.objects.create(
+                    transaction_id=payme_transaction_id,
+                    amount=amount,
+                    order=order,
+                    user=order.user,
+                    currency=Payment.CurrencyChoices.UZS,
+                    method=Payment.PaymentMethodChoices.PAYME
+                )
+
+            except Exception as e:
+                return self.error_response(
+                    Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[0],
+                    Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[1],
+                    request_id,
+                )
 
             return self.success_response(
                 {
