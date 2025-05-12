@@ -97,16 +97,6 @@ class PaymeAPIView(APIView):
         params = data.get("params", {})
         request_id = data.get("id")
 
-        authorization_header = request.META.get("HTTP_AUTHORIZATION")
-        authorization_token = authorization_header.split(" ")[1] if len(authorization_header.split(" ")) == 2 else None
-
-        if authorization_token not in (settings.PAYME_CASSA_KEY, settings.PAYME_CASSA_TEST_KEY):
-            return self.error_response(
-                Payme.General.NOT_AUTHORIZED[0],
-                Payme.General.NOT_AUTHORIZED[1],
-                request_id
-            )
-
         handler = {
             "CheckPerformTransaction": self.check_perform_transaction,
             "CreateTransaction": self.create_transaction,
