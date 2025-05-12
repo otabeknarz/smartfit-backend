@@ -117,7 +117,7 @@ class PaymeAPIView(APIView):
     def check_perform_transaction(self, params, request_id):
         try:
             order_id = params.get("account", {}).get("order_id")
-            amount = params.get("amount", 0) / 100
+            amount = float(params.get("amount", 0)) / 100
 
             order = Order.objects.filter(id=order_id).first()
 
@@ -128,7 +128,7 @@ class PaymeAPIView(APIView):
                     request_id
                 )
 
-            if amount != order.all_amount:
+            if amount != float(order.all_amount):
                 return self.error_response(
                     Payme.CheckPerformTransaction.WRONG_AMOUNT[0],
                     Payme.CheckPerformTransaction.WRONG_AMOUNT[1],
