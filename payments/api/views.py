@@ -232,8 +232,15 @@ class PaymeAPIView(APIView):
 
     def check_transaction(self, params, request_id):
         try:
-            transaction_id = params["id"]
-            payment = get_object_or_404(Payment, transaction_id=transaction_id)
+            transaction_id = params.get("id")
+            payment = Payment.objects.filter(transaction_id=transaction_id).first()
+
+            if not payment:
+                return self.error_response(
+                    Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[0],
+                    Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[1],
+                    request_id,
+                )
 
             state = 2 if payment.status == Payment.StatusChoices.COMPLETED else 1
 
