@@ -179,7 +179,8 @@ if not VIDEO_SERVICE_SECRET_KEY:
 
 
 # PAYME_CONFIGURATIONS
-PAYME_API_KEY = os.getenv("PAYME_API_KEY")
+PAYME_CASSA_KEY = os.getenv("PAYME_CASSA_KEY")
+PAYME_CASSA_TEST_KEY = os.getenv("PAYME_CASSA_TEST_KEY")
 HEADERS = {"content-type": "application/json", "Authorization": f"Basic {PAYME_API_KEY}"}
 
 

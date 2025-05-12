@@ -6,6 +6,7 @@ from rest_framework.permissions import AllowAny
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
+from django.conf import settings
 from payments.models import Payment, Order
 
 
@@ -23,6 +24,7 @@ class Payme:
             "Insufficient privileges to execute this method.",
         )
         INTERNAL_ERROR = (-32400, "Internal system error. Please try again later.")
+        NOT_AUTHORIZED = (-32401, "Not authorized.")
 
     class Merchant:
         WRONG_AMOUNT = (
@@ -94,6 +96,16 @@ class PaymeAPIView(APIView):
         method = data.get("method")
         params = data.get("params", {})
         request_id = data.get("id")
+
+        authorization_header = request.META.get("HTTP_AUTHORIZATION")
+        authorization_token = authorization_header.split(" ")[1] if len(authorization_header.split(" ")) == 2 else None
+
+        if authorization_token not in (settings.PAYME_CASSA_KEY, settings.PAYME_CASSA_TEST_KEY):
+            return self.error_response(
+                Payme.General.NOT_AUTHORIZED[0],
+                Payme.General.NOT_AUTHORIZED[1],
+                request_id
+            )
 
         handler = {
             "CheckPerformTransaction": self.check_perform_transaction,
