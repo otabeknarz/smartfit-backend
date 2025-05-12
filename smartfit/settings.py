@@ -76,6 +76,8 @@ INSTALLED_APPS = [
     # REST API
     "rest_framework",
     "rest_framework.authtoken",
+    # Payme PKG
+    "payme",
     # Local apps
     "users.apps.UsersConfig",
     "courses.apps.CoursesConfig",
@@ -179,8 +181,12 @@ if not VIDEO_SERVICE_SECRET_KEY:
 
 
 # PAYME_CONFIGURATIONS
-PAYME_CASSA_KEY = os.getenv("PAYME_CASSA_KEY")
-PAYME_CASSA_TEST_KEY = os.getenv("PAYME_CASSA_TEST_KEY")
+PAYME_ID = os.getenv("PAYME_CASSA_ID")
+PAYME_KEY = os.getenv("PAYME_CASSA_KEY")
+PAYME_ACCOUNT_FIELD = "order_id"
+PAYME_AMOUNT_FIELD = "total_amount"
+PAYME_ACCOUNT_MODEL = "payments.models.Order"
+PAYME_ONE_TIME_PAYMENT = True
 
 # LOGGING_SETTINGS
 LOGGING = {

@@ -20,7 +20,7 @@ class Order(BaseModel):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     courses = models.ManyToManyField(Course, blank=True, related_name="orders")
-    all_amount = models.DecimalField(max_digits=10, decimal_places=2)
+    total_amount = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
         return f"Order for @{self.user.username}"
