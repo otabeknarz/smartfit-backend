@@ -6,8 +6,7 @@ from rest_framework.permissions import AllowAny
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
-from decimal import Decimal
-from payments.models import Payment, Order, PaymentManager
+from payments.models import Payment, Order
 
 
 class Payme:
@@ -40,14 +39,14 @@ class Payme:
             "This operation cannot be performed with the current transaction status.",
         )
         INVALID_ACCOUNT_INPUT = (
-            range(-31099, -31049),
+            -31050,
             "Invalid account input. Please check your login or phone number.",
         )
 
     class CheckPerformTransaction:
         WRONG_AMOUNT = (-31001, "The transaction amount is incorrect.")
         INVALID_ACCOUNT_INPUT = (
-            range(-31099, -31049),
+            -31050,
             "Invalid buyer account input. Please verify the provided details.",
         )
 
@@ -65,7 +64,7 @@ class Payme:
         WRONG_AMOUNT = (-31001, "The transaction amount is incorrect.")
         OPERATION_NOT_ALLOWED = (-31008, "This operation cannot be performed.")
         INVALID_ACCOUNT_INPUT = (
-            range(-31099, -31049),
+            -31050,
             "Invalid account data provided. Please check the input details.",
         )
 
@@ -73,7 +72,7 @@ class Payme:
         TRANSACTION_NOT_FOUND = (-31003, "No transaction was found.")
         OPERATION_NOT_ALLOWED = (-31008, "This operation is not permitted.")
         INVALID_ACCOUNT_INPUT = (
-            range(-31099, -31049),
+            -31050,
             "Buyer account details are invalid.",
         )
 
