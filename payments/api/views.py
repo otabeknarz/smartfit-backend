@@ -164,6 +164,13 @@ class PaymeAPIView(APIView):
                     request_id,
                 )
 
+            if order.payments.filter(status=Payment.StatusChoices.PENDING).exists():
+                return self.error_response(
+                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[0],
+                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
+                    request_id,
+                )
+
             payment = Payment.objects.filter(transaction_id=payme_transaction_id).first()
 
             if not payment:
