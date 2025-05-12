@@ -37,11 +37,11 @@ class Payment(BaseModel):
         BANK = ("BANK", "Bank Transfer")
         CASH = ("CASH", "Cash")
 
-    class StatusChoices(models.TextChoices):
-        PENDING = ("PENDING", "Pending")
-        COMPLETED = ("COMPLETED", "Completed")
-        FAILED = ("FAILED", "Failed")
-        REFUNDED = ("REFUNDED", "Refunded")
+    class StatusChoices(models.IntegerChoices):
+        PENDING = (1, "Pending")
+        COMPLETED = (2, "Completed")
+        FAILED = (-1, "Failed")
+        REFUNDED = (-2, "Refunded")
 
     class CurrencyChoices(models.TextChoices):
         UZS = "UZS"

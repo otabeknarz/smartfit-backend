@@ -63,6 +63,7 @@ class Payme:
     class CreateTransaction:
         WRONG_AMOUNT = (-31001, "The transaction amount is incorrect.")
         OPERATION_NOT_ALLOWED = (-31008, "This operation cannot be performed.")
+        TRANSACTION_ALREADY_EXISTS = (-31099, "Transaction already exists.")
         INVALID_ACCOUNT_INPUT = (
             -31050,
             "Invalid account data provided. Please check the input details.",
@@ -175,38 +176,18 @@ class PaymeAPIView(APIView):
                     method=Payment.PaymentMethodChoices.PAYME,
                 )
 
-            elif float(payment.amount) != amount:
+            else:
                 return self.error_response(
-                    Payme.CreateTransaction.WRONG_AMOUNT[0],
-                    Payme.CreateTransaction.WRONG_AMOUNT[1],
+                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[0],
+                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
                     request_id,
                 )
-
-            else:
-                state = 0
-                if payment.status == Payment.StatusChoices.PENDING :
-                    state = 1
-                elif payment.status == Payment.StatusChoices.COMPLETED:
-                    state = 2
-                else:
-                    state = 0
-
-                return self.success_response(
-                    {
-                        "create_time": int(time.time() * 1000),
-                        "transaction": payme_transaction_id,
-                        "state": state,
-                        "receivers": None,
-                    },
-                    request_id
-                )
-
 
             return self.success_response(
                 {
                     "create_time": int(time.time() * 1000),
                     "transaction": payme_transaction_id,
-                    "state": 1,
+                    "state": payment.status,
                     "receivers": None,
                 },
                 request_id
