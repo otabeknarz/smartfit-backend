@@ -7,7 +7,7 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
 from decimal import Decimal
-from payments.models import Payment, Order
+from payments.models import Payment, Order, PaymentManager
 
 
 class Payme:
@@ -119,7 +119,14 @@ class PaymeAPIView(APIView):
             order_id = params.get("account", {}).get("order_id")
             amount = Decimal(params.get("amount")) / 100
 
-            order = get_object_or_404(Order, id=order_id)
+            order = Order.objects.filter(id=order_id).first()
+
+            if not order:
+                return self.error_response(
+                    Payme.CheckPerformTransaction.INVALID_ACCOUNT_INPUT[0],
+                    Payme.CheckPerformTransaction.INVALID_ACCOUNT_INPUT[1],
+                    request_id
+                )
 
             if amount != order.all_amount:
                 return self.error_response(
