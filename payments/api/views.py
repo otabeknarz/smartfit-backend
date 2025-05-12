@@ -160,6 +160,8 @@ class PaymeAPIView(APIView):
                     request_id,
                 )
 
+            order.payments.all().delete()
+
             if amount != float(order.all_amount):
                 return self.error_response(
                     Payme.CreateTransaction.WRONG_AMOUNT[0],
