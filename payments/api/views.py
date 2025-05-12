@@ -149,17 +149,12 @@ class PaymeAPIView(APIView):
             payme_transaction_id = params.get("id")
             order = Order.objects.filter(id=order_id).first()
 
-            if (
-                Payment.objects.filter(transaction_id=payme_transaction_id).exists()
-                or not order
-            ):
+            if not order:
                 return self.error_response(
                     Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[0],
                     Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[1],
                     request_id,
                 )
-
-            order.payments.all().delete()
 
             if amount != float(order.all_amount):
                 return self.error_response(
@@ -168,7 +163,9 @@ class PaymeAPIView(APIView):
                     request_id,
                 )
 
-            try:
+            payment = Payment.objects.filter(transaction_id=payme_transaction_id).first()
+
+            if not payment:
                 Payment.objects.create(
                     transaction_id=payme_transaction_id,
                     amount=amount,
@@ -178,12 +175,32 @@ class PaymeAPIView(APIView):
                     method=Payment.PaymentMethodChoices.PAYME,
                 )
 
-            except Exception as e:
+            elif float(payment.amount) != amount:
                 return self.error_response(
-                    Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[0],
-                    Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[1],
+                    Payme.CreateTransaction.WRONG_AMOUNT[0],
+                    Payme.CreateTransaction.WRONG_AMOUNT[1],
                     request_id,
                 )
+
+            else:
+                state = 0
+                if payment.status == Payment.StatusChoices.PENDING :
+                    state = 1
+                elif payment.status == Payment.StatusChoices.COMPLETED:
+                    state = 2
+                else:
+                    state = 0
+
+                return self.success_response(
+                    {
+                        "create_time": int(time.time() * 1000),
+                        "transaction": payme_transaction_id,
+                        "state": state,
+                        "receivers": None,
+                    },
+                    request_id
+                )
+
 
             return self.success_response(
                 {
@@ -192,7 +209,7 @@ class PaymeAPIView(APIView):
                     "state": 1,
                     "receivers": None,
                 },
-                request_id,
+                request_id
             )
 
         except Exception:
