@@ -117,7 +117,7 @@ class PaymeAPIView(APIView):
     def check_perform_transaction(self, params, request_id):
         try:
             order_id = params.get("account", {}).get("order_id")
-            amount = Decimal(params.get("amount")) / 100
+            amount = params.get("amount", 0) / 100
 
             order = Order.objects.filter(id=order_id).first()
 
