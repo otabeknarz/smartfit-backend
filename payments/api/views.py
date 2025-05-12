@@ -167,7 +167,7 @@ class PaymeAPIView(APIView):
             payment = Payment.objects.filter(transaction_id=payme_transaction_id).first()
 
             if not payment:
-                Payment.objects.create(
+                payment = Payment.objects.create(
                     transaction_id=payme_transaction_id,
                     amount=amount,
                     order=order,
