@@ -145,20 +145,33 @@ class PaymeAPIView(APIView):
 
     def create_transaction(self, params, request_id):
         try:
-            payment_id = params["account"]["payment_id"]
-            payme_transaction_id = params["id"]
-            payment = get_object_or_404(Payment, id=payment_id)
+            order_id = params.get("account", {})("order_id")
+            amount = float(params.get("amount", 0)) / 100
+            payme_transaction_id = params.get("id")
+            order = Order.objects.filter(id=order_id).first()
 
-            if (
-                payment.transaction_id
-                and payment.transaction_id != payme_transaction_id
-            ):
+            if Payment.objects.filter(transaction_id=payme_transaction_id).exists() or not order:
                 return self.error_response(
-                    -31008, "Transaction already exists", request_id
+                    Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[0],
+                    Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[1],
+                    request_id,
                 )
 
-            payment.transaction_id = payme_transaction_id
-            payment.save()
+            if amount != float(order.all_amount):
+                return self.error_response(
+                    Payme.CreateTransaction.WRONG_AMOUNT[0],
+                    Payme.CreateTransaction.WRONG_AMOUNT[1],
+                    request_id,
+                )
+
+            Payment.objects.create(
+                transaction_id=payme_transaction_id,
+                amount=amount,
+                order=order,
+                user=order.user,
+                currency=Payment.CurrencyChoices.UZS,
+                method=Payment.PaymentMethodChoices.PAYME
+            )
 
             return self.success_response(
                 {
