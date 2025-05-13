@@ -177,14 +177,13 @@ class PaymeAPIView(APIView):
                     request_id,
                 )
 
-            payment = Payment.objects.filter(
-                transaction_id=payme_transaction_id
-            ).first()
+            payments = order.payments.all().order_by("-created_at")
+
+            payment = payments.filter(transaction_id=payme_transaction_id).first()
 
             if not payment:
-                payment = order.payments.filter(status=Payment.StatusChoices.PENDING).order_by("-created_at").first()
-
-                if not payment:
+                filtered_payment = payments.filter(status=Payment.StatusChoices.PENDING).order_by("-created_at").first()
+                if not filtered_payment:
                     payment = Payment.objects.create(
                         transaction_id=payme_transaction_id,
                         amount=amount,
@@ -193,6 +192,14 @@ class PaymeAPIView(APIView):
                         currency=Payment.CurrencyChoices.UZS,
                         method=Payment.PaymentMethodChoices.PAYME,
                     )
+                elif (timezone.now() - payment.created_at).total_seconds() <= 43200:
+                    return self.error_response(
+                        -31099,
+                        "Transaction already exists.",
+                        payment.id,
+                    )
+                else:
+                    filtered_payment.mark_failed()
 
             elif payment.status != Payment.StatusChoices.PENDING:
                 return self.error_response(
