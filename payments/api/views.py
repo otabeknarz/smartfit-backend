@@ -238,7 +238,7 @@ class PaymeAPIView(APIView):
     def perform_transaction(self, params, request_id):
         try:
             transaction_id = params.get("id")
-            payment = Payment.objects.filter(id=transaction_id).first()
+            payment = Payment.objects.filter(transaction_id=transaction_id).first()
 
             if not payment:
                 return self.error_response(
