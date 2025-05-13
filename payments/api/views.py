@@ -293,7 +293,7 @@ class PaymeAPIView(APIView):
     @staticmethod
     def success_response(result, request_id):
         return Response(
-            {"jsonrpc": "2.0", "result": result, "id": request_id}, status=200
+            {"jsonrpc": "2.0", "result": result, "id": request_id}
         )
 
     @staticmethod
@@ -308,5 +308,4 @@ class PaymeAPIView(APIView):
                 },
                 "id": request_id,
             },
-            status=400,
         )
