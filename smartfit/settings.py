@@ -76,8 +76,6 @@ INSTALLED_APPS = [
     # REST API
     "rest_framework",
     "rest_framework.authtoken",
-    # Payme PKG
-    "payme",
     # Local apps
     "users.apps.UsersConfig",
     "courses.apps.CoursesConfig",
@@ -187,27 +185,3 @@ PAYME_ACCOUNT_FIELD = "order_id"
 PAYME_AMOUNT_FIELD = "total_amount"
 PAYME_ACCOUNT_MODEL = "payments.models.Order"
 PAYME_ONE_TIME_PAYMENT = True
-
-# LOGGING_SETTINGS
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-        'django.request': {
-            'handlers': ['console'],
-            'level': 'INFO',
-            'propagate': False,
-        },
-    },
-}
