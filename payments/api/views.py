@@ -209,7 +209,7 @@ class PaymeAPIView(APIView):
                 {
                     "create_time": int(payment.created_at.timestamp() * 1000),
                     "transaction": payme_transaction_id,
-                    "state": int(payment.status),
+                    "state": payment.status,
                     "receivers": None,
                 },
                 request_id

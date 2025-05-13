@@ -56,9 +56,7 @@ class Payment(BaseModel):
         max_length=10, default=CurrencyChoices.UZS, choices=CurrencyChoices.choices
     )
     method = models.CharField(max_length=10, choices=PaymentMethodChoices.choices)
-    status = models.CharField(
-        max_length=10, choices=StatusChoices.choices, default=StatusChoices.PENDING
-    )
+    status = models.IntegerField(choices=StatusChoices.choices, default=StatusChoices.PENDING)
     transaction_id = models.CharField(
         max_length=100, unique=True, null=True, blank=True
     )
