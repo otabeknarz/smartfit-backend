@@ -275,6 +275,8 @@ class PaymeAPIView(APIView):
                 )
             Enrollment.objects.bulk_create(enrollments)
 
+            payment.order.delete()
+
             return self.success_response(
                 {
                     "transaction": transaction_id,
