@@ -7,6 +7,7 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
 from django.conf import settings
+import base64
 from payments.models import Payment, Order
 
 
@@ -104,6 +105,15 @@ class PaymeAPIView(APIView):
             "CheckTransaction": self.check_transaction,
             "CancelTransaction": self.cancel_transaction,
         }.get(method)
+
+        auth_status = self.check_auth(request, settings.PAYME_KEY)
+
+        if not auth_status:
+            return self.error_response(
+                Payme.General.NOT_AUTHORIZED[0],
+                Payme.General.NOT_AUTHORIZED[1],
+                request_id
+            )
 
         if handler:
             return handler(params, request_id)
@@ -309,3 +319,19 @@ class PaymeAPIView(APIView):
                 "id": request_id,
             },
         )
+
+    @staticmethod
+    def check_auth(request, token):
+        auth_header = request.META.get("HTTP_AUTHORIZATION")
+        if not auth_header:
+            return False
+
+        encoded_token = auth_header.split(" ")[-1]
+
+        decoded = base64.b64decode(encoded_token).decode()
+        _, actual_token = decoded.split(":", 1)
+
+        if token != actual_token:
+            return False
+
+        return True
