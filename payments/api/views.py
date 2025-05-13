@@ -130,7 +130,7 @@ class PaymeAPIView(APIView):
                     request_id,
                 )
 
-            if amount != float(order.all_amount):
+            if amount != float(order.total_amount):
                 return self.error_response(
                     Payme.CheckPerformTransaction.WRONG_AMOUNT[0],
                     Payme.CheckPerformTransaction.WRONG_AMOUNT[1],
@@ -159,7 +159,7 @@ class PaymeAPIView(APIView):
                     request_id,
                 )
 
-            if amount != float(order.all_amount):
+            if amount != float(order.total_amount):
                 return self.error_response(
                     Payme.CreateTransaction.WRONG_AMOUNT[0],
                     Payme.CreateTransaction.WRONG_AMOUNT[1],
