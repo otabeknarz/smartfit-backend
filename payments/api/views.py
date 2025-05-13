@@ -272,7 +272,7 @@ class PaymeAPIView(APIView):
                     "create_time": int(payment.created_at.timestamp() * 1000),
                     "perform_time": (
                         int(payment.updated_at.timestamp() * 1000)
-                        if payment.status == Payment.StatusChoices.PENDING
+                        if payment.status == Payment.StatusChoices.COMPLETED
                         else 0
                     ),
                     "cancel_time": 0,
