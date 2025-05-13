@@ -264,8 +264,6 @@ class PaymeAPIView(APIView):
                     request_id,
                 )
 
-            state = 2 if payment.status == Payment.StatusChoices.COMPLETED else 1
-
             return self.success_response(
                 {
                     "transaction": transaction_id,
@@ -273,7 +271,7 @@ class PaymeAPIView(APIView):
                     "perform_time": int(payment.updated_at.timestamp() * 1000),
                     "cancel_time": 0,
                     "reason": None,
-                    "state": state,
+                    "state": payment.status,
                 },
                 request_id,
             )
