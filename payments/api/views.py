@@ -264,6 +264,8 @@ class PaymeAPIView(APIView):
                     request_id,
                 )
 
+            print(payment.status)
+
             return self.success_response(
                 {
                     "transaction": transaction_id,
