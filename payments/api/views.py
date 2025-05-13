@@ -1,3 +1,5 @@
+import time
+
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
@@ -5,7 +7,6 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
 from django.conf import settings
-from django.utils import timezone
 import base64
 from payments.models import Payment, Order
 
@@ -65,13 +66,11 @@ class Payme:
     class CreateTransaction:
         WRONG_AMOUNT = (-31001, "The transaction amount is incorrect.")
         OPERATION_NOT_ALLOWED = (-31008, "This operation cannot be performed.")
-        TRANSACTION_ALREADY_EXISTS = (-31099, "Transaction already exists.")
+        TRANSACTION_ALREADY_EXISTS = (-31008, "Transaction already exists.")
         INVALID_ACCOUNT_INPUT = (
             -31050,
             "Invalid account data provided. Please check the input details.",
         )
-        # TRANSACTION_ALREADY_EXISTS = (-31050, "Transaction already exists.")
-        TRANSACTION_EXPIRED = (-31008, "Transaction has expired.")
 
     class PerformTransaction:
         TRANSACTION_NOT_FOUND = (-31003, "No transaction was found.")
@@ -177,56 +176,35 @@ class PaymeAPIView(APIView):
                     request_id,
                 )
 
-            # Check for existing transaction
-            payment = Payment.objects.filter(transaction_id=payme_transaction_id).first()
-
-            if payment:
-                if payment.status == Payment.StatusChoices.PENDING:
-                    timeout_minutes = 12 * 60  # 12 hours
-                    elapsed_minutes = (timezone.now() - payment.created_at).total_seconds() / 60
-
-                    if elapsed_minutes > timeout_minutes:
-                        # Expired → cancel the transaction and return error
-                        payment.status = Payment.StatusChoices.FAILED
-                        payment.save(update_fields=["status"])
-
-                        return self.error_response(
-                            Payme.CreateTransaction.TRANSACTION_EXPIRED[0],
-                            Payme.CreateTransaction.TRANSACTION_EXPIRED[1],
-                            request_id,
-                        )
-
-                    # Still valid and pending → return same transaction
-                    return self.success_response(
-                        {
-                            "create_time": int(payment.created_at.timestamp() * 1000),
-                            "transaction": payment.transaction_id,
-                            "state": payment.status,
-                            "receivers": None,
-                        },
-                        request_id
-                    )
-
-                # If status is not pending → transaction already exists and is finished
+            if order.payments.filter(status=Payment.StatusChoices.PENDING).exists():
                 return self.error_response(
                     Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[0],
                     Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
                     request_id,
                 )
 
-            # If no transaction → create new one
-            payment = Payment.objects.create(
-                transaction_id=payme_transaction_id,
-                amount=amount,
-                order=order,
-                user=order.user,
-                currency=Payment.CurrencyChoices.UZS,
-                method=Payment.PaymentMethodChoices.PAYME,
-            )
+            payment = Payment.objects.filter(transaction_id=payme_transaction_id).first()
+
+            if not payment:
+                payment = Payment.objects.create(
+                    transaction_id=payme_transaction_id,
+                    amount=amount,
+                    order=order,
+                    user=order.user,
+                    currency=Payment.CurrencyChoices.UZS,
+                    method=Payment.PaymentMethodChoices.PAYME,
+                )
+
+            else:
+                return self.error_response(
+                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[0],
+                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
+                    request_id,
+                )
 
             return self.success_response(
                 {
-                    "create_time": int(payment.created_at.timestamp() * 1000),
+                    "create_time": int(time.time() * 1000),
                     "transaction": payme_transaction_id,
                     "state": payment.status,
                     "receivers": None,
