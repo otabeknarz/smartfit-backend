@@ -256,7 +256,18 @@ class PaymeAPIView(APIView):
                         Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
                         request_id,
                     )
-            elif payment.status != Payment.StatusChoices.COMPLETED:
+
+            elif payment.status == Payment.StatusChoices.COMPLETED:
+                return self.success_response(
+                    {
+                        "transaction": transaction_id,
+                        "perform_time": int(payment.updated_at.timestamp() * 1000),
+                        "state": payment.status,
+                    },
+                    request_id,
+                )
+
+            else:
                 return self.error_response(
                     Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[0],
                     Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
