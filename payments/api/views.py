@@ -7,6 +7,7 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
 from django.conf import settings
+from django.utils import timezone
 import base64
 from payments.models import Payment, Order
 
@@ -176,13 +177,6 @@ class PaymeAPIView(APIView):
                     request_id,
                 )
 
-            if order.payments.filter(status=Payment.StatusChoices.PENDING).exists():
-                return self.error_response(
-                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[0],
-                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
-                    request_id,
-                )
-
             payment = Payment.objects.filter(transaction_id=payme_transaction_id).first()
 
             if not payment:
@@ -195,7 +189,16 @@ class PaymeAPIView(APIView):
                     method=Payment.PaymentMethodChoices.PAYME,
                 )
 
-            else:
+            elif payment.status == Payment.StatusChoices.PENDING:
+                return self.error_response(
+                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[0],
+                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
+                    request_id,
+                )
+
+            elif (timezone.now() - payment.created_at).total_seconds() > 43200:
+                payment.mark_failed()
+
                 return self.error_response(
                     Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[0],
                     Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
@@ -204,7 +207,7 @@ class PaymeAPIView(APIView):
 
             return self.success_response(
                 {
-                    "create_time": int(time.time() * 1000),
+                    "create_time": int(payment.created_at.timestamp() * 1000),
                     "transaction": payme_transaction_id,
                     "state": payment.status,
                     "receivers": None,
