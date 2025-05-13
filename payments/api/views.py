@@ -268,7 +268,7 @@ class PaymeAPIView(APIView):
                 {
                     "transaction": transaction_id,
                     "create_time": int(payment.created_at.timestamp() * 1000),
-                    "perform_time": int(payment.updated_at.timestamp() * 1000) if payment.status == Payment.StatusChoices.PENDING else None,
+                    "perform_time": int(payment.updated_at.timestamp() * 1000) if payment.status == 1 else None,
                     "cancel_time": 0,
                     "reason": None,
                     "state": payment.status,
