@@ -25,7 +25,7 @@ class Payme:
             "Insufficient privileges to execute this method.",
         )
         INTERNAL_ERROR = (-32400, "Internal system error. Please try again later.")
-        NOT_AUTHORIZED = (-32401, "Not authorized.")
+        NOT_AUTHORIZED = (-32504, "Not authorized.")
 
     class Merchant:
         WRONG_AMOUNT = (
