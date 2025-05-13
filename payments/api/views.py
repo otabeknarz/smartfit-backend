@@ -113,7 +113,7 @@ class PaymeAPIView(APIView):
             return self.error_response(
                 Payme.General.NOT_AUTHORIZED[0],
                 Payme.General.NOT_AUTHORIZED[1],
-                request_id
+                request_id,
             )
 
         if handler:
@@ -177,7 +177,9 @@ class PaymeAPIView(APIView):
                     request_id,
                 )
 
-            payment = Payment.objects.filter(transaction_id=payme_transaction_id).first()
+            payment = Payment.objects.filter(
+                transaction_id=payme_transaction_id
+            ).first()
 
             if not payment:
                 order.payments.filter(status=Payment.StatusChoices.PENDING).delete()
@@ -213,7 +215,7 @@ class PaymeAPIView(APIView):
                     "state": payment.status,
                     "receivers": None,
                 },
-                request_id
+                request_id,
             )
 
         except Exception:
@@ -264,13 +266,15 @@ class PaymeAPIView(APIView):
                     request_id,
                 )
 
-            print(payment.status)
-
             return self.success_response(
                 {
                     "transaction": transaction_id,
                     "create_time": int(payment.created_at.timestamp() * 1000),
-                    "perform_time": int(payment.updated_at.timestamp() * 1000) if payment.status == 1 else None,
+                    "perform_time": (
+                        int(payment.updated_at.timestamp() * 1000)
+                        if payment.status == Payment.StatusChoices.PENDING
+                        else 0
+                    ),
                     "cancel_time": 0,
                     "reason": None,
                     "state": payment.status,
@@ -306,9 +310,7 @@ class PaymeAPIView(APIView):
 
     @staticmethod
     def success_response(result, request_id):
-        return Response(
-            {"jsonrpc": "2.0", "result": result, "id": request_id}
-        )
+        return Response({"jsonrpc": "2.0", "result": result, "id": request_id})
 
     @staticmethod
     def error_response(code, message, request_id):
