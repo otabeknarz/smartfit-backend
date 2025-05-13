@@ -182,15 +182,17 @@ class PaymeAPIView(APIView):
             ).first()
 
             if not payment:
-                order.payments.filter(status=Payment.StatusChoices.PENDING).delete()
-                payment = Payment.objects.create(
-                    transaction_id=payme_transaction_id,
-                    amount=amount,
-                    order=order,
-                    user=order.user,
-                    currency=Payment.CurrencyChoices.UZS,
-                    method=Payment.PaymentMethodChoices.PAYME,
-                )
+                payment = order.payments.filter(status=Payment.StatusChoices.PENDING).order_by("-created_at").first()
+
+                if not payment:
+                    payment = Payment.objects.create(
+                        transaction_id=payme_transaction_id,
+                        amount=amount,
+                        order=order,
+                        user=order.user,
+                        currency=Payment.CurrencyChoices.UZS,
+                        method=Payment.PaymentMethodChoices.PAYME,
+                    )
 
             elif payment.status != Payment.StatusChoices.PENDING:
                 return self.error_response(
