@@ -60,7 +60,7 @@ class Payment(BaseModel):
     transaction_id = models.CharField(
         max_length=100, unique=True, null=True, blank=True
     )
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name="payments")
+    order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True, related_name="payments")
     description = models.TextField(blank=True)
 
     def mark_completed(self):
