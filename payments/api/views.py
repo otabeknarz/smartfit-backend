@@ -9,6 +9,8 @@ from django.shortcuts import get_object_or_404
 from django.conf import settings
 from django.utils import timezone
 import base64
+
+from courses.models import Enrollment
 from payments.models import Payment, Order
 
 
@@ -72,6 +74,7 @@ class Payme:
             -31050,
             "Invalid account data provided. Please check the input details.",
         )
+        TRANSACTION_NOT_FOUND = (-31003, "Transaction not found.")
 
     class PerformTransaction:
         TRANSACTION_NOT_FOUND = (-31003, "No transaction was found.")
@@ -234,26 +237,49 @@ class PaymeAPIView(APIView):
 
     def perform_transaction(self, params, request_id):
         try:
-            transaction_id = params["id"]
-            payment = get_object_or_404(Payment, transaction_id=transaction_id)
+            transaction_id = params.get("id")
+            payment = Payment.objects.filter(id=transaction_id).first()
 
-            if payment.status == Payment.StatusChoices.COMPLETED:
-                return self.success_response(
-                    {
-                        "transaction": transaction_id,
-                        "perform_time": int(payment.updated_at.timestamp() * 1000),
-                        "state": 2,
-                    },
+            if not payment:
+                return self.error_response(
+                    Payme.CreateTransaction.TRANSACTION_NOT_FOUND[0],
+                    Payme.CreateTransaction.TRANSACTION_NOT_FOUND[1],
+                    request_id,
+                )
+
+            if payment.status == Payment.StatusChoices.PENDING:
+                if (timezone.now() - payment.created_at).total_seconds() > 43200:
+                    payment.mark_failed()
+
+                    return self.error_response(
+                        Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[0],
+                        Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
+                        request_id,
+                    )
+            elif payment.status != Payment.StatusChoices.COMPLETED:
+                return self.error_response(
+                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[0],
+                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
                     request_id,
                 )
 
             payment.mark_completed()
 
+            enrollments = []
+            for course in payment.order.courses.all():
+                enrollments.append(
+                    Enrollment(
+                        course=course,
+                        student=payment.user,
+                    )
+                )
+            Enrollment.objects.bulk_create(enrollments)
+
             return self.success_response(
                 {
                     "transaction": transaction_id,
                     "perform_time": int(payment.updated_at.timestamp() * 1000),
-                    "state": 2,
+                    "state": payment.status,
                 },
                 request_id,
             )
