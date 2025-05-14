@@ -185,7 +185,11 @@ class PaymeAPIView(APIView):
             payment = payments.filter(transaction_id=payme_transaction_id).first()
 
             if not payment:
-                filtered_payment = payments.filter(status=Payment.StatusChoices.PENDING).order_by("-created_at").first()
+                filtered_payment = (
+                    payments.filter(status=Payment.StatusChoices.PENDING)
+                    .order_by("-created_at")
+                    .first()
+                )
                 if not filtered_payment:
                     payment = Payment.objects.create(
                         transaction_id=payme_transaction_id,
@@ -375,7 +379,7 @@ class PaymeAPIView(APIView):
         )
 
     @staticmethod
-    def check_auth(request, token):
+    def check_auth(request, token) -> bool:
         auth_header = request.META.get("HTTP_AUTHORIZATION")
         if not auth_header:
             return False
@@ -383,7 +387,7 @@ class PaymeAPIView(APIView):
         encoded_token = auth_header.split(" ")[-1]
 
         decoded = base64.b64decode(encoded_token).decode()
-        _, actual_token = decoded.split(":", 1)
+        username, actual_token = decoded.split(":", 1)
 
         if token != actual_token:
             return False
