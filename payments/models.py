@@ -44,7 +44,7 @@ class Payment(BaseModel):
         FAILED = (-1, "Failed")
         REFUNDED = (-2, "Refunded")
 
-    class ReasonChoices(models.TextChoices):
+    class ReasonChoices(models.IntegerChoices):
         RECIPIENT_NOT_FOUND = 1, "Recipient not found or inactive"
         DEBIT_ERROR = 2, "Debit operation error"
         TRANSACTION_ERROR = 3, "Transaction error"
