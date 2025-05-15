@@ -339,21 +339,52 @@ class PaymeAPIView(APIView):
 
     def cancel_transaction(self, params, request_id):
         try:
-            transaction_id = params["id"]
+            transaction_id = params.get("id")
             reason = params.get("reason", 0)
-            payment = get_object_or_404(Payment, transaction_id=transaction_id)
+            payment = Payment.objects.filter(transaction_id=transaction_id).first()
 
-            payment.mark_failed()
+            if not payment:
+                return self.error_response(
+                    Payme.CreateTransaction.TRANSACTION_NOT_FOUND[0],
+                    Payme.CreateTransaction.TRANSACTION_NOT_FOUND[1],
+                    request_id,
+                )
 
-            return self.success_response(
-                {
-                    "transaction": transaction_id,
-                    "cancel_time": int(payment.updated_at.timestamp() * 1000),
-                    "state": -1,
-                    "reason": reason,
-                },
-                request_id,
-            )
+            if payment.status == Payment.StatusChoices.PENDING:
+                payment.mark_failed(reason=reason)
+
+                return self.success_response(
+                    {
+                        "transaction": transaction_id,
+                        "cancel_time": int(payment.cancel_time.timestamp() * 1000),
+                        "state": payment.status,
+                        "reason": reason,
+                    },
+                    request_id,
+                )
+
+            elif payment.status == Payment.StatusChoices.COMPLETED:
+                payment.mark_failed(reason=reason)
+
+                return self.success_response(
+                    {
+                        "transaction": transaction_id,
+                        "cancel_time": int(payment.cancel_time.timestamp() * 1000),
+                        "state": payment.status,
+                        "reason": reason,
+                    },
+                    request_id,
+                )
+
+            else:
+                return self.success_response(
+                    {
+                        "transaction": transaction_id,
+                        "cancel_time": int(payment.cancel_time.timestamp() * 1000),
+                        "state": payment.status,
+                    },
+                    request_id,
+                )
 
         except Exception:
             return self.error_response(

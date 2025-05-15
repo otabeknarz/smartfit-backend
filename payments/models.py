@@ -1,5 +1,6 @@
 import uuid
 from django.db import models
+from django.utils import timezone
 
 from courses.models import Course
 from users.models import User
@@ -43,6 +44,14 @@ class Payment(BaseModel):
         FAILED = (-1, "Failed")
         REFUNDED = (-2, "Refunded")
 
+    class ReasonChoices(models.TextChoices):
+        RECIPIENT_NOT_FOUND = 1, "Recipient not found or inactive"
+        DEBIT_ERROR = 2, "Debit operation error"
+        TRANSACTION_ERROR = 3, "Transaction error"
+        TIMEOUT_CANCELLED = 4, "Transaction cancelled (timeout)"
+        REFUND = 5, "Refund"
+        UNKNOWN_ERROR = 10, "Unknown error"
+
     class CurrencyChoices(models.TextChoices):
         UZS = "UZS"
         USD = "USD"
@@ -57,14 +66,21 @@ class Payment(BaseModel):
     )
     method = models.CharField(max_length=10, choices=PaymentMethodChoices.choices)
     status = models.IntegerField(choices=StatusChoices.choices, default=StatusChoices.PENDING)
+    reason = models.IntegerField(choices=ReasonChoices.choices, null=True, blank=True)
     transaction_id = models.CharField(
         max_length=100, unique=True, null=True, blank=True
     )
     order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True, related_name="payments")
     description = models.TextField(blank=True)
 
-    def mark_completed(self):
+    cancel_time = models.DateTimeField(null=True, blank=True)
+
+    def mark_completed(self, reason=None):
         self.status = self.StatusChoices.COMPLETED
+        self.cancel_time = timezone.now()
+        if reason:
+            self.reason = reason
+
         self.save()
 
     def mark_failed(self):
