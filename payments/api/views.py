@@ -167,11 +167,12 @@ class PaymeAPIView(APIView):
                 request_id,
             )
 
-        order = Order(
+        order = Order.objects.create(
             user=self.request.user,
             total_amount=course.price
         )
         order.courses.add(course)
+
         payme_checkout_url = f"https://checkout.paycom.uz/base64(m={CASSA_ID};ac.order_id={order.id};a={order.total_amount*100})"
         return Response({"url": payme_checkout_url}, status=201)
 
