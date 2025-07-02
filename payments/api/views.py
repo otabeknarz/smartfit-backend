@@ -160,11 +160,18 @@ class PaymeAPIView(APIView):
                 request_id,
             )
 
+        if not self.request.user.is_authenticated:
+            return self.error_response(
+                Payme.General.NOT_AUTHORIZED[0],
+                Payme.General.NOT_AUTHORIZED[1],
+                request_id,
+            )
+
         order = Order(
-            course=course,
             user=self.request.user,
             total_amount=course.price
         )
+        order.courses.add(course)
         payme_checkout_url = f"https://checkout.paycom.uz/base64(m={CASSA_ID};ac.order_id={order.id};a={order.total_amount*100})"
         return Response({"url": payme_checkout_url}, status=201)
 
