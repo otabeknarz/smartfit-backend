@@ -173,7 +173,9 @@ class PaymeAPIView(APIView):
         )
         order.courses.add(course)
 
-        payme_checkout_url = f"https://checkout.paycom.uz/base64(m={CASSA_ID};ac.order_id={order.id};a={order.total_amount*100})"
+        payload = f"m={CASSA_ID};ac.order_id={order.id};a={int(order.total_amount * 100)}"
+        encoded = base64.b64encode(payload.encode()).decode()
+        payme_checkout_url = f"https://checkout.paycom.uz/{encoded}"
         return Response({"url": payme_checkout_url}, status=201)
 
 
