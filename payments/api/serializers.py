@@ -12,3 +12,9 @@ class PaymentSerializer(serializers.ModelSerializer):
             "status",
             "created_at",
         )
+
+
+class OrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Order
+        fields = "__all__"

@@ -1,17 +1,32 @@
-import time
+import os
+from pathlib import Path
 
+from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
-from django.shortcuts import get_object_or_404
 from django.conf import settings
 from django.utils import timezone
+from dotenv import load_dotenv
+import random
 import base64
 
-from courses.models import Enrollment
+from courses.models import Enrollment, Course
 from payments.models import Payment, Order
+from .serializers import PaymentSerializer, OrderSerializer
+
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+load_dotenv(BASE_DIR / '.env')
+
+CASSA_ID = os.getenv("PAYME_CASSA_ID")
+
+
+class OrderViewSet(viewsets.ModelViewSet):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+    permission_classes = [AllowAny]
 
 
 class Payme:
@@ -100,7 +115,7 @@ class PaymeAPIView(APIView):
         data = request.data
         method = data.get("method")
         params = data.get("params", {})
-        request_id = data.get("id")
+        request_id = data.get("id") or random.randint(100000, 999999)
 
         handler = {
             "CheckPerformTransaction": self.check_perform_transaction,
@@ -108,9 +123,13 @@ class PaymeAPIView(APIView):
             "PerformTransaction": self.perform_transaction,
             "CheckTransaction": self.check_transaction,
             "CancelTransaction": self.cancel_transaction,
+            "GetLinkForFrontend": self.get_link_for_frontend,
         }.get(method)
 
         auth_status = self.check_auth(request, settings.PAYME_KEY)
+
+        if method == "GetLinkForFrontend":
+            auth_status = True
 
         if not auth_status:
             return self.error_response(
@@ -129,6 +148,26 @@ class PaymeAPIView(APIView):
                 "id": request_id,
             }
         )
+
+    def get_link_for_frontend(self, params, request_id):
+        course_id = params.get("course_id")
+        course = Course.objects.filter(id=course_id).first()
+
+        if not course:
+            return self.error_response(
+                Payme.General.INTERNAL_ERROR[0],
+                Payme.General.INTERNAL_ERROR[1],
+                request_id,
+            )
+
+        order = Order(
+            course=course,
+            user=self.request.user,
+            total_amount=course.price
+        )
+        payme_checkout_url = f"https://checkout.paycom.uz/base64(m={CASSA_ID};ac.order_id={order.id};a={order.total_amount*100})"
+        return Response({"url": payme_checkout_url}, status=201)
+
 
     def check_perform_transaction(self, params, request_id):
         try:
