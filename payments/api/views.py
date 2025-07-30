@@ -22,6 +22,9 @@ load_dotenv(BASE_DIR / '.env')
 
 CASSA_ID = os.getenv("PAYME_CASSA_ID")
 
+if not CASSA_ID:
+    raise ValueError("CASSA_ID environment variable not set")
+
 
 class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
