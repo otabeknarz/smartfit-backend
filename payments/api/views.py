@@ -129,10 +129,10 @@ class PaymeAPIView(APIView):
             "GetLinkForFrontend": self.get_link_for_frontend,
         }.get(method)
 
-        auth_status = self.check_auth(request, settings.PAYME_KEY)
-
         if method == "GetLinkForFrontend":
             auth_status = True
+        else:
+            auth_status = self.check_auth(request, settings.PAYME_KEY)
 
         if not auth_status:
             return self.error_response(
