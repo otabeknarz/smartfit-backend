@@ -70,6 +70,7 @@ class Payment(BaseModel):
     transaction_id = models.CharField(
         max_length=100, unique=True, null=True, blank=True
     )
+    stripe_payment_intent = models.CharField(max_length=255, null=True, blank=True)
     order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True, related_name="payments")
     description = models.TextField(blank=True)
 

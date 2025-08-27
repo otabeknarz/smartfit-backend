@@ -1,482 +1,143 @@
-import os
-from pathlib import Path
-
-from rest_framework import viewsets
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework.permissions import AllowAny
-from django.utils.decorators import method_decorator
-from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
-from django.utils import timezone
-from dotenv import load_dotenv
-import random
-import base64
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
+from rest_framework import viewsets
+from rest_framework.response import Response
+import stripe
 
-from courses.models import Enrollment, Course
 from payments.models import Payment, Order
-from .serializers import PaymentSerializer, OrderSerializer
+from courses.models import Course, Enrollment
+from users.models import User
+from .serializers import PaymentSerializer, CreatePaymentSerializer, OrderSerializer
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
-load_dotenv(BASE_DIR / '.env')
-
-CASSA_ID = os.getenv("PAYME_CASSA_ID")
-
-if not CASSA_ID:
-    raise ValueError("CASSA_ID environment variable not set")
+stripe.api_key = settings.STRIPE_SECRET_KEY
+endpoint_secret = settings.STRIPE_WEBHOOK_SECRET
 
 
-class OrderViewSet(viewsets.ModelViewSet):
-    queryset = Order.objects.all()
-    serializer_class = OrderSerializer
-    permission_classes = [AllowAny]
+class PaymentViewSet(viewsets.ModelViewSet):
+    """
+    A viewset for viewing and editing payment instances.
+    """
+    queryset = Payment.objects.all()
+    serializer_class = PaymentSerializer
 
+    def get_queryset(self):
+        """
+        Optionally restricts the returned payments to a given user,
+        by filtering against a `user` query parameter in the URL.
+        """
+        queryset = super().get_queryset()
+        user = self.request.query_params.get('user', None)
+        if user is not None:
+            queryset = queryset.filter(user=user)
+        return queryset.order_by("-created_at")
 
-class Payme:
-    class General:
-        INVALID_HTTP_METHOD = (-32300, "Invalid request method. POST required.")
-        PARSE_ERROR = (-32700, "Invalid JSON format.")
-        INVALID_REQUEST = (
-            -32600,
-            "Invalid RPC request format or missing required fields.",
-        )
-        METHOD_NOT_FOUND = (-32601, "Requested method not found.")
-        INSUFFICIENT_PRIVILEGES = (
-            -32504,
-            "Insufficient privileges to execute this method.",
-        )
-        INTERNAL_ERROR = (-32400, "Internal system error. Please try again later.")
-        NOT_AUTHORIZED = (-32504, "Not authorized.")
+    def create(self, request, *args, **kwargs):
+        serializer = CreatePaymentSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
 
-    class Merchant:
-        WRONG_AMOUNT = (
-            -31001,
-            "The transaction amount does not match the order amount.",
-        )
-        TRANSACTION_NOT_FOUND = (-31003, "Transaction not found.")
-        CANNOT_CANCEL_TRANSACTION = (
-            -31007,
-            "The product or service is already delivered and cannot be canceled.",
-        )
-        OPERATION_NOT_ALLOWED = (
-            -31008,
-            "This operation cannot be performed with the current transaction status.",
-        )
-        INVALID_ACCOUNT_INPUT = (
-            -31050,
-            "Invalid account input. Please check your login or phone number.",
-        )
-
-    class CheckPerformTransaction:
-        WRONG_AMOUNT = (-31001, "The transaction amount is incorrect.")
-        INVALID_ACCOUNT_INPUT = (
-            -31050,
-            "Invalid buyer account input. Please verify the provided details.",
-        )
-
-        @staticmethod
-        def check_perform_transaction(payment_id, amount):
-            payment = Payment.objects.filter(id=payment_id).update(amount=amount)
-            if not payment:
-                return Payme.CheckPerformTransaction.INVALID_ACCOUNT_INPUT
-            if payment.amount == amount * 100:
-                return True
-            else:
-                return Payme.CheckPerformTransaction.WRONG_AMOUNT
-
-    class CreateTransaction:
-        WRONG_AMOUNT = (-31001, "The transaction amount is incorrect.")
-        OPERATION_NOT_ALLOWED = (-31008, "This operation cannot be performed.")
-        TRANSACTION_ALREADY_EXISTS = (-31008, "Transaction already exists.")
-        INVALID_ACCOUNT_INPUT = (
-            -31050,
-            "Invalid account data provided. Please check the input details.",
-        )
-        TRANSACTION_NOT_FOUND = (-31003, "Transaction not found.")
-
-    class PerformTransaction:
-        TRANSACTION_NOT_FOUND = (-31003, "No transaction was found.")
-        OPERATION_NOT_ALLOWED = (-31008, "This operation is not permitted.")
-        INVALID_ACCOUNT_INPUT = (
-            -31050,
-            "Buyer account details are invalid.",
-        )
-
-    class CancelTransaction:
-        TRANSACTION_NOT_FOUND = (-31003, "No transaction was found to cancel.")
-        CANNOT_CANCEL_TRANSACTION = (
-            -31007,
-            "The order is complete and cannot be canceled.",
-        )
-
-
-@method_decorator(csrf_exempt, name="dispatch")
-class PaymeAPIView(APIView):
-    permission_classes = [AllowAny]
-
-    def post(self, request):
-        data = request.data
-        method = data.get("method")
-        params = data.get("params", {})
-        request_id = data.get("id") or random.randint(100000, 999999)
-
-        handler = {
-            "CheckPerformTransaction": self.check_perform_transaction,
-            "CreateTransaction": self.create_transaction,
-            "PerformTransaction": self.perform_transaction,
-            "CheckTransaction": self.check_transaction,
-            "CancelTransaction": self.cancel_transaction,
-            "GetLinkForFrontend": self.get_link_for_frontend,
-        }.get(method)
-
-        if method == "GetLinkForFrontend":
-            auth_status = True
-        else:
-            auth_status = self.check_auth(request, settings.PAYME_KEY)
-
-        if not auth_status:
-            return self.error_response(
-                Payme.General.NOT_AUTHORIZED[0],
-                Payme.General.NOT_AUTHORIZED[1],
-                request_id,
-            )
-
-        if handler:
-            return handler(params, request_id)
-
-        return Response(
-            {
-                "jsonrpc": "2.0",
-                "error": {"code": -32601, "message": "Method not found"},
-                "id": request_id,
-            }
-        )
-
-    def get_link_for_frontend(self, params, request_id):
-        course_id = params.get("course_id")
+        course_id = serializer.validated_data["course_id"]
         course = Course.objects.filter(id=course_id).first()
 
         if not course:
-            return self.error_response(
-                Payme.General.INTERNAL_ERROR[0],
-                Payme.General.INTERNAL_ERROR[1],
-                request_id,
-            )
-
-        if not self.request.user.is_authenticated:
-            return self.error_response(
-                Payme.General.NOT_AUTHORIZED[0],
-                Payme.General.NOT_AUTHORIZED[1],
-                request_id,
-            )
+            return Response({"detail": "No course found with given id"}, status=404)
 
         order = Order.objects.create(
-            user=self.request.user,
-            total_amount=course.price
+            user=request.user,
+            total_amount=course.price,
         )
+
         order.courses.add(course)
+        order.save()
 
-        payload = f"m={CASSA_ID};ac.order_id={order.id};a={int(order.total_amount * 100)}"
-        encoded = base64.b64encode(payload.encode(encoding="utf-8")).decode(encoding="utf-8")
-
-        payme_checkout_url_base64 = f"https://checkout.paycom.uz/{encoded}"
-        return Response(
-            {"url": payme_checkout_url_base64},
-            status=201
+        payment = Payment.objects.create(
+            user=request.user,
+            amount=course.price,
+            method=Payment.PaymentMethodChoices.STRIPE,
+            status=Payment.StatusChoices.PENDING,
         )
 
-
-    def check_perform_transaction(self, params, request_id):
-        try:
-            order_id = params.get("account", {}).get("order_id")
-            amount = float(params.get("amount", 0)) / 100
-
-            order = Order.objects.filter(id=order_id).first()
-
-            if not order:
-                return self.error_response(
-                    Payme.CheckPerformTransaction.INVALID_ACCOUNT_INPUT[0],
-                    Payme.CheckPerformTransaction.INVALID_ACCOUNT_INPUT[1],
-                    request_id,
-                )
-
-            if amount != float(order.total_amount):
-                return self.error_response(
-                    Payme.CheckPerformTransaction.WRONG_AMOUNT[0],
-                    Payme.CheckPerformTransaction.WRONG_AMOUNT[1],
-                    request_id,
-                )
-
-            return self.success_response({"allow": True}, request_id)
-
-        except Exception as e:
-            print("Error in check_perform_transaction:", str(e))
-            return self.error_response(
-                -31099, "Error in checking transaction", request_id
-            )
-
-    def create_transaction(self, params, request_id):
-        try:
-            order_id = params.get("account", {}).get("order_id")
-            amount = float(params.get("amount", 0)) / 100
-            payme_transaction_id = params.get("id")
-            order = Order.objects.filter(id=order_id).first()
-
-            if not order:
-                return self.error_response(
-                    Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[0],
-                    Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[1],
-                    request_id,
-                )
-
-            if amount != float(order.total_amount):
-                return self.error_response(
-                    Payme.CreateTransaction.WRONG_AMOUNT[0],
-                    Payme.CreateTransaction.WRONG_AMOUNT[1],
-                    request_id,
-                )
-
-            payments = order.payments.all().order_by("-created_at")
-
-            payment = payments.filter(transaction_id=payme_transaction_id).first()
-
-            if not payment:
-                filtered_payment = (
-                    payments.filter(status=Payment.StatusChoices.PENDING)
-                    .order_by("-created_at")
-                    .first()
-                )
-                if not filtered_payment:
-                    payment = Payment.objects.create(
-                        transaction_id=payme_transaction_id,
-                        amount=amount,
-                        order=order,
-                        user=order.user,
-                        currency=Payment.CurrencyChoices.UZS,
-                        method=Payment.PaymentMethodChoices.PAYME,
-                    )
-                elif (timezone.now() - payment.created_at).total_seconds() <= 43200:
-                    return self.error_response(
-                        -31099,
-                        "Transaction already exists.",
-                        payment.id,
-                    )
-                else:
-                    filtered_payment.mark_failed()
-
-            elif payment.status != Payment.StatusChoices.PENDING:
-                return self.error_response(
-                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[0],
-                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
-                    request_id,
-                )
-
-            elif (timezone.now() - payment.created_at).total_seconds() > 43200:
-                payment.mark_failed()
-
-                return self.error_response(
-                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[0],
-                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
-                    request_id,
-                )
-
-            return self.success_response(
-                {
-                    "create_time": int(payment.created_at.timestamp() * 1000),
-                    "transaction": payme_transaction_id,
-                    "state": payment.status,
-                    "receivers": None,
-                },
-                request_id,
-            )
-
-        except Exception:
-            return self.error_response(
-                -31099, "Failed to create transaction", request_id
-            )
-
-    def perform_transaction(self, params, request_id):
-        try:
-            transaction_id = params.get("id")
-            payment = Payment.objects.filter(transaction_id=transaction_id).first()
-
-            if not payment:
-                return self.error_response(
-                    Payme.CreateTransaction.TRANSACTION_NOT_FOUND[0],
-                    Payme.CreateTransaction.TRANSACTION_NOT_FOUND[1],
-                    request_id,
-                )
-
-            if payment.status == Payment.StatusChoices.PENDING:
-                if (timezone.now() - payment.created_at).total_seconds() > 43200:
-                    payment.mark_failed()
-
-                    return self.error_response(
-                        Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[0],
-                        Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
-                        request_id,
-                    )
-
-            elif payment.status == Payment.StatusChoices.COMPLETED:
-                return self.success_response(
-                    {
-                        "transaction": transaction_id,
-                        "perform_time": int(payment.updated_at.timestamp() * 1000),
-                        "state": payment.status,
+        checkout_session = stripe.checkout.Session.create(
+            payment_method_types=['card'],
+            line_items=[{
+                'price_data': {
+                    'currency': 'usd',
+                    'unit_amount': int(course.price * 100),
+                    'product_data': {
+                        'name': course.title,
+                        'images': [request.build_absolute_uri(course.thumbnail.url)],
                     },
-                    request_id,
-                )
-
-            else:
-                return self.error_response(
-                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[0],
-                    Payme.CreateTransaction.TRANSACTION_ALREADY_EXISTS[1],
-                    request_id,
-                )
-
-            payment.mark_completed()
-
-            enrollments = []
-            for course in payment.order.courses.all():
-                enrollments.append(
-                    Enrollment(
-                        course=course,
-                        student=payment.user,
-                    )
-                )
-            Enrollment.objects.bulk_create(enrollments)
-
-            payment.order.delete()
-
-            return self.success_response(
-                {
-                    "transaction": transaction_id,
-                    "perform_time": int(payment.updated_at.timestamp() * 1000),
-                    "state": payment.status,
                 },
-                request_id,
-            )
-
-        except Exception:
-            return self.error_response(
-                -31099, "Failed to perform transaction", request_id
-            )
-
-    def check_transaction(self, params, request_id):
-        try:
-            transaction_id = params.get("id")
-            payment = Payment.objects.filter(transaction_id=transaction_id).first()
-
-            if not payment:
-                return self.error_response(
-                    Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[0],
-                    Payme.CreateTransaction.INVALID_ACCOUNT_INPUT[1],
-                    request_id,
-                )
-
-            return self.success_response(
-                {
-                    "transaction": transaction_id,
-                    "create_time": int(payment.created_at.timestamp() * 1000),
-                    "perform_time": (
-                        int(payment.updated_at.timestamp() * 1000)
-                        if payment.status == Payment.StatusChoices.COMPLETED
-                        else 0
-                    ),
-                    "cancel_time": 0,
-                    "reason": None,
-                    "state": payment.status,
-                },
-                request_id,
-            )
-
-        except Exception:
-            return self.error_response(-31099, "Transaction not found", request_id)
-
-    def cancel_transaction(self, params, request_id):
-        try:
-            transaction_id = params.get("id")
-            reason = params.get("reason", 0)
-            payment = Payment.objects.filter(transaction_id=transaction_id).first()
-
-            if not payment:
-                return self.error_response(
-                    Payme.CreateTransaction.TRANSACTION_NOT_FOUND[0],
-                    Payme.CreateTransaction.TRANSACTION_NOT_FOUND[1],
-                    request_id,
-                )
-
-            if payment.status == Payment.StatusChoices.PENDING:
-                payment.mark_failed(reason=reason)
-
-                return self.success_response(
-                    {
-                        "transaction": transaction_id,
-                        "cancel_time": int(payment.cancel_time.timestamp() * 1000),
-                        "state": payment.status,
-                        "reason": reason,
-                    },
-                    request_id,
-                )
-
-            elif payment.status == Payment.StatusChoices.COMPLETED:
-                payment.mark_failed(reason=reason)
-
-                return self.success_response(
-                    {
-                        "transaction": transaction_id,
-                        "cancel_time": int(payment.cancel_time.timestamp() * 1000),
-                        "state": payment.status,
-                        "reason": reason,
-                    },
-                    request_id,
-                )
-
-            else:
-                return self.success_response(
-                    {
-                        "transaction": transaction_id,
-                        "cancel_time": int(payment.cancel_time.timestamp() * 1000),
-                        "state": payment.status,
-                    },
-                    request_id,
-                )
-
-        except Exception:
-            return self.error_response(
-                -31099, "Failed to cancel transaction", request_id
-            )
-
-    @staticmethod
-    def success_response(result, request_id):
-        return Response({"jsonrpc": "2.0", "result": result, "id": request_id})
-
-    @staticmethod
-    def error_response(code, message, request_id):
-        return Response(
-            {
-                "jsonrpc": "2.0",
-                "error": {
-                    "code": code,
-                    "message": message,
-                    "data": message,
-                },
-                "id": request_id,
+                'quantity': 1,
+            }],
+            metadata={
+                "user_id": request.user.id,
+                "user_email": request.user.email,
+                "order_id": order.id,
+                "payment_id": payment.id,
             },
+            mode='payment',
+            success_url=settings.FRONTEND_URL + f"/payment-success?course-slug={course.slug}",
+            cancel_url=settings.FRONTEND_URL + "/payment-cancel",
         )
 
-    @staticmethod
-    def check_auth(request, token) -> bool:
-        auth_header = request.META.get("HTTP_AUTHORIZATION")
-        if not auth_header:
-            return False
+        return Response({
+            'checkout_session_id': checkout_session.id,
+            'order': OrderSerializer(order).data
+        })
 
-        encoded_token = auth_header.split(" ")[-1]
 
-        decoded = base64.b64decode(encoded_token).decode()
-        username, actual_token = decoded.split(":", 1)
+@csrf_exempt
+def stripe_webhook(request):
+    payload = request.body
+    sig_header = request.META.get("HTTP_STRIPE_SIGNATURE")
 
-        if token != actual_token:
-            return False
+    try:
+        event = stripe.Webhook.construct_event(
+            payload, sig_header, endpoint_secret
+        )
+    except Exception as e:
+        return HttpResponse(content=str(e), status=400)
 
-        return True
+    if event['type'] == 'checkout.session.completed':
+        session = event['data']['object']
+        user_id = session['metadata']['user_id']
+        order_id = session['metadata']['order_id']
+        payment_id = session['metadata']['payment_id']
+
+        payment = Payment.objects.filter(id=payment_id).first()
+
+        if not payment:
+            return HttpResponse("Payment not found", status=404)
+
+        user = User.objects.filter(id=user_id).first()
+        if user is None:
+            payment.status = Payment.StatusChoices.FAILED
+            payment.reason = Payment.ReasonChoices.TRANSACTION_ERROR
+            payment.save()
+            return HttpResponse(content="User not found", status=404)
+
+        order = Order.objects.filter(id=order_id).first()
+
+        if order is None:
+            payment.status = Payment.StatusChoices.FAILED
+            payment.reason = Payment.ReasonChoices.RECIPIENT_NOT_FOUND
+            payment.save()
+            return HttpResponse(content="Order not found", status=404)
+
+        payment.status = Payment.StatusChoices.COMPLETED
+        payment.order = order
+        payment.transaction_id = session['id']
+        payment.stripe_payment_intent = session['payment_intent']
+        payment.save()
+
+        courses = list(order.courses.all())
+
+        enrollments = [
+            Enrollment(student=user, course=course)
+            for course in courses
+        ]
+
+        Enrollment.objects.bulk_create(enrollments, ignore_conflicts=True)
+
+    return HttpResponse(status=200)

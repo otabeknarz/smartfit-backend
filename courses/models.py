@@ -2,10 +2,11 @@ from django.db import models
 import uuid
 from slugify import slugify
 
+from smartfit.base_model import BaseModel
 from users.models import User
 
 
-class Category(models.Model):
+class Category(BaseModel):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
@@ -18,7 +19,7 @@ class Category(models.Model):
         super(Category, self).save(*args, **kwargs)
 
 
-class Course(models.Model):
+class Course(BaseModel):
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True
     )
@@ -33,9 +34,6 @@ class Course(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     is_published = models.BooleanField(default=False)
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
     def __str__(self):
         return self.title
 
@@ -44,7 +42,7 @@ class Course(models.Model):
         super(Course, self).save(*args, **kwargs)
 
 
-class CoursePart(models.Model):
+class CoursePart(BaseModel):
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True
     )
@@ -54,9 +52,6 @@ class CoursePart(models.Model):
     description = models.TextField(null=True, blank=True)
     order = models.PositiveIntegerField(default=0)
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
     def __str__(self):
         return f"{self.course.title} - {self.title}"
 
@@ -65,7 +60,7 @@ class CoursePart(models.Model):
         super(CoursePart, self).save(*args, **kwargs)
 
 
-class Lesson(models.Model):
+class Lesson(BaseModel):
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True
     )
@@ -80,9 +75,6 @@ class Lesson(models.Model):
     duration = models.DurationField(null=True, blank=True)
     is_free_preview = models.BooleanField(default=False)
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
     def __str__(self):
         return f"{self.part.course.title} - {self.part.title} - {self.title}"
 
@@ -91,20 +83,17 @@ class Lesson(models.Model):
         super(Lesson, self).save(*args, **kwargs)
 
 
-class Comment(models.Model):
+class Comment(BaseModel):
     id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True, primary_key=True)
     text = models.TextField(null=True, blank=True)
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name="comments")
     lesson = models.ForeignKey(Lesson, on_delete=models.SET_NULL, null=True, related_name="comments")
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
     def __str__(self):
         return f"{self.user} - {self.lesson}"
 
 
-class Enrollment(models.Model):
+class Enrollment(BaseModel):
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True
     )
@@ -116,41 +105,31 @@ class Enrollment(models.Model):
     )
     enrolled_at = models.DateTimeField(auto_now_add=True)
 
-    objects = models.Manager()
-
     class Meta:
         unique_together = ("student", "course")
 
 
-class Progress(models.Model):
+class Progress(BaseModel):
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True
     )
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="progress")
     lessons = models.ManyToManyField(Lesson)
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
-    def get_course_progress(self, course):
-        return self.lessons.objects.filter(course=course)
-
-
-class OneTimeVideoToken(models.Model):
+class OneTimeVideoToken(BaseModel):
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True
     )
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="one_time_video_tokens", null=True)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name="tokens")
     is_used = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"Token for <{self.lesson.title}>"
+        return f"Token for {self.lesson.title}"
 
 
-class Diet(models.Model):
+class Diet(BaseModel):
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True
     )

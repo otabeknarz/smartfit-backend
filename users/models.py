@@ -3,6 +3,8 @@ from django.contrib.auth.models import AbstractUser
 import uuid
 import random
 
+from smartfit.base_model import BaseModel
+
 
 def get_random_id():
     return str(random.randint(1000000000, 9999999999))
@@ -26,13 +28,16 @@ class User(AbstractUser):
     age = models.PositiveSmallIntegerField(null=True, blank=True)
     height = models.FloatField(null=True, blank=True)
 
+    def __str__(self):
+        return f"@{self.username}"
+
     def save(self, *args, **kwargs):
         if not self.pk and not self.username:
             self.username = self.id
         super(User, self).save(*args, **kwargs)
 
 
-class CustomSession(models.Model):
+class CustomSession(BaseModel):
     user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
@@ -44,13 +49,12 @@ class CustomSession(models.Model):
     ip_address = models.CharField(max_length=64, null=True, blank=True)
     device_info = models.CharField(max_length=512, null=True, blank=True)
     last_online = models.DateTimeField(auto_now=True)
-    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.user.username} - {self.device_info}"
+        return f"{self.user} - {self.device_info}"
 
 
-class OnboardingAnswers(models.Model):
+class OnboardingAnswers(BaseModel):
     class GoalsChoices(models.TextChoices):
         WEIGHT_LOSS = "weight_loss", "Weight Loss"
         MUSCLE_GAIN = "muscle_gain", "Muscle Gain"
@@ -85,8 +89,5 @@ class OnboardingAnswers(models.Model):
     training_frequency = models.CharField(max_length=20, choices=TrainingFrequencyChoices.choices, null=True, blank=True)
     consultation = models.CharField(max_length=20, choices=ConsultationChoices.choices, null=True, blank=True)
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
     def __str__(self):
-        return f"{self.user.username} - {self.goal} - {self.timeline} - {self.experience_level}"
+        return f"{self.user} - {self.goal} - {self.timeline} - {self.experience_level}"

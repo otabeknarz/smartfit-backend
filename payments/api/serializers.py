@@ -18,3 +18,7 @@ class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
         fields = "__all__"
+
+
+class CreatePaymentSerializer(serializers.Serializer):
+    course_id = serializers.CharField(required=True)

@@ -1,6 +1,8 @@
-from django.urls import path
+from rest_framework.routers import DefaultRouter
 from . import views
 
-urlpatterns = [
-    path("payme/", views.PaymeAPIView.as_view()),
-]
+
+default_router = DefaultRouter()
+default_router.register(r'payments', views.PaymentViewSet)
+
+urlpatterns = default_router.urls

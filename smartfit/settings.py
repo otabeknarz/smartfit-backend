@@ -187,3 +187,12 @@ PAYME_ACCOUNT_FIELD = "order_id"
 PAYME_AMOUNT_FIELD = "total_amount"
 PAYME_ACCOUNT_MODEL = "payments.models.Order"
 PAYME_ONE_TIME_PAYMENT = True
+
+
+# Stripe settings
+STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
+STRIPE_WEBHOOK_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET")
+FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
+
+if not STRIPE_SECRET_KEY or not STRIPE_WEBHOOK_SECRET or not FRONTEND_URL:
+    raise ValueError("STRIPE_SECRET_KEY or STRIPE_WEBHOOK_SECRET not set")

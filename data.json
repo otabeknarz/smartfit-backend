@@ -1,0 +1,4480 @@
+[
+{
+  "model": "users.user",
+  "pk": "1084497801",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Michelemimos",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-24T20:34:39.956Z",
+    "name": "MImi ❤️‍🩹",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1085357487",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Azizbest",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T19:39:53.948Z",
+    "name": "Azizbek Zaripov",
+    "picture": "",
+    "email": null,
+    "phone_number": "998958883369",
+    "gender": "MALE",
+    "age": 18,
+    "height": 172.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1145841053",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "bilalsns",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-29T19:30:21.105Z",
+    "name": "Bilol Bakhrillaev",
+    "picture": "",
+    "email": null,
+    "phone_number": "+998977024779",
+    "gender": "MALE",
+    "age": 69,
+    "height": 142.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1306977014",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "asilbekfr",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:57:02.968Z",
+    "name": "Asilbek Ashurov",
+    "picture": "",
+    "email": null,
+    "phone_number": "998992249717",
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1374252845",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "qmjonatas",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-12T23:25:19.578Z",
+    "name": "Jônatas",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1378025519",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "realabubakr",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T16:13:19.407Z",
+    "name": "H9",
+    "picture": "",
+    "email": null,
+    "phone_number": "998330434313",
+    "gender": "MALE",
+    "age": 13,
+    "height": 160.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1413321699",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "1413321699",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T08:04:38.815Z",
+    "name": "Azizjon Ilxomov",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1450008497",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "1450008497",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-07-30T20:32:59.697Z",
+    "name": "Наталья Жишко",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1456499051",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "thdm02",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-16T05:09:05.075Z",
+    "name": "T H",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1464200560",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "dreamchaser_aa",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:52:31.712Z",
+    "name": "Azizxo'ja Asqarxo'jayev",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1464895573",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "khushnoza_008",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T08:07:09.238Z",
+    "name": "Abdumutalova Xushnoza",
+    "picture": "",
+    "email": null,
+    "phone_number": "998941203185",
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "14778617",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "d_ualimova",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-06T14:22:49.557Z",
+    "name": "Diyora Alimova",
+    "picture": "",
+    "email": null,
+    "phone_number": "14126261445",
+    "gender": "FEMALE",
+    "age": 30,
+    "height": 170.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1482864275",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "WolllG",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-17T07:55:53.904Z",
+    "name": "Leo Still",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1571738256",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "1571738256",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T10:02:38.395Z",
+    "name": "さ",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "160910236",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "imnuruddin",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-11T11:53:33.857Z",
+    "name": "hh",
+    "picture": "",
+    "email": null,
+    "phone_number": "998992990202",
+    "gender": "MALE",
+    "age": 15,
+    "height": 185.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1655577759",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mdddnm",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T13:27:46.245Z",
+    "name": "Madina Abdullayeva",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1801125319",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Ligeirinho25",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-21T14:07:42.335Z",
+    "name": "Ligeirinho 🙅🏽🙏🎖️",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "1928916124",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "khontemurr",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:45:34.376Z",
+    "name": "Хонтемур",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": "MALE",
+    "age": 34,
+    "height": 170.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "2038109198",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "2038109198",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-14T15:51:40.916Z",
+    "name": "Matheus M",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "2128705356",
+  "fields": {
+    "password": "pbkdf2_sha256$870000$FbNYk2LnaT0OP9bMFOJznz$VoeivjlX9n883wB4FFWTNJF75KcmcwqE/b0CEf0I5oM=",
+    "last_login": "2025-08-26T13:13:05.584Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-03-24T08:53:56.923Z",
+    "name": null,
+    "picture": "",
+    "email": "",
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "318106885",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "318106885",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-02T23:40:23.401Z",
+    "name": "Iskander",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "34454424",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "KK90412",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-05T15:50:35.438Z",
+    "name": null,
+    "picture": "",
+    "email": null,
+    "phone_number": "16463066022",
+    "gender": "MALE",
+    "age": 30,
+    "height": 175.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "393053897",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "SK20004",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-02T21:46:25.455Z",
+    "name": null,
+    "picture": "",
+    "email": null,
+    "phone_number": "34664157399",
+    "gender": "MALE",
+    "age": 20,
+    "height": 180.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "502378649",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "502378649",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-26T20:14:36.080Z",
+    "name": "Ignacio San Martin",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5080813917",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jurat1",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T08:05:39.926Z",
+    "name": "jurt",
+    "picture": "",
+    "email": null,
+    "phone_number": "998903553737",
+    "gender": "MALE",
+    "age": 16,
+    "height": 180.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5106607597",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "5106607597",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-13T02:38:51.103Z",
+    "name": "Cearense Por amor",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5153483756",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "5153483756",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-26T03:00:59.968Z",
+    "name": "Aueaue Aue",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5206926217",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "TheDilshodbek",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:47:42.851Z",
+    "name": "Dusatov Dilshodbek",
+    "picture": "",
+    "email": null,
+    "phone_number": "998913181167",
+    "gender": "MALE",
+    "age": 19,
+    "height": 185.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5209541539",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Blbs7",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-21T10:49:26.460Z",
+    "name": "B",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5246754648",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "nematovabrorbek",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-25T17:18:22.537Z",
+    "name": "ab",
+    "picture": "",
+    "email": null,
+    "phone_number": "998903150012",
+    "gender": "MALE",
+    "age": 17,
+    "height": 175.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5251148450",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Z77744uberon50",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-06T14:37:32.627Z",
+    "name": "R10 Uber50%",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5498849006",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "5498849006",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-14T02:53:45.455Z",
+    "name": "A. Victor",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5516499450",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Mikaasssa",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:53:18.184Z",
+    "name": "Malika",
+    "picture": "",
+    "email": null,
+    "phone_number": "998908117443",
+    "gender": "FEMALE",
+    "age": 18,
+    "height": 156.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5551503420",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "otabek_narz",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-24T16:43:13.249Z",
+    "name": "Otabek Narz",
+    "picture": "",
+    "email": "",
+    "phone_number": "998880885998",
+    "gender": "MALE",
+    "age": 17,
+    "height": 165.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5637711673",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jss449",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-20T01:16:05.393Z",
+    "name": "Jsss net",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5697429262",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ogiloy_hamroyeva",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:45:27.159Z",
+    "name": "Hamroyeva O'g'iloy",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5706277893",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Alisher_vibes",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:48:07.380Z",
+    "name": "Alisher Shokirov",
+    "picture": "",
+    "email": null,
+    "phone_number": "+998908226617",
+    "gender": "MALE",
+    "age": 18,
+    "height": 170.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5747895950",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "5747895950",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-22T23:45:14.533Z",
+    "name": "Ysis Vitória",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5833734229",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "thalassophile_o7",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:44:55.498Z",
+    "name": "Mashhura Amanboyeva",
+    "picture": "",
+    "email": null,
+    "phone_number": "998972992110",
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5889481991",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "fonz_1",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:46:09.277Z",
+    "name": "келдибоева зилола",
+    "picture": "",
+    "email": null,
+    "phone_number": "998978005118",
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5924086090",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mirzosharifh",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:56:41.323Z",
+    "name": "Mirzosharif",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "5990619321",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "aliisroilov",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-11T12:55:37.890Z",
+    "name": "Ali isroilov",
+    "picture": "",
+    "email": null,
+    "phone_number": "+998917400270",
+    "gender": "MALE",
+    "age": 17,
+    "height": 164.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "6013064636",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "6013064636",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-15T19:06:26.140Z",
+    "name": "erick",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "6023992625",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "6023992625",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-07-11T01:41:19.079Z",
+    "name": "Mairo Felipe",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "6042885860",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "gureevaolesya",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-03T03:48:40.496Z",
+    "name": "Олеся Гуреева",
+    "picture": "",
+    "email": null,
+    "phone_number": "998901296543",
+    "gender": "FEMALE",
+    "age": 44,
+    "height": 170.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "6164462781",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "o1muslim",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:44:47.867Z",
+    "name": "Muslimbek Zaynobidinov",
+    "picture": "",
+    "email": null,
+    "phone_number": "998943671200",
+    "gender": "MALE",
+    "age": 17,
+    "height": 181.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "6416835784",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "tukhtasinov_husniddin",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T08:02:01.355Z",
+    "name": "Husniddin",
+    "picture": "",
+    "email": null,
+    "phone_number": "998917551803",
+    "gender": "MALE",
+    "age": 16,
+    "height": 170.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "6537629401",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "supersebasty",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-08T15:38:11.683Z",
+    "name": ".•°°•Fly•°°",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "6542105822",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Dilbek",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:53:59.688Z",
+    "name": "Dilbek Ruziyev",
+    "picture": "",
+    "email": null,
+    "phone_number": "998903412715",
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "6571763021",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "6571763021",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-15T16:46:53.852Z",
+    "name": "Gisele Campos",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "6596529404",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "6596529404",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:48:59.111Z",
+    "name": "Karomat",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "6631362147",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "6631362147",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-27T05:59:02.530Z",
+    "name": "Deivison Dantas",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "6651143037",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "pardaboyevv",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T08:34:53.560Z",
+    "name": "Ibrohim",
+    "picture": "",
+    "email": null,
+    "phone_number": "998950286773",
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "6679556422",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Munisa_0401",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:45:20.187Z",
+    "name": "Munisa Raxmonova",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "67293220",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "67293220",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-03T01:12:56.578Z",
+    "name": "Pavel Umurzakov",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": "MALE",
+    "age": 48,
+    "height": 172.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "6861481045",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "6861481045",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-07-22T19:40:12.969Z",
+    "name": "Felipe",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "6996480908",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "6996480908",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-10T05:59:09.954Z",
+    "name": "Nilton Junio Junio",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "7074351713",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "7074351713",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-01T01:16:44.805Z",
+    "name": ".",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": "MALE",
+    "age": 14,
+    "height": 111.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "7088918618",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "7088918618",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-08T14:51:30.066Z",
+    "name": "Emanuel",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "7174232603",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "7174232603",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-01T22:59:20.496Z",
+    "name": "LB",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "7223758826",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "9835938691",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-24T17:46:13.622Z",
+    "name": "Павел Умурзаков",
+    "picture": "images/users/pavel.jpg",
+    "email": "",
+    "phone_number": null,
+    "gender": "MALE",
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "7369984569",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "7369984569",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-04T14:33:46.713Z",
+    "name": "O 7 Sempre on",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "7378361354",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "notresp_hpp",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:54:06.680Z",
+    "name": "Jerker jerky]",
+    "picture": "",
+    "email": null,
+    "phone_number": "+998958486872",
+    "gender": "MALE",
+    "age": 16,
+    "height": 173.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "745308525",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Nemiroff55",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-22T13:30:29.828Z",
+    "name": "Виталий",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "7657934581",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "matheus_silva396",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-22T23:19:08.863Z",
+    "name": "Matheus Silva",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "7700487725",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "najmiddin220",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T09:53:18.054Z",
+    "name": "N",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": "MALE",
+    "age": 18,
+    "height": 183.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "7752994466",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "7752994466",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-11T14:15:33.054Z",
+    "name": ".",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "7842606224",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "7842606224",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-29T18:26:09.164Z",
+    "name": "Márcio Maia",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "7908233254",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "7908233254",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-24T17:18:33.026Z",
+    "name": "Narz",
+    "picture": "",
+    "email": "",
+    "phone_number": null,
+    "gender": "MALE",
+    "age": 17,
+    "height": 111.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "7943520961",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "7943520961",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-28T07:51:34.192Z",
+    "name": "Mubina💙",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "7984125248",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "7984125248",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-13T20:24:50.736Z",
+    "name": "Ricardo",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "849725640",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "tolkuunova",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-20T21:55:49.246Z",
+    "name": "Laziza Tolkunova",
+    "picture": "",
+    "email": null,
+    "phone_number": "19299901771",
+    "gender": "FEMALE",
+    "age": 24,
+    "height": 171.0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "872491405",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Marcelinho76",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-07-22T17:57:11.854Z",
+    "name": "Marcelinho",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "889354044",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "PedroLucasT",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-23T15:25:47.795Z",
+    "name": "Pedro Lucas",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "941978633",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ms1nho",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-07-12T18:55:39.165Z",
+    "name": "Msinho",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": "964017569",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "hida_115",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-07-11T10:10:08.675Z",
+    "name": "Husan",
+    "picture": "",
+    "email": null,
+    "phone_number": null,
+    "gender": null,
+    "age": null,
+    "height": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "03500924-febb-47b2-bc47-a06c9afd824f",
+  "fields": {
+    "user": "5080813917",
+    "goal": "muscle_gain",
+    "timeline": "one_month",
+    "experience_level": "intermediate",
+    "training_frequency": "three_to_four",
+    "consultation": "no",
+    "created_at": "2025-06-28T08:06:37.872Z",
+    "updated_at": "2025-06-28T08:06:37.872Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "10f7d5aa-509c-4d28-a540-411a3485562b",
+  "fields": {
+    "user": "6164462781",
+    "goal": "muscle_gain",
+    "timeline": "two_three_months",
+    "experience_level": "advanced",
+    "training_frequency": "five_plus",
+    "consultation": "yes",
+    "created_at": "2025-06-28T07:46:26.297Z",
+    "updated_at": "2025-06-28T07:46:26.297Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "2ee26dc4-122b-425e-a5f3-9eb6e50ed38a",
+  "fields": {
+    "user": "5706277893",
+    "goal": "strength",
+    "timeline": "two_three_months",
+    "experience_level": "intermediate",
+    "training_frequency": "three_to_four",
+    "consultation": "no",
+    "created_at": "2025-06-28T07:49:25.250Z",
+    "updated_at": "2025-06-28T07:49:25.250Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "3048eac9-18d9-4fa0-a5af-5192ab0fc870",
+  "fields": {
+    "user": "1145841053",
+    "goal": "strength",
+    "timeline": "two_three_months",
+    "experience_level": "advanced",
+    "training_frequency": "five_plus",
+    "consultation": "yes",
+    "created_at": "2025-06-29T19:31:15.061Z",
+    "updated_at": "2025-06-29T19:31:15.061Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "35295190-c7a8-4520-b69f-5f67b8e7a5c9",
+  "fields": {
+    "user": "160910236",
+    "goal": "weight_loss",
+    "timeline": "two_three_months",
+    "experience_level": "intermediate",
+    "training_frequency": "three_to_four",
+    "consultation": "yes",
+    "created_at": "2025-04-11T11:54:24.016Z",
+    "updated_at": "2025-04-11T11:54:24.016Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "48272b8c-d281-4aef-8cb9-c83718a27c52",
+  "fields": {
+    "user": "67293220",
+    "goal": "weight_loss",
+    "timeline": "two_three_months",
+    "experience_level": "intermediate",
+    "training_frequency": "three_to_four",
+    "consultation": "yes",
+    "created_at": "2025-08-26T07:03:38.300Z",
+    "updated_at": "2025-08-26T07:03:38.300Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "52d68e54-4bb4-4cd8-a802-98402df14095",
+  "fields": {
+    "user": "7378361354",
+    "goal": "muscle_gain",
+    "timeline": "two_three_months",
+    "experience_level": "intermediate",
+    "training_frequency": "three_to_four",
+    "consultation": "yes",
+    "created_at": "2025-06-28T07:57:42.133Z",
+    "updated_at": "2025-06-28T07:57:42.133Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "52d95953-3384-46f9-84d6-ab58e5d65595",
+  "fields": {
+    "user": "5551503420",
+    "goal": "weight_loss",
+    "timeline": "one_month",
+    "experience_level": "beginner",
+    "training_frequency": "twice",
+    "consultation": "yes",
+    "created_at": "2025-04-26T05:09:06.006Z",
+    "updated_at": "2025-04-26T05:09:06.006Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "6a07f6d3-2dab-4e83-86d4-4cf907fd041a",
+  "fields": {
+    "user": "5551503420",
+    "goal": "weight_loss",
+    "timeline": "one_month",
+    "experience_level": "beginner",
+    "training_frequency": "twice",
+    "consultation": "yes",
+    "created_at": "2025-04-26T05:16:25.937Z",
+    "updated_at": "2025-04-26T05:16:25.937Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "70a30173-2db1-4b79-a964-548a06525fa2",
+  "fields": {
+    "user": "5551503420",
+    "goal": "weight_loss",
+    "timeline": "one_month",
+    "experience_level": "beginner",
+    "training_frequency": "twice",
+    "consultation": "yes",
+    "created_at": "2025-05-01T16:31:34.900Z",
+    "updated_at": "2025-05-01T16:31:34.900Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "7253bf97-69fe-4103-9686-a30786060779",
+  "fields": {
+    "user": "1378025519",
+    "goal": "weight_loss",
+    "timeline": "one_month",
+    "experience_level": "beginner",
+    "training_frequency": "twice",
+    "consultation": "no",
+    "created_at": "2025-06-28T16:14:29.993Z",
+    "updated_at": "2025-06-28T16:14:29.993Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "7348e25d-14b3-4b99-b64a-2ce84ad677a5",
+  "fields": {
+    "user": "5246754648",
+    "goal": "muscle_gain",
+    "timeline": "one_month",
+    "experience_level": "advanced",
+    "training_frequency": "three_to_four",
+    "consultation": "no",
+    "created_at": "2025-06-25T17:19:27.448Z",
+    "updated_at": "2025-06-25T17:19:27.448Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "7fdcea4a-0299-45ce-8e7a-179d5b8ac751",
+  "fields": {
+    "user": "6042885860",
+    "goal": "weight_loss",
+    "timeline": "long_term",
+    "experience_level": "advanced",
+    "training_frequency": "three_to_four",
+    "consultation": "yes",
+    "created_at": "2025-04-03T03:51:15.862Z",
+    "updated_at": "2025-04-03T03:51:15.862Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "86a0a96a-4065-42b4-980f-c77411410f8f",
+  "fields": {
+    "user": "393053897",
+    "goal": "weight_loss",
+    "timeline": "two_three_months",
+    "experience_level": "intermediate",
+    "training_frequency": "three_to_four",
+    "consultation": "yes",
+    "created_at": "2025-04-02T21:47:08.217Z",
+    "updated_at": "2025-04-02T21:47:08.217Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "8c8b2605-a328-4385-acc0-9e7d7dc7ca7f",
+  "fields": {
+    "user": "849725640",
+    "goal": "muscle_gain",
+    "timeline": "two_three_months",
+    "experience_level": "intermediate",
+    "training_frequency": "three_to_four",
+    "consultation": "yes",
+    "created_at": "2025-05-20T21:56:56.652Z",
+    "updated_at": "2025-05-20T21:56:56.652Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "93c96fb1-a6f3-4b08-8885-71b9eee1f8c8",
+  "fields": {
+    "user": "1928916124",
+    "goal": "weight_loss",
+    "timeline": "one_month",
+    "experience_level": "intermediate",
+    "training_frequency": "three_to_four",
+    "consultation": "yes",
+    "created_at": "2025-06-28T07:47:05.656Z",
+    "updated_at": "2025-06-28T07:47:05.656Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "b25ec290-4d3f-4403-8fc1-87ad2443c85b",
+  "fields": {
+    "user": "5551503420",
+    "goal": "weight_loss",
+    "timeline": "one_month",
+    "experience_level": "beginner",
+    "training_frequency": "twice",
+    "consultation": "yes",
+    "created_at": "2025-04-01T12:00:20.871Z",
+    "updated_at": "2025-04-01T12:00:20.871Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "c6c91a2b-b395-43a0-be90-43e6c4734037",
+  "fields": {
+    "user": "34454424",
+    "goal": "muscle_gain",
+    "timeline": "two_three_months",
+    "experience_level": "intermediate",
+    "training_frequency": "three_to_four",
+    "consultation": "yes",
+    "created_at": "2025-04-05T15:53:14.278Z",
+    "updated_at": "2025-04-05T15:53:14.278Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "d72e215f-19be-4401-990e-9e9c04fbf41d",
+  "fields": {
+    "user": "5990619321",
+    "goal": "muscle_gain",
+    "timeline": "one_month",
+    "experience_level": "intermediate",
+    "training_frequency": "three_to_four",
+    "consultation": "yes",
+    "created_at": "2025-06-11T13:54:33.977Z",
+    "updated_at": "2025-06-11T13:54:33.977Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "d736094e-799e-423c-a44d-90f0e4971d2c",
+  "fields": {
+    "user": "6416835784",
+    "goal": "muscle_gain",
+    "timeline": "two_three_months",
+    "experience_level": "intermediate",
+    "training_frequency": "three_to_four",
+    "consultation": "yes",
+    "created_at": "2025-06-28T08:04:32.418Z",
+    "updated_at": "2025-06-28T08:04:32.418Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "ea260885-3a78-421c-ae43-ae06a23dd4e4",
+  "fields": {
+    "user": "7700487725",
+    "goal": "endurance",
+    "timeline": "two_three_months",
+    "experience_level": "intermediate",
+    "training_frequency": "three_to_four",
+    "consultation": "yes",
+    "created_at": "2025-06-28T10:41:22.405Z",
+    "updated_at": "2025-06-28T10:41:22.405Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "eb328cd5-3ccd-4eb6-8d72-a7a34f75f6e8",
+  "fields": {
+    "user": "1085357487",
+    "goal": "muscle_gain",
+    "timeline": "two_three_months",
+    "experience_level": "advanced",
+    "training_frequency": "three_to_four",
+    "consultation": "no",
+    "created_at": "2025-06-28T19:43:21.370Z",
+    "updated_at": "2025-06-28T19:43:21.370Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "f9a958d2-6bda-455b-bda7-3d2e4a1ba1cf",
+  "fields": {
+    "user": "5516499450",
+    "goal": "weight_loss",
+    "timeline": "one_month",
+    "experience_level": "intermediate",
+    "training_frequency": "three_to_four",
+    "consultation": "yes",
+    "created_at": "2025-06-28T07:54:46.145Z",
+    "updated_at": "2025-06-28T07:54:46.145Z"
+  }
+},
+{
+  "model": "users.onboardinganswers",
+  "pk": "fb06bf72-448b-4210-a1c1-a311a6737143",
+  "fields": {
+    "user": "5206926217",
+    "goal": "maintenance",
+    "timeline": "two_three_months",
+    "experience_level": "beginner",
+    "training_frequency": "three_to_four",
+    "consultation": "yes",
+    "created_at": "2025-06-28T08:16:45.082Z",
+    "updated_at": "2025-06-28T08:16:45.082Z"
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "316d7110-c5c6-466c-9055-6af1f2fbc890",
+  "fields": {
+    "created_at": "2025-07-29T10:29:25.042Z",
+    "updated_at": "2025-07-29T10:29:25.042Z",
+    "user": "2128705356",
+    "total_amount": "300000.00",
+    "courses": [
+      "32fa5bf0-8ca1-48f6-a563-cd310648d3cf"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "44fb9280-525b-47cd-a9fe-ad7bcabd9369",
+  "fields": {
+    "created_at": "2025-07-30T03:09:10.633Z",
+    "updated_at": "2025-07-30T03:09:10.633Z",
+    "user": "5551503420",
+    "total_amount": "300000.00",
+    "courses": [
+      "8a329659-fa9f-477f-9f56-af1f7d3ee3b0"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "5751f70c-2975-4fba-9261-96390c7b1c7c",
+  "fields": {
+    "created_at": "2025-07-02T22:02:38.927Z",
+    "updated_at": "2025-07-02T22:02:38.927Z",
+    "user": "2128705356",
+    "total_amount": "300000.00",
+    "courses": [
+      "1043c539-a84d-4351-8680-157f33906ad4"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "5fe38e97-3d7b-4eec-82cc-caa06648fb0d",
+  "fields": {
+    "created_at": "2025-08-04T08:09:21.724Z",
+    "updated_at": "2025-08-04T08:09:21.724Z",
+    "user": "5551503420",
+    "total_amount": "300000.00",
+    "courses": [
+      "32fa5bf0-8ca1-48f6-a563-cd310648d3cf"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "671a7f13-e2e6-426c-a7f9-e1012a83bd5b",
+  "fields": {
+    "created_at": "2025-07-02T22:00:48.231Z",
+    "updated_at": "2025-07-02T22:00:48.231Z",
+    "user": "2128705356",
+    "total_amount": "300000.00",
+    "courses": [
+      "1043c539-a84d-4351-8680-157f33906ad4"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "735555bf-cb68-4fff-825a-601c58f6b5f8",
+  "fields": {
+    "created_at": "2025-07-30T03:14:35.071Z",
+    "updated_at": "2025-07-30T03:14:35.071Z",
+    "user": "5551503420",
+    "total_amount": "300000.00",
+    "courses": [
+      "8e2a9497-a3fb-4932-a002-882ffbd0af4d"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "7d803c0b-9b05-4d9f-86b4-06aca3225954",
+  "fields": {
+    "created_at": "2025-08-26T07:06:29.965Z",
+    "updated_at": "2025-08-26T07:06:29.965Z",
+    "user": "67293220",
+    "total_amount": "300000.00",
+    "courses": [
+      "32fa5bf0-8ca1-48f6-a563-cd310648d3cf"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "8223ac18-535d-4c88-8fda-81edf785eb15",
+  "fields": {
+    "created_at": "2025-08-26T05:09:14.020Z",
+    "updated_at": "2025-08-26T05:09:14.020Z",
+    "user": "5551503420",
+    "total_amount": "300000.00",
+    "courses": [
+      "32fa5bf0-8ca1-48f6-a563-cd310648d3cf"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "a0114948-e19a-42d1-b9c4-857eb5797acc",
+  "fields": {
+    "created_at": "2025-08-26T07:06:34.806Z",
+    "updated_at": "2025-08-26T07:06:34.806Z",
+    "user": "67293220",
+    "total_amount": "300000.00",
+    "courses": [
+      "32fa5bf0-8ca1-48f6-a563-cd310648d3cf"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "b2cdd66b-7285-4a39-9044-5f3410634c41",
+  "fields": {
+    "created_at": "2025-07-03T16:58:28.887Z",
+    "updated_at": "2025-07-03T16:58:28.887Z",
+    "user": "2128705356",
+    "total_amount": "300000.00",
+    "courses": [
+      "1043c539-a84d-4351-8680-157f33906ad4"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "b7981e55-f683-48a6-ab0c-42837d387bf8",
+  "fields": {
+    "created_at": "2025-08-10T09:56:56.490Z",
+    "updated_at": "2025-08-10T09:56:56.490Z",
+    "user": "34454424",
+    "total_amount": "300000.00",
+    "courses": [
+      "8e2a9497-a3fb-4932-a002-882ffbd0af4d"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "b960751d-93d1-4966-ad00-5050d90c1579",
+  "fields": {
+    "created_at": "2025-07-30T03:11:34.966Z",
+    "updated_at": "2025-07-30T03:11:34.966Z",
+    "user": "5551503420",
+    "total_amount": "300000.00",
+    "courses": [
+      "8a329659-fa9f-477f-9f56-af1f7d3ee3b0"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "c26b7e8c-588c-48ee-ab46-1438716b45bb",
+  "fields": {
+    "created_at": "2025-08-26T07:08:49.855Z",
+    "updated_at": "2025-08-26T07:08:49.855Z",
+    "user": "67293220",
+    "total_amount": "300000.00",
+    "courses": [
+      "32fa5bf0-8ca1-48f6-a563-cd310648d3cf"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "c5e24720-41ad-463d-8da2-7f3aa39f6517",
+  "fields": {
+    "created_at": "2025-07-30T03:08:23.146Z",
+    "updated_at": "2025-07-30T03:08:23.146Z",
+    "user": "5551503420",
+    "total_amount": "300000.00",
+    "courses": [
+      "8a329659-fa9f-477f-9f56-af1f7d3ee3b0"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "cb5a3a77-ce8f-425d-9f41-39ff0908c1fa",
+  "fields": {
+    "created_at": "2025-07-30T03:11:18.625Z",
+    "updated_at": "2025-07-30T03:11:18.625Z",
+    "user": "5551503420",
+    "total_amount": "300000.00",
+    "courses": [
+      "8a329659-fa9f-477f-9f56-af1f7d3ee3b0"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "d1e82702-84d2-451f-ae7c-43e6a4e4b46f",
+  "fields": {
+    "created_at": "2025-08-10T09:56:55.479Z",
+    "updated_at": "2025-08-10T09:56:55.479Z",
+    "user": "34454424",
+    "total_amount": "300000.00",
+    "courses": [
+      "8e2a9497-a3fb-4932-a002-882ffbd0af4d"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "d849c590-28fd-4643-be4c-9e786a6fc94d",
+  "fields": {
+    "created_at": "2025-08-10T09:56:56.036Z",
+    "updated_at": "2025-08-10T09:56:56.036Z",
+    "user": "34454424",
+    "total_amount": "300000.00",
+    "courses": [
+      "8e2a9497-a3fb-4932-a002-882ffbd0af4d"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "e367ee7a-029b-48ce-ba2c-4cc03e640915",
+  "fields": {
+    "created_at": "2025-07-03T17:03:16.156Z",
+    "updated_at": "2025-07-03T17:03:16.156Z",
+    "user": "2128705356",
+    "total_amount": "300000.00",
+    "courses": [
+      "1043c539-a84d-4351-8680-157f33906ad4"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "e6e0acac-f28c-49c0-ace0-b8fd9ec8807a",
+  "fields": {
+    "created_at": "2025-07-03T17:04:43.512Z",
+    "updated_at": "2025-07-03T17:04:43.512Z",
+    "user": "2128705356",
+    "total_amount": "300000.00",
+    "courses": [
+      "1043c539-a84d-4351-8680-157f33906ad4"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "eba10450-025f-4c24-b886-4e1e48210d9c",
+  "fields": {
+    "created_at": "2025-07-30T03:09:46.837Z",
+    "updated_at": "2025-07-30T03:09:46.837Z",
+    "user": "5551503420",
+    "total_amount": "300000.00",
+    "courses": [
+      "8a329659-fa9f-477f-9f56-af1f7d3ee3b0"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "ed1282b7-7a8a-4a30-b0db-e62e4daf7753",
+  "fields": {
+    "created_at": "2025-07-03T17:05:14.869Z",
+    "updated_at": "2025-07-03T17:05:14.869Z",
+    "user": "2128705356",
+    "total_amount": "300000.00",
+    "courses": [
+      "1043c539-a84d-4351-8680-157f33906ad4"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "f0926a5c-bbae-4673-bc2b-385d91720854",
+  "fields": {
+    "created_at": "2025-08-26T07:07:31.500Z",
+    "updated_at": "2025-08-26T07:07:31.500Z",
+    "user": "67293220",
+    "total_amount": "300000.00",
+    "courses": [
+      "32fa5bf0-8ca1-48f6-a563-cd310648d3cf"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "f9c4b125-fafd-4406-85fb-48f25aa89122",
+  "fields": {
+    "created_at": "2025-07-30T02:56:16.716Z",
+    "updated_at": "2025-07-30T02:56:16.716Z",
+    "user": "2128705356",
+    "total_amount": "300000.00",
+    "courses": [
+      "8a329659-fa9f-477f-9f56-af1f7d3ee3b0"
+    ]
+  }
+},
+{
+  "model": "payments.order",
+  "pk": "fa2b9faf-6235-407d-96f0-7775b7bd701e",
+  "fields": {
+    "created_at": "2025-07-30T03:09:23.753Z",
+    "updated_at": "2025-07-30T03:09:23.753Z",
+    "user": "5551503420",
+    "total_amount": "300000.00",
+    "courses": [
+      "8a329659-fa9f-477f-9f56-af1f7d3ee3b0"
+    ]
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 1,
+  "fields": {
+    "name": "Full body",
+    "slug": "full-body",
+    "description": "",
+    "created_at": "2025-07-30T03:09:23.753Z",
+    "updated_at": "2025-07-30T03:09:23.753Z"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": "1043c539-a84d-4351-8680-157f33906ad4",
+  "fields": {
+    "title": "Домашний Курс HIIT",
+    "slug": "domashnii-kurs-hiit",
+    "thumbnail": "images/course_thumbnails/hiit.jpg",
+    "description": "Интенсивный интервальный тренинг для сжигания жира, улучшения выносливости и ускорения метаболизма — без необходимости посещать спортзал. \r\nВыполнять 45 секунд каждое упражнения и отдых 30 секунд. Делать 3 подхода",
+    "category": 1,
+    "price": "300000.00",
+    "is_published": true,
+    "created_at": "2025-04-21T08:53:32.907Z",
+    "updated_at": "2025-04-21T08:53:32.907Z",
+    "trainers": [
+      "7223758826"
+    ]
+  }
+},
+{
+  "model": "courses.course",
+  "pk": "32fa5bf0-8ca1-48f6-a563-cd310648d3cf",
+  "fields": {
+    "title": "Тренировка для новичков - 3 раза в неделю",
+    "slug": "trenirovka-dlia-novichkov-3-raza-v-nedeliu",
+    "thumbnail": "images/course_thumbnails/pavel.jpg",
+    "description": "Этот курс предназначен для тех, кто только начинает путь в бодибилдинге и хочет правильно и безопасно построить мощное, эстетичное тело. Мы шаг за шагом разберёмся с техникой упражнений, базовой анатомией, питанием и восстановлением. Без перегруза теорией — только практичные знания и понятные схемы тренировок.",
+    "category": 1,
+    "price": "300000.00",
+    "is_published": true,
+    "created_at": "2025-03-24T17:47:06.605Z",
+    "updated_at": "2025-04-08T09:47:50.813Z",
+    "trainers": [
+      "7223758826"
+    ]
+  }
+},
+{
+  "model": "courses.course",
+  "pk": "8a329659-fa9f-477f-9f56-af1f7d3ee3b0",
+  "fields": {
+    "title": "Тренировка для новичков - 5 раза в неделю",
+    "slug": "trenirovka-dlia-novichkov-5-raza-v-nedeliu",
+    "thumbnail": "images/course_thumbnails/pavel_w1sqliG.jpg",
+    "description": "",
+    "category": 1,
+    "price": "400000.00",
+    "is_published": true,
+    "created_at": "2025-05-30T07:42:55.778Z",
+    "updated_at": "2025-08-26T13:13:23.370Z",
+    "trainers": [
+      "67293220"
+    ]
+  }
+},
+{
+  "model": "courses.course",
+  "pk": "8e2a9497-a3fb-4932-a002-882ffbd0af4d",
+  "fields": {
+    "title": "Тренировка для новичков - 4 раза в неделю",
+    "slug": "trenirovka-dlia-novichkov-4-raza-v-nedeliu",
+    "thumbnail": "images/course_thumbnails/pavel_YX5HQlz.jpg",
+    "description": "",
+    "category": 1,
+    "price": "350000.00",
+    "is_published": true,
+    "created_at": "2025-04-18T18:58:36.463Z",
+    "updated_at": "2025-08-26T13:13:31.823Z",
+    "trainers": [
+      "7223758826"
+    ]
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "01b9cdcb-010f-4a53-a97d-55c4de499264",
+  "fields": {
+    "course": "8a329659-fa9f-477f-9f56-af1f7d3ee3b0",
+    "title": "1 день",
+    "slug": "trenirovka-dlia-novichkov-5-raza-v-nedeliu-1-den",
+    "description": "",
+    "order": 0,
+    "created_at": "2025-05-30T07:43:23.960Z",
+    "updated_at": "2025-05-30T07:43:23.960Z"
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "0d74dfcb-ef0d-41a7-bc71-6162112bc687",
+  "fields": {
+    "course": "1043c539-a84d-4351-8680-157f33906ad4",
+    "title": "2 день",
+    "slug": "domashnii-kurs-hiit-2-den",
+    "description": "",
+    "order": 1,
+    "created_at": "2025-04-21T08:58:49.603Z",
+    "updated_at": "2025-04-21T08:58:49.603Z"
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "22ff2de7-b8a2-484a-a7fd-67313dbb1390",
+  "fields": {
+    "course": "8e2a9497-a3fb-4932-a002-882ffbd0af4d",
+    "title": "2 день",
+    "slug": "trenirovka-dlia-novichkov-4-raza-v-nedeliu-2-den",
+    "description": "",
+    "order": 1,
+    "created_at": "2025-04-19T17:47:41.472Z",
+    "updated_at": "2025-04-21T08:44:01.488Z"
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "34646f2c-924b-48bf-8870-e5393a617f4e",
+  "fields": {
+    "course": "32fa5bf0-8ca1-48f6-a563-cd310648d3cf",
+    "title": "3 день",
+    "slug": "trenirovka-dlia-novichkov-3-raza-v-nedeliu3-den",
+    "description": "",
+    "order": 2,
+    "created_at": "2025-04-01T21:04:49.534Z",
+    "updated_at": "2025-04-18T19:03:15.590Z"
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "41e1b6cb-cbf6-46ba-8922-6a91c49b544c",
+  "fields": {
+    "course": "8a329659-fa9f-477f-9f56-af1f7d3ee3b0",
+    "title": "3 день",
+    "slug": "trenirovka-dlia-novichkov-5-raza-v-nedeliu-3-den",
+    "description": "",
+    "order": 2,
+    "created_at": "2025-05-30T08:19:45.248Z",
+    "updated_at": "2025-05-30T08:19:45.248Z"
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "546deb6e-dbb4-4bac-a1d8-5aa26e6573dd",
+  "fields": {
+    "course": "8e2a9497-a3fb-4932-a002-882ffbd0af4d",
+    "title": "4 день",
+    "slug": "trenirovka-dlia-novichkov-4-raza-v-nedeliu-4-den",
+    "description": "",
+    "order": 3,
+    "created_at": "2025-04-21T08:44:25.944Z",
+    "updated_at": "2025-04-21T08:44:25.944Z"
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "62160712-4a9e-4e42-9933-17efedc18c6b",
+  "fields": {
+    "course": "8a329659-fa9f-477f-9f56-af1f7d3ee3b0",
+    "title": "4 день",
+    "slug": "trenirovka-dlia-novichkov-5-raza-v-nedeliu-4-den",
+    "description": "",
+    "order": 3,
+    "created_at": "2025-05-30T08:22:12.406Z",
+    "updated_at": "2025-05-30T08:24:14.578Z"
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "6c82e28e-434a-4b0d-b348-3a3ced0ff0e5",
+  "fields": {
+    "course": "32fa5bf0-8ca1-48f6-a563-cd310648d3cf",
+    "title": "1 день",
+    "slug": "trenirovka-dlia-novichkov-3-raza-v-nedeliu1-den",
+    "description": "",
+    "order": 0,
+    "created_at": "2025-03-24T17:47:25.065Z",
+    "updated_at": "2025-04-18T19:03:15.578Z"
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "846b7010-19fb-4083-af11-b2fc9dea2ff1",
+  "fields": {
+    "course": "1043c539-a84d-4351-8680-157f33906ad4",
+    "title": "3 день",
+    "slug": "domashnii-kurs-hiit-3-den",
+    "description": "",
+    "order": 2,
+    "created_at": "2025-04-21T09:03:10.174Z",
+    "updated_at": "2025-04-21T09:03:10.174Z"
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "925acd35-d00e-4b70-8160-fad848e8830c",
+  "fields": {
+    "course": "1043c539-a84d-4351-8680-157f33906ad4",
+    "title": "1 день",
+    "slug": "domashnii-kurs-hiit-1-den",
+    "description": "",
+    "order": 0,
+    "created_at": "2025-04-21T08:54:42.019Z",
+    "updated_at": "2025-04-21T08:54:42.019Z"
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "9be47c86-5310-488b-9410-6b4229ab136b",
+  "fields": {
+    "course": "8e2a9497-a3fb-4932-a002-882ffbd0af4d",
+    "title": "1 день",
+    "slug": "trenirovka-dlia-novichkov-4-raza-v-nedeliu1-den",
+    "description": "",
+    "order": 0,
+    "created_at": "2025-04-18T18:59:07.658Z",
+    "updated_at": "2025-04-18T19:03:15.596Z"
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "c9d15fa3-3f28-4f9f-8236-ff4a4d767b4a",
+  "fields": {
+    "course": "8e2a9497-a3fb-4932-a002-882ffbd0af4d",
+    "title": "3 день",
+    "slug": "trenirovka-dlia-novichkov-4-raza-v-nedeliu-3-den",
+    "description": "",
+    "order": 2,
+    "created_at": "2025-04-21T08:44:12.846Z",
+    "updated_at": "2025-04-21T08:44:12.846Z"
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "e1232207-4a4f-4678-8c0d-085785c22a20",
+  "fields": {
+    "course": "32fa5bf0-8ca1-48f6-a563-cd310648d3cf",
+    "title": "2 день",
+    "slug": "trenirovka-dlia-novichkov-3-raza-v-nedeliu2-den",
+    "description": "",
+    "order": 1,
+    "created_at": "2025-03-25T16:05:39.891Z",
+    "updated_at": "2025-04-18T19:03:15.585Z"
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "e1c8583a-efe1-4472-93fe-35a552f138f7",
+  "fields": {
+    "course": "8a329659-fa9f-477f-9f56-af1f7d3ee3b0",
+    "title": "5 день",
+    "slug": "trenirovka-dlia-novichkov-5-raza-v-nedeliu-5-den",
+    "description": "",
+    "order": 4,
+    "created_at": "2025-05-30T09:48:43.751Z",
+    "updated_at": "2025-05-30T09:48:43.751Z"
+  }
+},
+{
+  "model": "courses.coursepart",
+  "pk": "ef5ff796-4ea3-4d7f-a14b-6c3c19fd2958",
+  "fields": {
+    "course": "8a329659-fa9f-477f-9f56-af1f7d3ee3b0",
+    "title": "2 день",
+    "slug": "trenirovka-dlia-novichkov-5-raza-v-nedeliu-2-den",
+    "description": "",
+    "order": 1,
+    "created_at": "2025-05-30T07:46:14.194Z",
+    "updated_at": "2025-05-30T07:46:14.194Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "00f383cc-8cdc-4ea5-8056-78a9603a0c6a",
+  "fields": {
+    "part": "ef5ff796-4ea3-4d7f-a14b-6c3c19fd2958",
+    "title": "Пресс",
+    "slug": "c-press",
+    "description": "",
+    "video_service_id": "6a4bae35f9aa442f8715c63225594dd6",
+    "order": 3,
+    "duration": "00:00:48",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T07:47:58.706Z",
+    "updated_at": "2025-05-30T07:47:58.706Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "01551eb9-89ca-4bdd-a864-7411988da13e",
+  "fields": {
+    "part": "c9d15fa3-3f28-4f9f-8236-ff4a4d767b4a",
+    "title": "Бицепс - скотт",
+    "slug": "9-bitseps-skott",
+    "description": "",
+    "video_service_id": "f61f3cb7b4464051bae81979129cb15c",
+    "order": 0,
+    "duration": "00:01:25",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:45:00.266Z",
+    "updated_at": "2025-04-21T08:45:00.266Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "0252219f-4f40-4797-a1bb-1acf3be33042",
+  "fields": {
+    "part": "62160712-4a9e-4e42-9933-17efedc18c6b",
+    "title": "Бицепс - Скотт",
+    "slug": "f-bitseps-skott",
+    "description": "",
+    "video_service_id": "10de010ffe5b436dbda13f266ebc8ab1",
+    "order": 5,
+    "duration": "00:01:25",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T09:47:29.671Z",
+    "updated_at": "2025-05-30T09:47:29.671Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "03438e9d-3a34-481f-9db3-8f3d73720437",
+  "fields": {
+    "part": "925acd35-d00e-4b70-8160-fad848e8830c",
+    "title": "3. Планка",
+    "slug": "a-3-planka",
+    "description": "",
+    "video_service_id": "f06e2a0940f846778947e777aec996ef",
+    "order": 2,
+    "duration": "00:00:08",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:55:57.652Z",
+    "updated_at": "2025-04-21T08:55:57.652Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "0554e41a-427e-47c6-ae0f-27b985164382",
+  "fields": {
+    "part": "925acd35-d00e-4b70-8160-fad848e8830c",
+    "title": "1. Джампинг Джек",
+    "slug": "2-1-dzhamping-dzhek",
+    "description": "",
+    "video_service_id": "46a23966fdb64d1d9d8ed0402d8f88be",
+    "order": 0,
+    "duration": "00:00:11",
+    "is_free_preview": true,
+    "created_at": "2025-04-21T08:55:13.533Z",
+    "updated_at": "2025-04-21T08:55:13.533Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "094b2d46-ea0a-4851-98b9-107ad7175d14",
+  "fields": {
+    "part": "6c82e28e-434a-4b0d-b348-3a3ced0ff0e5",
+    "title": "Приседания со штангой",
+    "slug": "a-prisedaniia-so-shtangoi",
+    "description": "",
+    "video_service_id": "f316bea0537f4880917a815f53a08cc9",
+    "order": 7,
+    "duration": "00:01:24",
+    "is_free_preview": false,
+    "created_at": "2025-03-31T02:13:48.943Z",
+    "updated_at": "2025-04-18T19:11:17.850Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "0984c911-97c5-4176-a315-fa398dfbe5ab",
+  "fields": {
+    "part": "e1232207-4a4f-4678-8c0d-085785c22a20",
+    "title": "Грудь в наклоне",
+    "slug": "7-grud-v-naklone",
+    "description": "",
+    "video_service_id": "d476abf0428e441994aca4680075a7c0",
+    "order": 1,
+    "duration": "00:00:46",
+    "is_free_preview": false,
+    "created_at": "2025-04-01T20:59:12.217Z",
+    "updated_at": "2025-04-18T19:11:17.884Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "0c842832-7cd5-4e2f-ba5a-192dad825b0d",
+  "fields": {
+    "part": "e1c8583a-efe1-4472-93fe-35a552f138f7",
+    "title": "Икры на стонке",
+    "slug": "c-ikry-na-stonke",
+    "description": "",
+    "video_service_id": "aac7657f809d430da3a43776bc473b9f",
+    "order": 3,
+    "duration": "00:00:43",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T09:50:29.615Z",
+    "updated_at": "2025-05-30T09:50:29.615Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "0e023489-ee17-4f7b-bcc1-dfd0d35cd9b3",
+  "fields": {
+    "part": "ef5ff796-4ea3-4d7f-a14b-6c3c19fd2958",
+    "title": "Тяга сидя - спина",
+    "slug": "e-tiaga-sidia-spina",
+    "description": "",
+    "video_service_id": "6829dae33c334213b42a9c4240811e02",
+    "order": 0,
+    "duration": "00:01:09",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T07:46:46.484Z",
+    "updated_at": "2025-05-30T07:46:46.484Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "1213147b-3253-4cf8-94c3-42ec0e1f6d13",
+  "fields": {
+    "part": "c9d15fa3-3f28-4f9f-8236-ff4a4d767b4a",
+    "title": "Бицепс с гантелями",
+    "slug": "2-bitseps-s-ganteliami",
+    "description": "",
+    "video_service_id": "25a607ebfb3c4847ba2242dcd2a7bb0e",
+    "order": 6,
+    "duration": "00:00:48",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:48:18.219Z",
+    "updated_at": "2025-04-21T08:48:18.219Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "1580935e-d432-400d-85aa-67900672ab38",
+  "fields": {
+    "part": "e1232207-4a4f-4678-8c0d-085785c22a20",
+    "title": "Пресс",
+    "slug": "4-press",
+    "description": "",
+    "video_service_id": "4dbbb1d8a40d49f484b4ccf28aa355c4",
+    "order": 6,
+    "duration": "00:01:02",
+    "is_free_preview": false,
+    "created_at": "2025-04-01T21:02:22.074Z",
+    "updated_at": "2025-04-18T19:11:17.904Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "190bb75c-c7c6-484e-bd9f-2306377774cc",
+  "fields": {
+    "part": "ef5ff796-4ea3-4d7f-a14b-6c3c19fd2958",
+    "title": "Поясница",
+    "slug": "7-poiasnitsa",
+    "description": "",
+    "video_service_id": "bf4ed980046e4022836f3544a71077e1",
+    "order": 1,
+    "duration": "00:01:16",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T07:47:11.496Z",
+    "updated_at": "2025-05-30T07:47:11.496Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "20a1a547-2fee-400b-8f23-0f3a1f87750d",
+  "fields": {
+    "part": "0d74dfcb-ef0d-41a7-bc71-6162112bc687",
+    "title": "5. Боковые скручивания",
+    "slug": "f-5-bokovye-skruchivaniia",
+    "description": "",
+    "video_service_id": "7270d65a478e47c5944cfd6a52e5b68d",
+    "order": 4,
+    "duration": "00:00:11",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:01:14.703Z",
+    "updated_at": "2025-04-21T09:01:14.703Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "239e5445-1958-44c4-afb1-f90a9a24e7a2",
+  "fields": {
+    "part": "9be47c86-5310-488b-9410-6b4229ab136b",
+    "title": "Пресс",
+    "slug": "9-press",
+    "description": "",
+    "video_service_id": "c96d27d66e3b4dc7b03e8db92046acf8",
+    "order": 1,
+    "duration": "00:01:02",
+    "is_free_preview": false,
+    "created_at": "2025-04-18T19:05:28.434Z",
+    "updated_at": "2025-04-18T19:11:17.938Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "255b8924-164d-4ee6-b389-bd6eab365637",
+  "fields": {
+    "part": "01b9cdcb-010f-4a53-a97d-55c4de499264",
+    "title": "Брусья",
+    "slug": "6-brusia",
+    "description": "",
+    "video_service_id": "9a7a0f8589814659be98710ad36bd8d9",
+    "order": 3,
+    "duration": "00:00:47",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T07:44:59.793Z",
+    "updated_at": "2025-05-30T07:44:59.794Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "26539063-0f24-4726-aa44-5904116b4e33",
+  "fields": {
+    "part": "34646f2c-924b-48bf-8870-e5393a617f4e",
+    "title": "Спина тяга",
+    "slug": "f-spina-tiaga",
+    "description": "",
+    "video_service_id": "dfc142229b504a6a9ebd2af91541a9c7",
+    "order": 1,
+    "duration": "00:01:43",
+    "is_free_preview": false,
+    "created_at": "2025-04-01T21:23:03.573Z",
+    "updated_at": "2025-04-18T19:11:17.913Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "2694b80d-41ee-4820-98fb-04a16114e5cd",
+  "fields": {
+    "part": "6c82e28e-434a-4b0d-b348-3a3ced0ff0e5",
+    "title": "Спина тяга",
+    "slug": "1-spina-tiaga",
+    "description": "",
+    "video_service_id": "19ceb8b5cada4ff09f467c299e85e53d",
+    "order": 1,
+    "duration": "00:01:05",
+    "is_free_preview": false,
+    "created_at": "2025-03-24T17:48:11.307Z",
+    "updated_at": "2025-04-18T19:11:17.855Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "269830af-512c-4b14-87ca-c41623a4f864",
+  "fields": {
+    "part": "546deb6e-dbb4-4bac-a1d8-5aa26e6573dd",
+    "title": "Выпады со штангой",
+    "slug": "1-vypady-so-shtangoi",
+    "description": "",
+    "video_service_id": "1c03cc45a43d49eeb9a8daddba5d06dd",
+    "order": 2,
+    "duration": "00:01:27",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:49:27.314Z",
+    "updated_at": "2025-04-21T08:49:27.315Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "26fbe224-fd6c-4c66-8303-a867771f3692",
+  "fields": {
+    "part": "9be47c86-5310-488b-9410-6b4229ab136b",
+    "title": "Спина тяга",
+    "slug": "d-spina-tiaga",
+    "description": "",
+    "video_service_id": "16065d3bdeba44be9656a212f70d6876",
+    "order": 6,
+    "duration": "00:01:05",
+    "is_free_preview": false,
+    "created_at": "2025-04-18T19:12:41.268Z",
+    "updated_at": "2025-04-18T19:12:41.268Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "2a46abf9-1ca4-47f2-9e7a-24811cbb21ed",
+  "fields": {
+    "part": "34646f2c-924b-48bf-8870-e5393a617f4e",
+    "title": "Пресс подъем ног",
+    "slug": "c-press-podem-nog",
+    "description": "",
+    "video_service_id": "bcb7016ee8554df2b0c21e3672fb9def",
+    "order": 6,
+    "duration": "00:00:48",
+    "is_free_preview": false,
+    "created_at": "2025-04-01T21:24:59.035Z",
+    "updated_at": "2025-04-18T19:11:17.931Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "2b39a385-335a-4b52-b4e7-7596122c6b2c",
+  "fields": {
+    "part": "546deb6e-dbb4-4bac-a1d8-5aa26e6573dd",
+    "title": "Предплечья со штангой",
+    "slug": "3-predplechia-so-shtangoi",
+    "description": "",
+    "video_service_id": "91d5f5e3484142c8a92c467216a6db6d",
+    "order": 0,
+    "duration": "00:01:00",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:48:47.863Z",
+    "updated_at": "2025-04-21T08:48:47.863Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "2cfae1b2-3228-47e9-8e65-ef07cc1f7aed",
+  "fields": {
+    "part": "62160712-4a9e-4e42-9933-17efedc18c6b",
+    "title": "Трицепс на блоке",
+    "slug": "2-tritseps-na-bloke",
+    "description": "",
+    "video_service_id": "a81cf9993dba4fc68a661913511e8711",
+    "order": 2,
+    "duration": "00:01:21",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T09:46:05.023Z",
+    "updated_at": "2025-05-30T09:46:05.023Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "2eae4ef0-e699-42eb-a7f4-5a33eb14551a",
+  "fields": {
+    "part": "925acd35-d00e-4b70-8160-fad848e8830c",
+    "title": "6. Пресс ножницы",
+    "slug": "6-6-press-nozhnitsy",
+    "description": "",
+    "video_service_id": "629fa8a39bf843b0815d2bed10486999",
+    "order": 5,
+    "duration": "00:00:11",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:57:05.000Z",
+    "updated_at": "2025-04-21T08:57:05.000Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "2f167e60-6212-4e4a-bc24-1c961c7f2c64",
+  "fields": {
+    "part": "6c82e28e-434a-4b0d-b348-3a3ced0ff0e5",
+    "title": "Бицепс со штангой",
+    "slug": "2-bitseps-so-shtangoi",
+    "description": "",
+    "video_service_id": "b30ea80d324c436d96a938069923fff9",
+    "order": 4,
+    "duration": "00:01:16",
+    "is_free_preview": false,
+    "created_at": "2025-03-24T19:45:33.777Z",
+    "updated_at": "2025-04-18T19:11:17.859Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "324f1af2-d16e-4864-8b76-2d88c03fbdc7",
+  "fields": {
+    "part": "e1232207-4a4f-4678-8c0d-085785c22a20",
+    "title": "Плечи с гантелями",
+    "slug": "1-plechi-s-ganteliami",
+    "description": "",
+    "video_service_id": "46b35c65add2441c8a15d42bee693206",
+    "order": 2,
+    "duration": "00:00:39",
+    "is_free_preview": false,
+    "created_at": "2025-04-01T20:59:53.525Z",
+    "updated_at": "2025-04-18T19:11:17.888Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "32f3277c-9ec4-4f36-88f5-b12b1e83c514",
+  "fields": {
+    "part": "41e1b6cb-cbf6-46ba-8922-6a91c49b544c",
+    "title": "Шраги",
+    "slug": "e-shragi",
+    "description": "",
+    "video_service_id": "e863ebd0252b4157b144953654f02a30",
+    "order": 4,
+    "duration": "00:00:39",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T08:21:27.887Z",
+    "updated_at": "2025-05-30T08:21:27.887Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "33b2434e-fb74-49fa-9af0-b166d532638b",
+  "fields": {
+    "part": "0d74dfcb-ef0d-41a7-bc71-6162112bc687",
+    "title": "3. Выпрямление руки и ноги в упоре лёжа",
+    "slug": "b-3-vypriamlenie-ruki-i-nogi-v-upore-lezha",
+    "description": "",
+    "video_service_id": "0fc2ceaf06d749d7aaca7d177bd10831",
+    "order": 2,
+    "duration": "00:00:10",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:00:24.305Z",
+    "updated_at": "2025-04-21T09:00:24.305Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "34623e00-323f-458d-aecf-780a11ec4cc6",
+  "fields": {
+    "part": "62160712-4a9e-4e42-9933-17efedc18c6b",
+    "title": "Предплечьи со штангой",
+    "slug": "2-predplechi-so-shtangoi",
+    "description": "",
+    "video_service_id": "3bfb290739d84e5791fe54b9213b666a",
+    "order": 6,
+    "duration": "00:01:00",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T09:47:52.939Z",
+    "updated_at": "2025-05-30T09:47:52.939Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "3641998c-8142-4086-8a02-2c2006b79b24",
+  "fields": {
+    "part": "22ff2de7-b8a2-484a-a7fd-67313dbb1390",
+    "title": "Приседания со штангой",
+    "slug": "1-prisedaniia-so-shtangoi",
+    "description": "",
+    "video_service_id": "9f4e53019bb7434987d1001289cd32f8",
+    "order": 4,
+    "duration": "00:01:24",
+    "is_free_preview": false,
+    "created_at": "2025-04-19T17:50:38.695Z",
+    "updated_at": "2025-04-19T17:50:38.695Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "3952d899-9a95-4688-9341-dfb235b08968",
+  "fields": {
+    "part": "41e1b6cb-cbf6-46ba-8922-6a91c49b544c",
+    "title": "Подъем штанги - плечи",
+    "slug": "a-podem-shtangi-plechi",
+    "description": "",
+    "video_service_id": "8af745fcc4e149ed9e5f4f5390d95659",
+    "order": 5,
+    "duration": "00:01:15",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T08:21:48.221Z",
+    "updated_at": "2025-05-30T08:21:48.221Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "3988f31e-0578-4f54-829c-9675a4a1b32a",
+  "fields": {
+    "part": "6c82e28e-434a-4b0d-b348-3a3ced0ff0e5",
+    "title": "Грудь жим лежа",
+    "slug": "5-grud-zhim-lezha",
+    "description": "",
+    "video_service_id": "7df34f5c77444d45a390b1c5185f379a",
+    "order": 2,
+    "duration": "00:00:53",
+    "is_free_preview": false,
+    "created_at": "2025-03-24T19:32:31.093Z",
+    "updated_at": "2025-04-18T19:11:17.863Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "3bc1d316-41d6-41b6-9dd0-7d97d044e088",
+  "fields": {
+    "part": "546deb6e-dbb4-4bac-a1d8-5aa26e6573dd",
+    "title": "Армейский жим",
+    "slug": "1-armeiskii-zhim",
+    "description": "",
+    "video_service_id": "f30d6411767b4ab681b6cbdae59b1a41",
+    "order": 5,
+    "duration": "00:01:33",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:50:30.698Z",
+    "updated_at": "2025-04-21T08:50:30.698Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "3e6649c9-38b5-40c7-9f0e-f9335d7f62cd",
+  "fields": {
+    "part": "34646f2c-924b-48bf-8870-e5393a617f4e",
+    "title": "Бицепс молотки",
+    "slug": "8-bitseps-molotki",
+    "description": "",
+    "video_service_id": "777e1eb5c3b0441aaca606ce62fa748f",
+    "order": 3,
+    "duration": "00:00:52",
+    "is_free_preview": false,
+    "created_at": "2025-04-01T21:23:59.014Z",
+    "updated_at": "2025-04-18T19:11:17.920Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "4005d3dc-d312-4820-a13f-bbf09febf12a",
+  "fields": {
+    "part": "e1232207-4a4f-4678-8c0d-085785c22a20",
+    "title": "Трицепс на канате",
+    "slug": "3-tritseps-na-kanate",
+    "description": "",
+    "video_service_id": "2ece51ce35344762978312426cc25afa",
+    "order": 4,
+    "duration": "00:01:21",
+    "is_free_preview": false,
+    "created_at": "2025-04-01T21:01:25.339Z",
+    "updated_at": "2025-04-18T19:11:17.896Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "4018b512-9483-4474-9084-ed607f4cb0d9",
+  "fields": {
+    "part": "e1232207-4a4f-4678-8c0d-085785c22a20",
+    "title": "Ноги на тренажере",
+    "slug": "4-nogi-na-trenazhere",
+    "description": "",
+    "video_service_id": "c71502b822d44d879855a7e07cf1684f",
+    "order": 5,
+    "duration": "00:01:05",
+    "is_free_preview": false,
+    "created_at": "2025-04-01T21:01:55.014Z",
+    "updated_at": "2025-04-18T19:11:17.900Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "420585f9-0554-4ed6-897c-c098524e6e4b",
+  "fields": {
+    "part": "846b7010-19fb-4083-af11-b2fc9dea2ff1",
+    "title": "7. Болгарские выпады",
+    "slug": "5-7-bolgarskie-vypady",
+    "description": "",
+    "video_service_id": "ab834036d2ac49299da6c71d09077dfe",
+    "order": 6,
+    "duration": "00:00:12",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:06:12.988Z",
+    "updated_at": "2025-04-21T09:06:12.988Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "43e93a92-16d3-4b07-8000-da640f76e671",
+  "fields": {
+    "part": "0d74dfcb-ef0d-41a7-bc71-6162112bc687",
+    "title": "7. Приседания динамические",
+    "slug": "6-7-prisedaniia-dinamicheskie",
+    "description": "",
+    "video_service_id": "c85a91af967e466699aaff2e1c9c976f",
+    "order": 6,
+    "duration": "00:00:15",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:02:02.319Z",
+    "updated_at": "2025-04-21T09:02:02.319Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "46452a1b-449f-4e7a-ae8e-dd7593d1c962",
+  "fields": {
+    "part": "9be47c86-5310-488b-9410-6b4229ab136b",
+    "title": "Грудь в наклоне",
+    "slug": "4-grud-v-naklone",
+    "description": "",
+    "video_service_id": "1f7e6fff55a44298b11ed4a002422e7a",
+    "order": 2,
+    "duration": "00:00:46",
+    "is_free_preview": false,
+    "created_at": "2025-04-18T19:05:49.850Z",
+    "updated_at": "2025-04-18T19:11:17.942Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "464c8bd3-052f-40e3-b302-bbded05a83c8",
+  "fields": {
+    "part": "22ff2de7-b8a2-484a-a7fd-67313dbb1390",
+    "title": "Жим гантелями плечи",
+    "slug": "5-zhim-ganteliami-plechi",
+    "description": "",
+    "video_service_id": "9be23612f7984cca9d7a420cbc204fc7",
+    "order": 6,
+    "duration": "00:00:50",
+    "is_free_preview": false,
+    "created_at": "2025-04-19T17:51:28.782Z",
+    "updated_at": "2025-04-19T17:51:28.782Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "53ef214d-db8b-464b-be52-c2e8d46ddde2",
+  "fields": {
+    "part": "846b7010-19fb-4083-af11-b2fc9dea2ff1",
+    "title": "9. Приседания с выпрыгиванием",
+    "slug": "b-9-prisedaniia-s-vyprygivaniem",
+    "description": "",
+    "video_service_id": "ca8ecc5dbcaa420bb3d15a2462f6ed0d",
+    "order": 8,
+    "duration": "00:00:10",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:06:55.938Z",
+    "updated_at": "2025-04-21T09:06:55.938Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "5418bec3-84cb-473c-a677-cd18dc471842",
+  "fields": {
+    "part": "41e1b6cb-cbf6-46ba-8922-6a91c49b544c",
+    "title": "Махи - плечи",
+    "slug": "4-makhi-plechi",
+    "description": "",
+    "video_service_id": "ff2be4301bda45a9805bf7396e11bf0f",
+    "order": 1,
+    "duration": "00:00:39",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T08:20:27.471Z",
+    "updated_at": "2025-05-30T08:20:27.471Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "56da3d3f-77db-4533-bf3d-37ffd971d715",
+  "fields": {
+    "part": "9be47c86-5310-488b-9410-6b4229ab136b",
+    "title": "Бицепс со штангой",
+    "slug": "7-bitseps-so-shtangoi",
+    "description": "",
+    "video_service_id": "2e4c80726c5b45e7a535f9167e948fe3",
+    "order": 5,
+    "duration": "00:01:16",
+    "is_free_preview": false,
+    "created_at": "2025-04-18T19:12:01.988Z",
+    "updated_at": "2025-04-18T19:12:09.715Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "570972a8-0f03-4229-a64f-4de21a8af331",
+  "fields": {
+    "part": "6c82e28e-434a-4b0d-b348-3a3ced0ff0e5",
+    "title": "Гиперэкстензий на поясницу",
+    "slug": "f-giperekstenzii-na-poiasnitsu",
+    "description": "",
+    "video_service_id": "4f2401e50a9e4aa59bf0ccd9fcd41932",
+    "order": 5,
+    "duration": "00:01:16",
+    "is_free_preview": false,
+    "created_at": "2025-03-31T02:11:06.468Z",
+    "updated_at": "2025-04-18T19:11:17.866Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "58c7de49-18f1-4d8c-9d3e-5a8256b5181d",
+  "fields": {
+    "part": "925acd35-d00e-4b70-8160-fad848e8830c",
+    "title": "4. Скалолаз",
+    "slug": "8-4-skalolaz",
+    "description": "",
+    "video_service_id": "0cc450f576d64224868aa2a2247cc68c",
+    "order": 3,
+    "duration": "00:00:11",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:56:20.054Z",
+    "updated_at": "2025-04-21T08:56:20.054Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "592f8be2-9c1f-4ee2-929c-28dd09959d78",
+  "fields": {
+    "part": "34646f2c-924b-48bf-8870-e5393a617f4e",
+    "title": "Тренажер брусья",
+    "slug": "c-trenazher-brusia",
+    "description": "",
+    "video_service_id": "9eade4dcd7f847e79d816af17bbbe220",
+    "order": 0,
+    "duration": "00:00:47",
+    "is_free_preview": false,
+    "created_at": "2025-04-01T21:07:10.140Z",
+    "updated_at": "2025-04-18T19:11:17.908Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "5ce79f10-1af5-421c-8b09-7b6fd3debb21",
+  "fields": {
+    "part": "41e1b6cb-cbf6-46ba-8922-6a91c49b544c",
+    "title": "Жим гантелями сидя",
+    "slug": "a-zhim-ganteliami-sidia",
+    "description": "",
+    "video_service_id": "19f5e9a3630445f9b97631e09e7eb9f0",
+    "order": 0,
+    "duration": "00:00:50",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T08:20:10.748Z",
+    "updated_at": "2025-05-30T08:20:10.748Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "5d71e691-6fa9-48e5-bb41-13d249eba51a",
+  "fields": {
+    "part": "41e1b6cb-cbf6-46ba-8922-6a91c49b544c",
+    "title": "Тяга штанги к подборотку",
+    "slug": "f-tiaga-shtangi-k-podborotku",
+    "description": "",
+    "video_service_id": "c3013cac38ef432d991a8a831c38e198",
+    "order": 3,
+    "duration": "00:00:56",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T08:21:06.411Z",
+    "updated_at": "2025-05-30T08:21:06.411Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "68911449-bab6-46cc-a846-3ea0a3c9646b",
+  "fields": {
+    "part": "0d74dfcb-ef0d-41a7-bc71-6162112bc687",
+    "title": "9. Берпи",
+    "slug": "a-9-berpi",
+    "description": "",
+    "video_service_id": "65ee1fc46f4e414aa2cc54b6c0c6117d",
+    "order": 8,
+    "duration": "00:00:12",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:02:49.094Z",
+    "updated_at": "2025-04-21T09:02:49.094Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "69b3eef9-5b93-46c9-809a-080776098df0",
+  "fields": {
+    "part": "22ff2de7-b8a2-484a-a7fd-67313dbb1390",
+    "title": "Трицепс с гантелей",
+    "slug": "b-tritseps-s-gantelei",
+    "description": "",
+    "video_service_id": "0035033733124dfe879eecbfbbd94fed",
+    "order": 5,
+    "duration": "00:00:56",
+    "is_free_preview": false,
+    "created_at": "2025-04-19T17:51:00.738Z",
+    "updated_at": "2025-04-19T17:51:00.738Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "6c892cc6-4e0b-4ea2-a2ea-4d9bfbf42e34",
+  "fields": {
+    "part": "0d74dfcb-ef0d-41a7-bc71-6162112bc687",
+    "title": "4. Супермен",
+    "slug": "e-4-supermen",
+    "description": "",
+    "video_service_id": "59054528c11547aca8689b6460b2558e",
+    "order": 3,
+    "duration": "00:00:12",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:00:49.938Z",
+    "updated_at": "2025-04-21T09:00:49.938Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "6d205bc5-fc04-4490-8d17-13e226cb8db4",
+  "fields": {
+    "part": "01b9cdcb-010f-4a53-a97d-55c4de499264",
+    "title": "Жим в наклоне",
+    "slug": "c-zhim-v-naklone",
+    "description": "",
+    "video_service_id": "06479efb3525427b999b9d211b268b11",
+    "order": 1,
+    "duration": "00:00:46",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T07:44:19.417Z",
+    "updated_at": "2025-05-30T07:44:19.418Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "6d2fa3d7-ff3d-46ef-a722-d76e4356afdd",
+  "fields": {
+    "part": "22ff2de7-b8a2-484a-a7fd-67313dbb1390",
+    "title": "Икры",
+    "slug": "f-ikry",
+    "description": "",
+    "video_service_id": "c40b7d9a9a204728a4b4e2c5d746b284",
+    "order": 0,
+    "duration": "00:00:43",
+    "is_free_preview": false,
+    "created_at": "2025-04-19T17:48:13.172Z",
+    "updated_at": "2025-04-19T17:48:13.172Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "6deffbd4-0005-488f-8128-310ab29323ea",
+  "fields": {
+    "part": "c9d15fa3-3f28-4f9f-8236-ff4a4d767b4a",
+    "title": "Пресс",
+    "slug": "0-press",
+    "description": "",
+    "video_service_id": "55eb3071a5e04b4abab64bf4cae6a451",
+    "order": 3,
+    "duration": "00:00:48",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:46:52.058Z",
+    "updated_at": "2025-04-21T08:46:52.058Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "6fc41141-e001-45fa-be6a-bab71bcfa498",
+  "fields": {
+    "part": "6c82e28e-434a-4b0d-b348-3a3ced0ff0e5",
+    "title": "Плечи гантелями",
+    "slug": "0-plechi-ganteliami",
+    "description": "",
+    "video_service_id": "61ea3e18a34f4c24b1bc7c848ea5607b",
+    "order": 3,
+    "duration": "00:00:50",
+    "is_free_preview": false,
+    "created_at": "2025-03-24T19:33:16.780Z",
+    "updated_at": "2025-04-18T19:11:17.870Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "724061b7-4963-4824-9842-2920d35ba8b6",
+  "fields": {
+    "part": "0d74dfcb-ef0d-41a7-bc71-6162112bc687",
+    "title": "1. Отпускание на руках",
+    "slug": "9-1-otpuskanie-na-rukakh",
+    "description": "",
+    "video_service_id": "cd5743c1e0924c8c8cacea033409fc06",
+    "order": 0,
+    "duration": "00:00:13",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:59:30.729Z",
+    "updated_at": "2025-04-21T08:59:30.729Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "75645ad0-4653-43cb-8377-3f01b09821b6",
+  "fields": {
+    "part": "e1232207-4a4f-4678-8c0d-085785c22a20",
+    "title": "Спина тяга",
+    "slug": "6-spina-tiaga",
+    "description": "",
+    "video_service_id": "cc1d792ea39f4ce7ac89adedcddce46f",
+    "order": 0,
+    "duration": "00:01:09",
+    "is_free_preview": false,
+    "created_at": "2025-03-31T02:20:57.376Z",
+    "updated_at": "2025-04-18T19:11:17.874Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "77c9f6ef-74b8-4870-b176-8d2a421105aa",
+  "fields": {
+    "part": "0d74dfcb-ef0d-41a7-bc71-6162112bc687",
+    "title": "8. Выпады",
+    "slug": "4-8-vypady",
+    "description": "",
+    "video_service_id": "c8242800dfff4c4896effd02c039f18f",
+    "order": 7,
+    "duration": "00:00:08",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:02:23.641Z",
+    "updated_at": "2025-04-21T09:02:23.641Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "81291e63-c449-4867-8ce5-654af35f0233",
+  "fields": {
+    "part": "546deb6e-dbb4-4bac-a1d8-5aa26e6573dd",
+    "title": "Трицепс на скамье",
+    "slug": "4-tritseps-na-skame",
+    "description": "",
+    "video_service_id": "921c6118d94a4e6dbbc367abde6e1110",
+    "order": 4,
+    "duration": "00:01:20",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:50:10.337Z",
+    "updated_at": "2025-04-21T08:50:10.337Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "82215145-301b-4d72-90e9-e8ce093ec763",
+  "fields": {
+    "part": "34646f2c-924b-48bf-8870-e5393a617f4e",
+    "title": "Трицепс сгибание рук",
+    "slug": "0-tritseps-sgibanie-ruk",
+    "description": "",
+    "video_service_id": "669fa41e07a14b69be63800d95fb1093",
+    "order": 4,
+    "duration": "00:01:02",
+    "is_free_preview": false,
+    "created_at": "2025-04-01T21:24:14.911Z",
+    "updated_at": "2025-04-18T19:11:17.924Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "86eaca8b-9c64-4359-b3fd-519a9b7cb94e",
+  "fields": {
+    "part": "846b7010-19fb-4083-af11-b2fc9dea2ff1",
+    "title": "2. Планка с подъёмом",
+    "slug": "c-2-planka-s-podemom",
+    "description": "",
+    "video_service_id": "e9b9dc7f0fbe46cd87cb4cd144bde4da",
+    "order": 1,
+    "duration": "00:00:10",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:04:20.320Z",
+    "updated_at": "2025-04-21T09:04:20.320Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "8b67e397-cc43-4e26-be16-60ffd1789ad2",
+  "fields": {
+    "part": "846b7010-19fb-4083-af11-b2fc9dea2ff1",
+    "title": "1. Джампинг Джек",
+    "slug": "c-1-dzhamping-dzhek",
+    "description": "",
+    "video_service_id": "740a388afbb24fc0b3b3728232feda34",
+    "order": 0,
+    "duration": "00:00:11",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:04:00.431Z",
+    "updated_at": "2025-04-21T09:04:00.431Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "8d8e3a17-c4b9-4e79-a23b-5113fb0cec5b",
+  "fields": {
+    "part": "c9d15fa3-3f28-4f9f-8236-ff4a4d767b4a",
+    "title": "Грудь на станке",
+    "slug": "4-grud-na-stanke",
+    "description": "",
+    "video_service_id": "6f5fa9124309431585518f09120924a5",
+    "order": 2,
+    "duration": "00:00:56",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:45:49.092Z",
+    "updated_at": "2025-04-21T08:45:49.092Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "8ee5cb39-c9d7-44ba-a8af-878a7268ef1d",
+  "fields": {
+    "part": "925acd35-d00e-4b70-8160-fad848e8830c",
+    "title": "9. Стульчик",
+    "slug": "9-9-stulchik",
+    "description": "",
+    "video_service_id": "4e3790a654c94f11839e2f5c4aa5f95f",
+    "order": 8,
+    "duration": "00:00:10",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:58:10.043Z",
+    "updated_at": "2025-04-21T08:58:10.043Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "9166ffb6-2369-496f-913a-5b80484108a3",
+  "fields": {
+    "part": "e1c8583a-efe1-4472-93fe-35a552f138f7",
+    "title": "Икры",
+    "slug": "3-ikry",
+    "description": "",
+    "video_service_id": "bc5428bc69614a08b02aa9946dcf93b2",
+    "order": 5,
+    "duration": "00:00:57",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T09:51:42.193Z",
+    "updated_at": "2025-05-30T09:51:42.193Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "a7a0f4cb-9e71-4112-9c66-470e0428e367",
+  "fields": {
+    "part": "e1c8583a-efe1-4472-93fe-35a552f138f7",
+    "title": "Тяга с гантелями",
+    "slug": "e-tiaga-s-ganteliami",
+    "description": "",
+    "video_service_id": null,
+    "order": 6,
+    "duration": "00:01:52",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T09:52:15.525Z",
+    "updated_at": "2025-05-30T09:52:20.595Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "a8d21705-4bd4-4494-935b-468ff595123e",
+  "fields": {
+    "part": "0d74dfcb-ef0d-41a7-bc71-6162112bc687",
+    "title": "2. Отжимания с касанием плеча",
+    "slug": "b-2-otzhimaniia-s-kasaniem-plecha",
+    "description": "",
+    "video_service_id": "6deb2e2c304b4c48b072a032870e34b5",
+    "order": 1,
+    "duration": "00:00:08",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:59:55.743Z",
+    "updated_at": "2025-04-21T08:59:55.743Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "a93a06fa-b5ee-4ca1-99ec-05ee98f283bd",
+  "fields": {
+    "part": "846b7010-19fb-4083-af11-b2fc9dea2ff1",
+    "title": "8. Стульчик",
+    "slug": "5-8-stulchik",
+    "description": "",
+    "video_service_id": "253feaab21eb4fc8aee89af6e8360d58",
+    "order": 7,
+    "duration": "00:00:10",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:06:35.552Z",
+    "updated_at": "2025-04-21T09:06:35.552Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "abd5d3c9-0197-403b-a691-03c02644bb91",
+  "fields": {
+    "part": "22ff2de7-b8a2-484a-a7fd-67313dbb1390",
+    "title": "Поясница",
+    "slug": "1-poiasnitsa",
+    "description": "",
+    "video_service_id": "75cc4ec6cfd34845ac86b9ad246c98fa",
+    "order": 1,
+    "duration": "00:01:16",
+    "is_free_preview": false,
+    "created_at": "2025-04-19T17:48:45.058Z",
+    "updated_at": "2025-04-19T17:48:45.058Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "ac980d68-15e3-41a6-bc61-e2515fb67301",
+  "fields": {
+    "part": "9be47c86-5310-488b-9410-6b4229ab136b",
+    "title": "Жим лежа",
+    "slug": "5-zhim-lezha",
+    "description": "",
+    "video_service_id": "c5dcbeb992aa4a8fa7c250862007e648",
+    "order": 4,
+    "duration": "00:00:53",
+    "is_free_preview": false,
+    "created_at": "2025-04-18T19:07:07.558Z",
+    "updated_at": "2025-04-18T19:11:17.949Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "ae77891e-46a6-4a83-b2cd-53f003cc4c61",
+  "fields": {
+    "part": "925acd35-d00e-4b70-8160-fad848e8830c",
+    "title": "2. Отжимания",
+    "slug": "6-2-otzhimaniia",
+    "description": "",
+    "video_service_id": "0fb956d46d304a30a94190311332ac26",
+    "order": 1,
+    "duration": "00:00:08",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:55:36.435Z",
+    "updated_at": "2025-04-21T08:55:36.435Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "b367a92d-33c4-47ac-ae9a-c3c96b4aa077",
+  "fields": {
+    "part": "925acd35-d00e-4b70-8160-fad848e8830c",
+    "title": "7. Приседания с касанием пола",
+    "slug": "3-7-prisedaniia-s-kasaniem-pola",
+    "description": "",
+    "video_service_id": "6750333a7fd642b8aacc1830f7979fc1",
+    "order": 6,
+    "duration": "00:00:12",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:57:27.023Z",
+    "updated_at": "2025-04-21T08:57:27.023Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "b587cb80-e5a2-45c7-bbc3-c0ea7d5f8731",
+  "fields": {
+    "part": "e1c8583a-efe1-4472-93fe-35a552f138f7",
+    "title": "Приседания со штангой",
+    "slug": "5-prisedaniia-so-shtangoi",
+    "description": "",
+    "video_service_id": "6915e8bfe5fc45429da80122047f3abd",
+    "order": 0,
+    "duration": "00:01:24",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T09:49:33.093Z",
+    "updated_at": "2025-05-30T09:49:33.093Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "b7ccee02-24c3-46c7-8942-282853853046",
+  "fields": {
+    "part": "c9d15fa3-3f28-4f9f-8236-ff4a4d767b4a",
+    "title": "Тяга гантели - спина",
+    "slug": "4-tiaga-ganteli-spina",
+    "description": "",
+    "video_service_id": "a2c82059cb01417d9d3b2a5ff010ec15",
+    "order": 1,
+    "duration": "00:01:22",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:45:24.554Z",
+    "updated_at": "2025-04-21T08:46:01.091Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "ba90003c-5bbc-43a7-a064-f68c6edf1b85",
+  "fields": {
+    "part": "846b7010-19fb-4083-af11-b2fc9dea2ff1",
+    "title": "5. Пресс ножницы",
+    "slug": "b-5-press-nozhnitsy",
+    "description": "",
+    "video_service_id": "c6a3156b93a044e29035af6ae78f9433",
+    "order": 4,
+    "duration": "00:00:11",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:05:30.145Z",
+    "updated_at": "2025-04-21T09:05:30.146Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "bc548270-e5c1-4cf1-9910-3eeb39275098",
+  "fields": {
+    "part": "ef5ff796-4ea3-4d7f-a14b-6c3c19fd2958",
+    "title": "Хаммер - спина",
+    "slug": "5-khammer-spina",
+    "description": "",
+    "video_service_id": "642aa4a62e724846acadb14d907112e8",
+    "order": 5,
+    "duration": "00:01:14",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T07:48:54.159Z",
+    "updated_at": "2025-05-30T07:48:54.159Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "bda52bb6-ef40-42f8-b496-8a4a04b7f2ab",
+  "fields": {
+    "part": "546deb6e-dbb4-4bac-a1d8-5aa26e6573dd",
+    "title": "Тяга штанги к подбородку",
+    "slug": "f-tiaga-shtangi-k-podborodku",
+    "description": "",
+    "video_service_id": "7d6af205e36543c58c7d689023c80666",
+    "order": 6,
+    "duration": "00:00:56",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:51:04.282Z",
+    "updated_at": "2025-04-21T08:51:04.283Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "c0c1e032-aa64-4190-9478-0f46cbfc29da",
+  "fields": {
+    "part": "22ff2de7-b8a2-484a-a7fd-67313dbb1390",
+    "title": "Трицепс на блоке",
+    "slug": "a-tritseps-na-bloke",
+    "description": "",
+    "video_service_id": "e6ef482b46a34066ac697ae16eb90f53",
+    "order": 2,
+    "duration": "00:01:21",
+    "is_free_preview": false,
+    "created_at": "2025-04-19T17:49:30.039Z",
+    "updated_at": "2025-04-19T17:49:30.039Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "c15cd475-0fcb-4fb0-a24e-5b12b1ff24e1",
+  "fields": {
+    "part": "41e1b6cb-cbf6-46ba-8922-6a91c49b544c",
+    "title": "Пресс",
+    "slug": "f-press",
+    "description": "",
+    "video_service_id": "42369518b1dc4f22acc472e313983a49",
+    "order": 2,
+    "duration": "00:01:02",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T08:20:46.084Z",
+    "updated_at": "2025-05-30T08:20:46.084Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "c1922524-ef3a-4da7-864a-fa16c22bb973",
+  "fields": {
+    "part": "6c82e28e-434a-4b0d-b348-3a3ced0ff0e5",
+    "title": "Трицепс гантелей",
+    "slug": "f-tritseps-gantelei",
+    "description": "",
+    "video_service_id": "d4efbd2b78604dbbaeb99c6131ff13f2",
+    "order": 6,
+    "duration": "00:00:56",
+    "is_free_preview": false,
+    "created_at": "2025-03-31T02:11:49.751Z",
+    "updated_at": "2025-04-18T19:11:17.877Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "c55b870c-1bec-4bd7-ac52-86639f84c468",
+  "fields": {
+    "part": "62160712-4a9e-4e42-9933-17efedc18c6b",
+    "title": "Молотки",
+    "slug": "b-molotki",
+    "description": "",
+    "video_service_id": "a3991ce6fe3c4f0a8ef18a3303c95603",
+    "order": 3,
+    "duration": "00:00:52",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T09:46:30.963Z",
+    "updated_at": "2025-05-30T09:46:30.963Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "c6621a02-d87b-423f-851a-464d89af0127",
+  "fields": {
+    "part": "6c82e28e-434a-4b0d-b348-3a3ced0ff0e5",
+    "title": "Начать",
+    "slug": "8-nachat",
+    "description": "",
+    "video_service_id": "c5d60bd17e2b410d9f470beb5e356443",
+    "order": 0,
+    "duration": "00:00:38",
+    "is_free_preview": true,
+    "created_at": "2025-03-31T02:28:59.713Z",
+    "updated_at": "2025-04-18T19:11:17.881Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "c72fbe66-603a-471b-9389-b479b4a380a8",
+  "fields": {
+    "part": "846b7010-19fb-4083-af11-b2fc9dea2ff1",
+    "title": "3. Прыжки в планке",
+    "slug": "0-3-pryzhki-v-planke",
+    "description": "",
+    "video_service_id": "5590955223ab4696b7cbd7ed3bfff861",
+    "order": 2,
+    "duration": "00:00:11",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:04:47.572Z",
+    "updated_at": "2025-04-21T09:04:47.572Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "c8cd10a4-7a75-46b7-a656-9baba6eb4078",
+  "fields": {
+    "part": "e1c8583a-efe1-4472-93fe-35a552f138f7",
+    "title": "Сгибание ног сидя",
+    "slug": "a-sgibanie-nog-sidia",
+    "description": "",
+    "video_service_id": "b7afc47310fc4ab69852eb467c98e665",
+    "order": 1,
+    "duration": "00:01:05",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T09:49:54.447Z",
+    "updated_at": "2025-05-30T09:49:54.447Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "c9a18a53-e1f9-4be1-8eae-f1a7ef53dd3a",
+  "fields": {
+    "part": "62160712-4a9e-4e42-9933-17efedc18c6b",
+    "title": "Трицепс со штангой",
+    "slug": "1-tritseps-so-shtangoi",
+    "description": "",
+    "video_service_id": "affa7f70efa84879963d957facdeb5c7",
+    "order": 4,
+    "duration": "00:01:02",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T09:47:07.352Z",
+    "updated_at": "2025-05-30T09:47:07.352Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "ca819170-71f3-49b1-9c91-857e91452982",
+  "fields": {
+    "part": "0d74dfcb-ef0d-41a7-bc71-6162112bc687",
+    "title": "6. Попеременный подъём ног",
+    "slug": "1-6-poperemennyi-podem-nog",
+    "description": "",
+    "video_service_id": "94479f05a6fc4c10b4740ab80d6f5e9a",
+    "order": 5,
+    "duration": "00:00:09",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:01:37.577Z",
+    "updated_at": "2025-04-21T09:01:37.577Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "cba7506c-d9fb-433b-b79d-b0c8ab19f81c",
+  "fields": {
+    "part": "9be47c86-5310-488b-9410-6b4229ab136b",
+    "title": "Спина - тяга сидя",
+    "slug": "9-spina-tiaga-sidia",
+    "description": "",
+    "video_service_id": "30c01a2594ce4abc9a9a97512200ffaf",
+    "order": 3,
+    "duration": "00:01:09",
+    "is_free_preview": false,
+    "created_at": "2025-04-18T19:06:11.032Z",
+    "updated_at": "2025-04-18T19:11:17.945Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "cbeebc86-7550-4be5-ad83-37f9edffdb8b",
+  "fields": {
+    "part": "62160712-4a9e-4e42-9933-17efedc18c6b",
+    "title": "Трицепс с гантелей",
+    "slug": "5-tritseps-s-gantelei",
+    "description": "",
+    "video_service_id": "bf44a0df44fc41a19fb3f660c0d1cbfc",
+    "order": 1,
+    "duration": "00:00:56",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T09:45:45.855Z",
+    "updated_at": "2025-05-30T09:45:45.855Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "cd60a0e7-c28c-4070-9632-38961b9e1caf",
+  "fields": {
+    "part": "e1c8583a-efe1-4472-93fe-35a552f138f7",
+    "title": "Выпады со штангой",
+    "slug": "2-vypady-so-shtangoi",
+    "description": "",
+    "video_service_id": "973644c683584248adb2a444fa5cfb8a",
+    "order": 4,
+    "duration": "00:01:27",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T09:51:17.142Z",
+    "updated_at": "2025-05-30T09:51:17.142Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "d5a326b1-326a-4c3c-9914-253a09f1bb5b",
+  "fields": {
+    "part": "925acd35-d00e-4b70-8160-fad848e8830c",
+    "title": "8. Конькобежец",
+    "slug": "2-8-konkobezhets",
+    "description": "",
+    "video_service_id": "c1cd251f177148338545dd6cc25feda5",
+    "order": 7,
+    "duration": "00:00:14",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:57:49.094Z",
+    "updated_at": "2025-04-21T08:57:49.094Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "d71aec12-9d12-40b1-a149-0311eff14eb6",
+  "fields": {
+    "part": "e1c8583a-efe1-4472-93fe-35a552f138f7",
+    "title": "Разгибание ног сидя",
+    "slug": "d-razgibanie-nog-sidia",
+    "description": "",
+    "video_service_id": "98f23fd1a3e048159af76cd66d4ddb5d",
+    "order": 2,
+    "duration": "00:01:16",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T09:50:14.174Z",
+    "updated_at": "2025-05-30T09:50:14.175Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "d7b07d5f-4de0-4fcd-be24-13604656d275",
+  "fields": {
+    "part": "9be47c86-5310-488b-9410-6b4229ab136b",
+    "title": "Бицепс молотки",
+    "slug": "d-bitseps-molotki",
+    "description": "",
+    "video_service_id": "a195628b1f7e4fb4a670b02e445c36cc",
+    "order": 0,
+    "duration": "00:00:52",
+    "is_free_preview": false,
+    "created_at": "2025-04-18T19:05:04.693Z",
+    "updated_at": "2025-04-18T19:11:17.935Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "d9a4600c-a10d-4c5c-88a6-36649ba89fc9",
+  "fields": {
+    "part": "846b7010-19fb-4083-af11-b2fc9dea2ff1",
+    "title": "4. Скобка",
+    "slug": "1-4-skobka",
+    "description": "",
+    "video_service_id": "ebe068c5fad749dabedff2218a80ccaa",
+    "order": 3,
+    "duration": "00:00:14",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:05:10.891Z",
+    "updated_at": "2025-04-21T09:05:10.891Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "da2bb1d6-2758-41d2-9eca-346e645c6eda",
+  "fields": {
+    "part": "546deb6e-dbb4-4bac-a1d8-5aa26e6573dd",
+    "title": "Жим ногами",
+    "slug": "7-zhim-nogami",
+    "description": "",
+    "video_service_id": "c76511b1d0ad4595b5a1f1822781fdbc",
+    "order": 3,
+    "duration": "00:01:38",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:49:53.483Z",
+    "updated_at": "2025-04-21T08:49:53.483Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "df005a0f-734c-4196-aafe-56dd0f7aecc3",
+  "fields": {
+    "part": "34646f2c-924b-48bf-8870-e5393a617f4e",
+    "title": "Плечи тяга штангой",
+    "slug": "3-plechi-tiaga-shtangoi",
+    "description": "",
+    "video_service_id": "bda544086d3545359f92aa29e8559781",
+    "order": 2,
+    "duration": "00:00:56",
+    "is_free_preview": false,
+    "created_at": "2025-04-01T21:23:34.578Z",
+    "updated_at": "2025-04-18T19:11:17.917Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "e277d76c-575b-42ea-a3d5-62f9c4d1d935",
+  "fields": {
+    "part": "34646f2c-924b-48bf-8870-e5393a617f4e",
+    "title": "Ноги на тренажере",
+    "slug": "7-nogi-na-trenazhere",
+    "description": "",
+    "video_service_id": "1298adef91db48de89603338766981d2",
+    "order": 5,
+    "duration": "00:01:16",
+    "is_free_preview": false,
+    "created_at": "2025-04-01T21:24:30.624Z",
+    "updated_at": "2025-04-18T19:11:17.928Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "e7851296-37a4-40d3-ad91-ac1b198a1f82",
+  "fields": {
+    "part": "01b9cdcb-010f-4a53-a97d-55c4de499264",
+    "title": "Бабочка на грудь",
+    "slug": "7-babochka-na-grud",
+    "description": "",
+    "video_service_id": "3eb533be75e349a494068d3155350e10",
+    "order": 4,
+    "duration": "00:00:56",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T07:45:20.057Z",
+    "updated_at": "2025-05-30T07:45:20.057Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "e8e3bdfe-4b20-4518-8c93-d521d3c4e038",
+  "fields": {
+    "part": "01b9cdcb-010f-4a53-a97d-55c4de499264",
+    "title": "Пресс",
+    "slug": "b-press",
+    "description": "",
+    "video_service_id": "0f92023ce0f1458b9e501743187b5122",
+    "order": 2,
+    "duration": "00:01:02",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T07:44:41.887Z",
+    "updated_at": "2025-05-30T07:44:41.887Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "e9059af4-bd03-4aad-92e1-be9844592f1c",
+  "fields": {
+    "part": "c9d15fa3-3f28-4f9f-8236-ff4a4d767b4a",
+    "title": "Брусья",
+    "slug": "d-brusia",
+    "description": "",
+    "video_service_id": "4fc26d39370445e6a123877fd0842fdd",
+    "order": 5,
+    "duration": "00:00:47",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:47:37.901Z",
+    "updated_at": "2025-04-21T08:47:37.901Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "e99bd5fc-87db-4586-bd67-cddd9bbb171c",
+  "fields": {
+    "part": "846b7010-19fb-4083-af11-b2fc9dea2ff1",
+    "title": "6. Приседания",
+    "slug": "7-6-prisedaniia",
+    "description": "",
+    "video_service_id": "ccca0d532a304e70b0050f75a72098ff",
+    "order": 5,
+    "duration": "00:00:09",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T09:05:49.629Z",
+    "updated_at": "2025-04-21T09:05:49.629Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "eaad60b1-2e9d-47a0-b2d9-08fbad2a71de",
+  "fields": {
+    "part": "e1232207-4a4f-4678-8c0d-085785c22a20",
+    "title": "Бицепс с гантелями",
+    "slug": "e-bitseps-s-ganteliami",
+    "description": "",
+    "video_service_id": "86f8939d3408465a86698bde5e8cce6a",
+    "order": 3,
+    "duration": "00:00:48",
+    "is_free_preview": false,
+    "created_at": "2025-04-01T21:00:45.923Z",
+    "updated_at": "2025-04-18T19:11:17.892Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "ed867b29-3395-4cf9-b02d-12997e011686",
+  "fields": {
+    "part": "22ff2de7-b8a2-484a-a7fd-67313dbb1390",
+    "title": "Плечи - махи",
+    "slug": "3-plechi-makhi",
+    "description": "",
+    "video_service_id": "abc31514fcf6403e9fc0ae5ca22a2f18",
+    "order": 3,
+    "duration": "00:00:39",
+    "is_free_preview": false,
+    "created_at": "2025-04-19T17:50:13.663Z",
+    "updated_at": "2025-04-19T17:50:13.663Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "efa4b84c-a140-471a-8078-8e3df78490fa",
+  "fields": {
+    "part": "ef5ff796-4ea3-4d7f-a14b-6c3c19fd2958",
+    "title": "Тяга на вертикальном блоке",
+    "slug": "1-tiaga-na-vertikalnom-bloke",
+    "description": "",
+    "video_service_id": "5386df1498c64b11864c076985958a72",
+    "order": 2,
+    "duration": "00:01:43",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T07:47:31.467Z",
+    "updated_at": "2025-05-30T07:47:31.467Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "f47c1d55-273a-4599-9bba-0f3a2141f904",
+  "fields": {
+    "part": "ef5ff796-4ea3-4d7f-a14b-6c3c19fd2958",
+    "title": "Тяга гантелей - спина",
+    "slug": "7-tiaga-gantelei-spina",
+    "description": "",
+    "video_service_id": "bbb64bf7d1704cb483702977a5f4f6da",
+    "order": 4,
+    "duration": "00:01:22",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T07:48:23.218Z",
+    "updated_at": "2025-05-30T07:48:23.219Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "f48553ec-233c-49f8-9d7c-fc39723171d2",
+  "fields": {
+    "part": "925acd35-d00e-4b70-8160-fad848e8830c",
+    "title": "5. Пресс скручивание",
+    "slug": "3-5-press-skruchivanie",
+    "description": "",
+    "video_service_id": "69bb0258088c46a3b6fc0e7a9414d0cf",
+    "order": 4,
+    "duration": "00:00:10",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:56:43.639Z",
+    "updated_at": "2025-04-21T08:58:21.510Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "f665153f-f3b2-4e6b-83df-54dafd06e1e3",
+  "fields": {
+    "part": "62160712-4a9e-4e42-9933-17efedc18c6b",
+    "title": "Бицепс со штангой",
+    "slug": "3-bitseps-so-shtangoi",
+    "description": "",
+    "video_service_id": "8ab005a275424e158d0a053d0b8d28d1",
+    "order": 0,
+    "duration": "00:01:16",
+    "is_free_preview": false,
+    "created_at": "2025-05-30T09:45:23.002Z",
+    "updated_at": "2025-05-30T09:45:23.002Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "f9171128-f1f0-4536-8eee-a8cabf255a44",
+  "fields": {
+    "part": "546deb6e-dbb4-4bac-a1d8-5aa26e6573dd",
+    "title": "Шраги",
+    "slug": "1-shragi",
+    "description": "",
+    "video_service_id": "688b2b0eab724dd69e5c393eb2b2e252",
+    "order": 1,
+    "duration": "00:00:39",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:49:05.658Z",
+    "updated_at": "2025-04-21T08:49:05.658Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "fbea310d-0007-4b21-b934-0bfa2f374966",
+  "fields": {
+    "part": "01b9cdcb-010f-4a53-a97d-55c4de499264",
+    "title": "Жим лежа",
+    "slug": "0-zhim-lezha",
+    "description": "",
+    "video_service_id": "d9d1b706f6714b659a759c6cc96094fa",
+    "order": 0,
+    "duration": "00:00:53",
+    "is_free_preview": true,
+    "created_at": "2025-05-30T07:43:57.602Z",
+    "updated_at": "2025-05-30T07:45:38.489Z"
+  }
+},
+{
+  "model": "courses.lesson",
+  "pk": "fda63ac7-3d72-459c-91a4-097bf7f0bb37",
+  "fields": {
+    "part": "c9d15fa3-3f28-4f9f-8236-ff4a4d767b4a",
+    "title": "Тяга к груди - спина",
+    "slug": "d-tiaga-k-grudi-spina",
+    "description": "",
+    "video_service_id": "f30f4932374e4c3d98192487ad7ddc4d",
+    "order": 4,
+    "duration": "00:01:43",
+    "is_free_preview": false,
+    "created_at": "2025-04-21T08:47:17.927Z",
+    "updated_at": "2025-04-21T08:47:17.927Z"
+  }
+}
+]
