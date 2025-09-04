@@ -14,8 +14,8 @@ def login_view(request):
     user = User.objects.filter(id=id).first()
     if user is None:
         return Response({"error": "User not found"}, status=404)
-    if user.custom_sessions.all().count() > 0:
-        return Response({"error": "User already logged in"}, status=400)
+    # if user.custom_sessions.all().count() > 0:
+    #     return Response({"error": "User already logged in"}, status=400)
     token, created = Token.objects.get_or_create(user=user)
     CustomSession.objects.create(
         user=user,
