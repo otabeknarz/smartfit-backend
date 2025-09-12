@@ -17,12 +17,6 @@ def login_view(request):
     # if user.custom_sessions.all().count() > 0:
     #     return Response({"error": "User already logged in"}, status=400)
     token, created = Token.objects.get_or_create(user=user)
-    CustomSession.objects.create(
-        user=user,
-        token=token.key,
-        ip_address=request.META.get("REMOTE_ADDR"),
-        device_info=request.META.get("HTTP_USER_AGENT"),
-    )
     return Response(
         {
             "token": token.key,
