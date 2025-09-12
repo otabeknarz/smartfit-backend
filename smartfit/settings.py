@@ -42,31 +42,16 @@ REST_FRAMEWORK = {
     ],
 }
 
-CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
+    "https://app.smart-fit.com",
+    "https://api.smart-fit.com",
     "http://localhost:3000",
-    "http://207.154.246.175:3000",
-    "https://smartfitapi.otabek.me",
-    "https://smartfit.otabek.me",
-    "https://smart-fit.uz",
-    "https://api.smart-fit.uz",
-    "https://app.smart-fit.uz",
-    "http://test.paycom.uz",
-    "https://test.paycom.uz",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:5173",
+    "https://app.smart-fit.com",
+    "https://api.smart-fit.com",
     "http://localhost:3000",
-    "http://207.154.246.175:3000",
-    "https://smartfitapi.otabek.me",
-    "https://smartfit.otabek.me",
-    "https://smart-fit.uz",
-    "https://api.smart-fit.uz",
-    "https://app.smart-fit.uz",
-    "http://test.paycom.uz",
-    "https://test.paycom.uz",
 ]
 
 INSTALLED_APPS = [
