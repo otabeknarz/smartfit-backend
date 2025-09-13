@@ -57,7 +57,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # CORS app
     "corsheaders",
+    # Storages app for Cloudflare R2
+    "storages",
     # REST API
     "rest_framework",
     "rest_framework.authtoken",
@@ -140,15 +143,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.1/howto/static-files/
-
-STATIC_URL = "static/"
-STATIC_ROOT = BASE_DIR / "static"
-
-MEDIA_URL = "media/"
-MEDIA_ROOT = BASE_DIR / "media"
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
@@ -176,5 +170,35 @@ STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
 STRIPE_WEBHOOK_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET")
 FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
 
-if not STRIPE_SECRET_KEY or not STRIPE_WEBHOOK_SECRET or not FRONTEND_URL:
-    raise ValueError("STRIPE_SECRET_KEY or STRIPE_WEBHOOK_SECRET not set")
+
+AWS_ACCESS_KEY_ID = os.getenv("R2_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("R2_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = os.getenv("R2_BUCKET_NAME")
+AWS_S3_ENDPOINT_URL = os.getenv("R2_ENDPOINT_URL")
+AWS_S3_SIGNATURE_VERSION = "s3v4"
+
+# AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.yourdomain.com"
+
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+        "OPTIONS": {
+            "location": "media",
+            "default_acl": "private",
+            "querystring_auth": True,
+            "querystring_expire": 3600,
+        },
+    },
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+        "OPTIONS": {
+            "location": "static",
+            "default_acl": "private",
+            "querystring_auth": True,
+            "querystring_expire": 3600,
+        },
+    },
+}
+
+STATIC_URL = f"{AWS_S3_ENDPOINT_URL}/static/"
+MEDIA_URL = f"{AWS_S3_ENDPOINT_URL}/media/"
